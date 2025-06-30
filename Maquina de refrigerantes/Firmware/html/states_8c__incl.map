@@ -1,0 +1,26 @@
+<map id="states.c" name="states.c">
+<area shape="rect" id="Node000001" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="310,5,383,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,30,86,81,85,76,309,25"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,79,160,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="312,33,174,78,173,73,311,28"/>
+<area shape="rect" id="Node000004" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="235,79,309,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="337,33,296,71,292,67,333,29"/>
+<area shape="rect" id="Node000005" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="138,152,265,177"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="311,30,265,49,243,63,225,80,210,109,205,138,200,137,205,107,221,77,240,58,263,44,309,25"/>
+<area shape="rect" id="Node000006" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="293,152,401,177"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="349,31,349,138,344,138,344,31"/>
+<area shape="rect" id="Node000007" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="384,79,459,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="360,29,401,67,397,71,357,33"/>
+<area shape="rect" id="Node000008" href="$ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="749,79,795,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="384,20,534,39,633,55,736,76,735,81,632,60,534,44,383,26"/>
+<area shape="rect" id="Node000010" href="$pagamento_8h.html" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="617,79,725,104"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="384,25,606,73,605,78,383,30"/>
+<area shape="rect" id="Node000011" href="$estatisticas_8h.html" title="Protótipos para as funções de geração de estatísticas de vendas." alt="" coords="483,79,592,104"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="378,28,494,71,492,76,376,33"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="262,106,224,144,220,140,258,102"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="286,102,326,141,323,144,282,106"/>
+<area shape="rect" id="Node000009" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="745,152,799,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="775,104,775,138,769,138,769,104"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="508,107,392,149,390,144,506,102"/>
+</map>

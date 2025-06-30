@@ -1,0 +1,79 @@
+\doxysection{pilha.\+h File Reference}
+\hypertarget{pilha_8h}{}\label{pilha_8h}\index{pilha.h@{pilha.h}}
+
+
+Definições e protótipos para estruturas de dados de pilha.  
+
+
+{\ttfamily \#include "{}states.\+h"{}}\newline
+Include dependency graph for pilha.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{pilha_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{pilha_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPilha}{Pilha}}
+\begin{DoxyCompactList}\small\item\em Estrutura para a pilha que armazena as moedas (valores float). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}}
+\begin{DoxyCompactList}\small\item\em Estrutura para a pilha que armazena o histórico de estados da FSM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{pilha_8h_a4096b9b3678b39a13cf79e9acafe1a86}\label{pilha_8h_a4096b9b3678b39a13cf79e9acafe1a86} 
+\#define {\bfseries MAX\+\_\+\+PILHA}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{pilha_8h_a694ad815c6eaba81220bb43a5e5a2cc5}\label{pilha_8h_a694ad815c6eaba81220bb43a5e5a2cc5} 
+void {\bfseries inicializar\+\_\+pilha} (\mbox{\hyperlink{structPilha}{Pilha}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_a7b7c481f1eba3c388564653a7f75dd4b}\label{pilha_8h_a7b7c481f1eba3c388564653a7f75dd4b} 
+int {\bfseries pilha\+\_\+vazia} (\mbox{\hyperlink{structPilha}{Pilha}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_a101c3272b108d1b72800f835968fb5cf}\label{pilha_8h_a101c3272b108d1b72800f835968fb5cf} 
+int {\bfseries pilha\+\_\+cheia} (\mbox{\hyperlink{structPilha}{Pilha}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_a1f0dcea368321fa71cffe9f8c74e7f73}\label{pilha_8h_a1f0dcea368321fa71cffe9f8c74e7f73} 
+void {\bfseries empilhar} (\mbox{\hyperlink{structPilha}{Pilha}} \texorpdfstring{$\ast$}{*}pilha, float valor)
+\item 
+\Hypertarget{pilha_8h_aa490639c2452a2554784741ad5187d3b}\label{pilha_8h_aa490639c2452a2554784741ad5187d3b} 
+float {\bfseries desempilhar} (\mbox{\hyperlink{structPilha}{Pilha}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_a9f0dc372535d1780f635b89ef2627cc1}\label{pilha_8h_a9f0dc372535d1780f635b89ef2627cc1} 
+void {\bfseries inicializar\+\_\+pilha\+\_\+estados} (\mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_ad3992144c0ea2a5bd0872c3d8d6d1b58}\label{pilha_8h_ad3992144c0ea2a5bd0872c3d8d6d1b58} 
+int {\bfseries pilha\+\_\+estados\+\_\+vazia} (\mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_a018896dca1518143645c87b7ff96c855}\label{pilha_8h_a018896dca1518143645c87b7ff96c855} 
+int {\bfseries pilha\+\_\+estados\+\_\+cheia} (\mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}} \texorpdfstring{$\ast$}{*}pilha)
+\item 
+\Hypertarget{pilha_8h_ab462ea01c1596419a1847806e044809d}\label{pilha_8h_ab462ea01c1596419a1847806e044809d} 
+void {\bfseries empilhar\+\_\+estado} (\mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}} \texorpdfstring{$\ast$}{*}pilha, \mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} estado)
+\item 
+\Hypertarget{pilha_8h_a4c71823065ee5f1d894cbcf34c1d14de}\label{pilha_8h_a4c71823065ee5f1d894cbcf34c1d14de} 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} {\bfseries desempilhar\+\_\+estado} (\mbox{\hyperlink{structPilhaEstados}{Pilha\+Estados}} \texorpdfstring{$\ast$}{*}pilha)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definições e protótipos para estruturas de dados de pilha. 
+
+
+\begin{DoxyItemize}
+\item Contém implementações para uma pilha de floats (usada para moedas) e uma pilha de estados (usada para o histórico de navegação). 
+\end{DoxyItemize}

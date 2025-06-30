@@ -1,0 +1,7 @@
+<map id="estatisticas.h" name="estatisticas.h">
+<area shape="rect" id="Node000001" title="Protótipos para as funções de geração de estatísticas de vendas." alt="" coords="62,5,171,31"/>
+<area shape="rect" id="Node000002" href="$estatisticas_8c.html" title="Implementação das funções de geração de estatísticas de vendas." alt="" coords="5,79,113,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,43,71,80,67,77,97,40"/>
+<area shape="rect" id="Node000003" href="$states_8c.html" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="137,79,211,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,40,167,77,163,80,132,43"/>
+</map>

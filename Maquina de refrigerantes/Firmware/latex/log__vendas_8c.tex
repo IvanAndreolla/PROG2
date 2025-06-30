@@ -1,0 +1,131 @@
+\doxysection{log\+\_\+vendas.\+c File Reference}
+\hypertarget{log__vendas_8c}{}\label{log__vendas_8c}\index{log\_vendas.c@{log\_vendas.c}}
+
+
+Implementação das funções de gerenciamento de logs de vendas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}log\+\_\+vendas.\+h"{}}\newline
+Include dependency graph for log\+\_\+vendas.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{log__vendas_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{log__vendas_8c_a6ef2013aad88676285cca212635ad068}{adicionar\+\_\+log}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}timestamp, int produto\+\_\+id, float valor\+\_\+pago, float troco)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo log de venda ao início da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{log__vendas_8c_ae18dbc5bb232270de95c47dafab25c01}{salvar\+\_\+logs}} (const char \texorpdfstring{$\ast$}{*}filename, \mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Salva a lista de logs em um arquivo binário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{log__vendas_8c_a9ec739eb08e6cc1ee938fd23a82eeda7}{carregar\+\_\+logs}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Carrega a lista de logs a partir de um arquivo binário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{log__vendas_8c_a3c329131b7f4d6e16240e720c3be4fd6}{liberar\+\_\+logs}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Libera toda a memória alocada para a lista de logs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{log__vendas_8c_a3f0888d81aeda9e2657666860d718e0d}{exibir\+\_\+logs}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Exibe todos os logs de vendas no terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de gerenciamento de logs de vendas. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{log__vendas_8c_a6ef2013aad88676285cca212635ad068}\label{log__vendas_8c_a6ef2013aad88676285cca212635ad068} 
+\index{log\_vendas.c@{log\_vendas.c}!adicionar\_log@{adicionar\_log}}
+\index{adicionar\_log@{adicionar\_log}!log\_vendas.c@{log\_vendas.c}}
+\doxysubsubsection{\texorpdfstring{adicionar\_log()}{adicionar\_log()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{timestamp,  }\item[{int}]{produto\+\_\+id,  }\item[{float}]{valor\+\_\+pago,  }\item[{float}]{troco }\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo log de venda ao início da lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista de logs. \\
+\hline
+\mbox{\texttt{ in}}  & {\em timestamp} & String com a data e hora da venda. \\
+\hline
+\mbox{\texttt{ in}}  & {\em produto\+\_\+id} & ID do produto vendido. \\
+\hline
+\mbox{\texttt{ in}}  & {\em valor\+\_\+pago} & Valor inserido pelo cliente. \\
+\hline
+\mbox{\texttt{ in}}  & {\em troco} & Valor do troco. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova cabeça da lista de logs. 
+\end{DoxyReturn}
+\Hypertarget{log__vendas_8c_a9ec739eb08e6cc1ee938fd23a82eeda7}\label{log__vendas_8c_a9ec739eb08e6cc1ee938fd23a82eeda7} 
+\index{log\_vendas.c@{log\_vendas.c}!carregar\_logs@{carregar\_logs}}
+\index{carregar\_logs@{carregar\_logs}!log\_vendas.c@{log\_vendas.c}}
+\doxysubsubsection{\texorpdfstring{carregar\_logs()}{carregar\_logs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*} carregar\+\_\+logs (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Carrega a lista de logs a partir de um arquivo binário. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Nome do arquivo a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a cabeça da nova lista de logs carregada. 
+\end{DoxyReturn}
+\Hypertarget{log__vendas_8c_a3f0888d81aeda9e2657666860d718e0d}\label{log__vendas_8c_a3f0888d81aeda9e2657666860d718e0d} 
+\index{log\_vendas.c@{log\_vendas.c}!exibir\_logs@{exibir\_logs}}
+\index{exibir\_logs@{exibir\_logs}!log\_vendas.c@{log\_vendas.c}}
+\doxysubsubsection{\texorpdfstring{exibir\_logs()}{exibir\_logs()}}
+{\footnotesize\ttfamily void exibir\+\_\+logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Exibe todos os logs de vendas no terminal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista de logs. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{log__vendas_8c_a3c329131b7f4d6e16240e720c3be4fd6}\label{log__vendas_8c_a3c329131b7f4d6e16240e720c3be4fd6} 
+\index{log\_vendas.c@{log\_vendas.c}!liberar\_logs@{liberar\_logs}}
+\index{liberar\_logs@{liberar\_logs}!log\_vendas.c@{log\_vendas.c}}
+\doxysubsubsection{\texorpdfstring{liberar\_logs()}{liberar\_logs()}}
+{\footnotesize\ttfamily void liberar\+\_\+logs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Libera toda a memória alocada para a lista de logs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista a ser liberada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{log__vendas_8c_ae18dbc5bb232270de95c47dafab25c01}\label{log__vendas_8c_ae18dbc5bb232270de95c47dafab25c01} 
+\index{log\_vendas.c@{log\_vendas.c}!salvar\_logs@{salvar\_logs}}
+\index{salvar\_logs@{salvar\_logs}!log\_vendas.c@{log\_vendas.c}}
+\doxysubsubsection{\texorpdfstring{salvar\_logs()}{salvar\_logs()}}
+{\footnotesize\ttfamily void salvar\+\_\+logs (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename,  }\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Salva a lista de logs em um arquivo binário. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Nome do arquivo de destino. \\
+\hline
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista de logs. \\
+\hline
+\end{DoxyParams}

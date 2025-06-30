@@ -1,0 +1,20 @@
+<map id="log_vendas.h" name="log_vendas.h">
+<area shape="rect" id="Node000001" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="153,5,261,31"/>
+<area shape="rect" id="Node000002" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="95,79,169,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,42,146,80,142,77,183,38"/>
+<area shape="rect" id="Node000004" href="$main_8c.html" title="Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes." alt="" coords="5,152,72,177"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="156,38,119,56,84,81,70,98,59,117,45,152,40,150,54,115,66,95,81,77,116,51,154,33"/>
+<area shape="rect" id="Node000005" href="$states_8c.html" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="193,152,266,177"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="213,44,230,151,225,152,208,45"/>
+<area shape="rect" id="Node000006" href="$estatisticas_8h.html" title="Protótipos para as funções de geração de estatísticas de vendas." alt="" coords="244,79,353,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="234,37,285,76,282,81,230,41"/>
+<area shape="rect" id="Node000008" href="$log__vendas_8c.html" title="Implementação das funções de gerenciamento de logs de vendas." alt="" coords="377,79,484,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="256,32,395,76,394,81,255,37"/>
+<area shape="rect" id="Node000003" href="$config_8c.html" title="Implementação das funcionalidades do menu de configuração." alt="" coords="96,152,168,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,118,135,152,129,152,129,118"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="108,114,56,154,52,150,105,110"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="160,110,215,150,212,154,157,114"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="280,116,242,154,239,150,276,112"/>
+<area shape="rect" id="Node000007" href="$estatisticas_8c.html" title="Implementação das funções de geração de estatísticas de vendas." alt="" coords="290,152,398,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="316,114,339,150,334,153,311,117"/>
+</map>

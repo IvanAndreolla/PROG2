@@ -1,0 +1,83 @@
+\doxysection{produto Struct Reference}
+\hypertarget{structproduto}{}\label{structproduto}\index{produto@{produto}}
+
+
+Estrutura para representar um produto na máquina de refrigerantes.  
+
+
+
+
+{\ttfamily \#include $<$lista\+\_\+produtos.\+h$>$}
+
+
+
+Collaboration diagram for produto\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{structproduto__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structproduto_afda9eec7aba2d91219870174a360dd99}{id}}
+\item 
+char \mbox{\hyperlink{structproduto_a73f5751f0cdfedb0ddf20ca606151f8a}{nome}} \mbox{[}50\mbox{]}
+\item 
+float \mbox{\hyperlink{structproduto_a8309215e5b4ca69c637997d10b217cfe}{preco}}
+\item 
+int \mbox{\hyperlink{structproduto_a3032ee8cb13cd38af30d8c170ccfa08e}{estoque}}
+\item 
+struct \mbox{\hyperlink{structproduto}{produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structproduto_ab4e7e9e688c4a96177d15b968fa37e74}{prox}}
+\item 
+struct \mbox{\hyperlink{structproduto}{produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structproduto_ac9f8b05f663d3c3e4828b8f6e4be7c46}{ant}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura para representar um produto na máquina de refrigerantes. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structproduto_ac9f8b05f663d3c3e4828b8f6e4be7c46}\label{structproduto_ac9f8b05f663d3c3e4828b8f6e4be7c46} 
+\index{produto@{produto}!ant@{ant}}
+\index{ant@{ant}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{ant}{ant}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproduto}{produto}}\texorpdfstring{$\ast$}{*} produto\+::ant}
+
+Ponteiro para o produto anterior na lista. \Hypertarget{structproduto_a3032ee8cb13cd38af30d8c170ccfa08e}\label{structproduto_a3032ee8cb13cd38af30d8c170ccfa08e} 
+\index{produto@{produto}!estoque@{estoque}}
+\index{estoque@{estoque}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{estoque}{estoque}}
+{\footnotesize\ttfamily int produto\+::estoque}
+
+Quantidade disponível em estoque. \Hypertarget{structproduto_afda9eec7aba2d91219870174a360dd99}\label{structproduto_afda9eec7aba2d91219870174a360dd99} 
+\index{produto@{produto}!id@{id}}
+\index{id@{id}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int produto\+::id}
+
+Identificador único do produto. \Hypertarget{structproduto_a73f5751f0cdfedb0ddf20ca606151f8a}\label{structproduto_a73f5751f0cdfedb0ddf20ca606151f8a} 
+\index{produto@{produto}!nome@{nome}}
+\index{nome@{nome}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily char produto\+::nome\mbox{[}50\mbox{]}}
+
+Nome do produto. \Hypertarget{structproduto_a8309215e5b4ca69c637997d10b217cfe}\label{structproduto_a8309215e5b4ca69c637997d10b217cfe} 
+\index{produto@{produto}!preco@{preco}}
+\index{preco@{preco}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{preco}{preco}}
+{\footnotesize\ttfamily float produto\+::preco}
+
+Preço do produto em reais. \Hypertarget{structproduto_ab4e7e9e688c4a96177d15b968fa37e74}\label{structproduto_ab4e7e9e688c4a96177d15b968fa37e74} 
+\index{produto@{produto}!prox@{prox}}
+\index{prox@{prox}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{prox}{prox}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproduto}{produto}}\texorpdfstring{$\ast$}{*} produto\+::prox}
+
+Ponteiro para o próximo produto na lista. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lista__produtos_8h}{lista\+\_\+produtos.\+h}}\end{DoxyCompactItemize}

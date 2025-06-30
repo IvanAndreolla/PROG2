@@ -1,0 +1,115 @@
+\doxysection{states.\+c File Reference}
+\hypertarget{states_8c}{}\label{states_8c}\index{states.c@{states.c}}
+
+
+Implementação das funções de lógica para cada estado da FSM.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}states.\+h"{}}\newline
+{\ttfamily \#include "{}ui.\+h"{}}\newline
+{\ttfamily \#include "{}lista\+\_\+produtos.\+h"{}}\newline
+{\ttfamily \#include "{}pagamento.\+h"{}}\newline
+{\ttfamily \#include "{}log\+\_\+vendas.\+h"{}}\newline
+{\ttfamily \#include "{}estatisticas.\+h"{}}\newline
+Include dependency graph for states.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{states_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{states_8c_a20ecef154f2cf20033ff0ad084818585}{estado\+\_\+menu\+\_\+principal}} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Lógica do estado do menu principal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{states_8c_a06e54282d860eeb6f7e7f7931b918080}{estado\+\_\+selecao\+\_\+produto}} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Lógica do estado de seleção de produto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{states_8c_a37cd3a490db4652d959c5f8e783a2dc8}{estado\+\_\+pagamento}} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Lógica do estado de pagamento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{states_8c_ab595df560f6d64c6327da6b5cd528f59}{estado\+\_\+configuracao}} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Lógica do estado de configuração. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de lógica para cada estado da FSM. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{states_8c_ab595df560f6d64c6327da6b5cd528f59}\label{states_8c_ab595df560f6d64c6327da6b5cd528f59} 
+\index{states.c@{states.c}!estado\_configuracao@{estado\_configuracao}}
+\index{estado\_configuracao@{estado\_configuracao}!states.c@{states.c}}
+\doxysubsubsection{\texorpdfstring{estado\_configuracao()}{estado\_configuracao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} estado\+\_\+configuracao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Lógica do estado de configuração. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em ctx} & \doxylink{structContexto}{Contexto} da aplicação, pode ser modificado pelo menu de configuração. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Próximo estado da FSM (sempre MENU\+\_\+\+PRINCIPAL ao sair do menu de config). 
+\end{DoxyReturn}
+\Hypertarget{states_8c_a20ecef154f2cf20033ff0ad084818585}\label{states_8c_a20ecef154f2cf20033ff0ad084818585} 
+\index{states.c@{states.c}!estado\_menu\_principal@{estado\_menu\_principal}}
+\index{estado\_menu\_principal@{estado\_menu\_principal}!states.c@{states.c}}
+\doxysubsubsection{\texorpdfstring{estado\_menu\_principal()}{estado\_menu\_principal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} estado\+\_\+menu\+\_\+principal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Lógica do estado do menu principal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ctx} & \doxylink{structContexto}{Contexto} da aplicação (usado para acessar logs). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Próximo estado da FSM. 
+\end{DoxyReturn}
+\Hypertarget{states_8c_a37cd3a490db4652d959c5f8e783a2dc8}\label{states_8c_a37cd3a490db4652d959c5f8e783a2dc8} 
+\index{states.c@{states.c}!estado\_pagamento@{estado\_pagamento}}
+\index{estado\_pagamento@{estado\_pagamento}!states.c@{states.c}}
+\doxysubsubsection{\texorpdfstring{estado\_pagamento()}{estado\_pagamento()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} estado\+\_\+pagamento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Lógica do estado de pagamento. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em ctx} & \doxylink{structContexto}{Contexto} da aplicação, usado para obter o produto, decrementar estoque e registrar o log. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Próximo estado da FSM. 
+\end{DoxyReturn}
+\Hypertarget{states_8c_a06e54282d860eeb6f7e7f7931b918080}\label{states_8c_a06e54282d860eeb6f7e7f7931b918080} 
+\index{states.c@{states.c}!estado\_selecao\_produto@{estado\_selecao\_produto}}
+\index{estado\_selecao\_produto@{estado\_selecao\_produto}!states.c@{states.c}}
+\doxysubsubsection{\texorpdfstring{estado\_selecao\_produto()}{estado\_selecao\_produto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} estado\+\_\+selecao\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Lógica do estado de seleção de produto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em ctx} & \doxylink{structContexto}{Contexto} da aplicação, o produto selecionado será armazenado aqui. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Próximo estado da FSM. 
+\end{DoxyReturn}

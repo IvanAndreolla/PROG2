@@ -1,3 +1,9 @@
+/**
+ * @file fila.h
+ * @brief Definições e protótipos para uma estrutura de dados de fila circular.
+ * * Usada para gerenciar as propagandas da máquina.
+ */
+
 #ifndef FILA_H
 #define FILA_H
 
@@ -8,36 +14,36 @@
  * @brief Estrutura para representar uma fila circular de propagandas.
  */
 typedef struct Fila {
-    char mensagens[MAX_PROPAGANDAS][TAMANHO_MAX_MSG]; /**< Array de mensagens. */
+    char mensagens[MAX_PROPAGANDAS][TAMANHO_MAX_MSG]; /**< Array de strings para as mensagens. */
     int frente;                                      /**< Índice da frente da fila. */
     int tras;                                        /**< Índice da traseira da fila. */
     int tamanho;                                     /**< Número de elementos na fila. */
 } Fila;
 
 /**
- * @brief Inicializa a fila de propagandas.
- * @param fila Ponteiro para a fila.
+ * @brief Inicializa a fila.
+ * @param[out] fila Ponteiro para a fila a ser inicializada.
  */
 void inicializar_fila(Fila* fila);
 
 /**
- * @brief Adiciona uma mensagem à fila.
- * @param fila Ponteiro para a fila.
- * @param mensagem Mensagem a ser adicionada.
+ * @brief Adiciona uma mensagem ao final da fila (enfileirar).
+ * @param[in,out] fila Ponteiro para a fila.
+ * @param[in] mensagem Mensagem a ser adicionada.
  */
 void enfileirar(Fila* fila, const char* mensagem);
 
 /**
- * @brief Remove e retorna a mensagem da frente da fila.
- * @param fila Ponteiro para a fila.
- * @return Ponteiro para a mensagem ou NULL se vazia.
+ * @brief Remove e retorna a mensagem da frente da fila (desenfileirar).
+ * @param[in,out] fila Ponteiro para a fila.
+ * @return Ponteiro para a mensagem removida, ou NULL se a fila estiver vazia.
  */
 const char* desenfileirar(Fila* fila);
 
 /**
  * @brief Retorna a mensagem na frente da fila sem removê-la.
- * @param fila Ponteiro para a fila.
- * @return Ponteiro para a mensagem ou NULL se vazia.
+ * @param[in] fila Ponteiro para a fila.
+ * @return Ponteiro para a mensagem da frente, ou NULL se a fila estiver vazia.
  */
 const char* frente_fila(Fila* fila);
 

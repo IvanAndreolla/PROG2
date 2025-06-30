@@ -1,0 +1,28 @@
+\doxysection{log\+\_\+vendas.\+h}
+\hypertarget{log__vendas_8h_source}{}\label{log__vendas_8h_source}\mbox{\hyperlink{log__vendas_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ LOG\_VENDAS\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ LOG\_VENDAS\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structLog}{Log}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structLog_aa4cb96e517065c1f33b274be3fefafe4}{timestamp}}[20];\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structLog_a8fabcdf05c4f42b7c81c607071c74606}{produto\_id}};\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structLog_a7959d83b6143c6030857c545bbb209f1}{valor\_pago}};\ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structLog_aa963e3cc34551710654d354d44f2f094}{troco}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structLog}{Log}}*\ \mbox{\hyperlink{structLog_a5760305228fcb972d8b596fa9cef1289}{prox}};\ \ \ }
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structLog}{Log}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{structLog}{Log}}*\ \mbox{\hyperlink{log__vendas_8h_a6ef2013aad88676285cca212635ad068}{adicionar\_log}}(\mbox{\hyperlink{structLog}{Log}}*\ head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structLog_aa4cb96e517065c1f33b274be3fefafe4}{timestamp}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structLog_a8fabcdf05c4f42b7c81c607071c74606}{produto\_id}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structLog_a7959d83b6143c6030857c545bbb209f1}{valor\_pago}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structLog_aa963e3cc34551710654d354d44f2f094}{troco}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{log__vendas_8h_ae18dbc5bb232270de95c47dafab25c01}{salvar\_logs}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename,\ \mbox{\hyperlink{structLog}{Log}}*\ head);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{structLog}{Log}}*\ \mbox{\hyperlink{log__vendas_8h_a9ec739eb08e6cc1ee938fd23a82eeda7}{carregar\_logs}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{log__vendas_8h_a3c329131b7f4d6e16240e720c3be4fd6}{liberar\_logs}}(\mbox{\hyperlink{structLog}{Log}}*\ head);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{log__vendas_8h_a3f0888d81aeda9e2657666860d718e0d}{exibir\_logs}}(\mbox{\hyperlink{structLog}{Log}}*\ head);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

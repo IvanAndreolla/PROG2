@@ -1,0 +1,9 @@
+<map id="pilha.h" name="pilha.h">
+<area shape="rect" id="Node000001" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="116,5,183,31"/>
+<area shape="rect" id="Node000002" href="$main_8c.html" title="Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes." alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,40,58,81,55,76,119,36"/>
+<area shape="rect" id="Node000003" href="$pagamento_8c.html" title="Implementação das funções de pagamento." alt="" coords="96,79,203,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,44,152,79,147,79,147,44"/>
+<area shape="rect" id="Node000004" href="$pilha_8c.html" title="Implementação da estrutura de dados de pilha." alt="" coords="227,79,293,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,36,243,76,240,81,177,40"/>
+</map>

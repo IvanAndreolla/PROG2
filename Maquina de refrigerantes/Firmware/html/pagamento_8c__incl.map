@@ -1,0 +1,11 @@
+<map id="pagamento.c" name="pagamento.c">
+<area shape="rect" id="Node000001" title="Implementação das funções de pagamento." alt="" coords="97,5,204,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,33,70,73,67,69,131,28"/>
+<area shape="rect" id="Node000003" href="$pagamento_8h.html" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="97,79,205,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,31,153,65,148,65,148,31"/>
+<area shape="rect" id="Node000004" href="$pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="229,79,296,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,28,234,69,231,73,167,33"/>
+<area shape="rect" id="Node000005" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="225,152,300,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="265,104,265,138,260,138,260,104"/>
+</map>

@@ -1,0 +1,87 @@
+\doxysection{estatisticas.\+h File Reference}
+\hypertarget{estatisticas_8h}{}\label{estatisticas_8h}\index{estatisticas.h@{estatisticas.h}}
+
+
+Protótipos para as funções de geração de estatísticas de vendas.  
+
+
+{\ttfamily \#include "{}log\+\_\+vendas.\+h"{}}\newline
+Include dependency graph for estatisticas.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{estatisticas_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{estatisticas_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{estatisticas_8h_a121996d83ba2c43b90dfbddffd75f480}{gerar\+\_\+estatisticas}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}logs)
+\begin{DoxyCompactList}\small\item\em Gera e exibe estatísticas com base nos logs de vendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estatisticas_8h_a67e9adac089d0423c809cb27bcd08d23}{salvar\+\_\+estatisticas\+\_\+csv}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}logs, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Salva as estatísticas de vendas em um arquivo CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Protótipos para as funções de geração de estatísticas de vendas. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{estatisticas_8h_a121996d83ba2c43b90dfbddffd75f480}\label{estatisticas_8h_a121996d83ba2c43b90dfbddffd75f480} 
+\index{estatisticas.h@{estatisticas.h}!gerar\_estatisticas@{gerar\_estatisticas}}
+\index{gerar\_estatisticas@{gerar\_estatisticas}!estatisticas.h@{estatisticas.h}}
+\doxysubsubsection{\texorpdfstring{gerar\_estatisticas()}{gerar\_estatisticas()}}
+{\footnotesize\ttfamily void gerar\+\_\+estatisticas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{logs }\end{DoxyParamCaption})}
+
+
+
+Gera e exibe estatísticas com base nos logs de vendas. 
+
+
+\begin{DoxyItemize}
+\item Calcula o total de vendas, valor arrecadado, valor médio e o produto mais vendido. Também invoca a função para salvar as estatísticas em um arquivo. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em logs} & Ponteiro para a cabeça da lista de logs de vendas.\\
+\hline
+\end{DoxyParams}
+
+\item Calcula o total de vendas, valor arrecadado, valor médio e o produto mais vendido. Também invoca a função para salvar as estatísticas em um arquivo. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em logs} & Ponteiro para a cabeça da lista de logs de vendas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Atualmente, o nome do produto mais vendido é um placeholder. Uma futura implementação poderia usar o contexto para buscar o nome real do produto a partir da lista de produtos. 
+\end{DoxyNote}
+
+\end{DoxyItemize}\Hypertarget{estatisticas_8h_a67e9adac089d0423c809cb27bcd08d23}\label{estatisticas_8h_a67e9adac089d0423c809cb27bcd08d23} 
+\index{estatisticas.h@{estatisticas.h}!salvar\_estatisticas\_csv@{salvar\_estatisticas\_csv}}
+\index{salvar\_estatisticas\_csv@{salvar\_estatisticas\_csv}!estatisticas.h@{estatisticas.h}}
+\doxysubsubsection{\texorpdfstring{salvar\_estatisticas\_csv()}{salvar\_estatisticas\_csv()}}
+{\footnotesize\ttfamily void salvar\+\_\+estatisticas\+\_\+csv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{logs,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Salva as estatísticas de vendas em um arquivo CSV. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em logs} & Ponteiro para a cabeça da lista de logs de vendas. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & O nome do arquivo CSV onde as estatísticas serão salvas. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}

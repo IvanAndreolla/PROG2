@@ -1,8 +1,19 @@
+/**
+ * @file config.c
+ * @brief Implementação das funcionalidades do menu de configuração.
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "config.h"
 #include "lista_produtos.h"
+#include "ui.h" 
 
+/**
+ * @brief Lê um número inteiro da entrada padrão com validação.
+ * * Continua solicitando a entrada até que um número inteiro válido seja fornecido.
+ * @return O número inteiro lido.
+ */
 static int ler_inteiro() {
     char buffer[256];
     int valor;
@@ -18,6 +29,11 @@ static int ler_inteiro() {
     }
 }
 
+/**
+ * @brief Lê um número de ponto flutuante da entrada padrão com validação.
+ * * Continua solicitando a entrada até que um número válido seja fornecido.
+ * @return O número float lido.
+ */
 static float ler_float() {
     char buffer[256];
     float valor;
@@ -33,6 +49,11 @@ static float ler_float() {
     }
 }
 
+/**
+ * @brief Solicita e verifica a senha do administrador.
+ * * Permite até 3 tentativas antes de bloquear o acesso.
+ * @return 1 se a senha estiver correta, 0 caso contrário.
+ */
 int verificar_senha() {
     char senha[50];
     int tentativas = 3;
@@ -52,13 +73,22 @@ int verificar_senha() {
     return 0;
 }
 
+/**
+ * @brief Exibe e gerencia o menu de configuração.
+ *
+ * Permite que o administrador adicione, remova e liste produtos. O acesso
+ * a este menu é protegido por senha.
+ * @param[in,out] ctx Ponteiro para o contexto da aplicação, que será modificado.
+ */
 void menu_configuracao(Contexto *ctx) {
     if (!verificar_senha()) {
+        pausar();
         return;
     }
 
     int op;
     do {
+        limpar_tela();
         printf("\n--- CONFIGURAÇÃO ---\n");
         printf("1. Adicionar produto\n");
         printf("2. Remover produto\n");
@@ -73,15 +103,21 @@ void menu_configuracao(Contexto *ctx) {
             float preco;
             printf("ID: ");
             id = ler_inteiro();
-            printf("Nome: ");
-            if (fgets(nome, sizeof(nome), stdin) != NULL) {
-                nome[strcspn(nome, "\n")] = '\0';
+
+            if (buscar_produto(ctx->lista_produtos, id) != NULL) {
+                printf("\nERRO: O ID %d já está em uso. O produto não foi adicionado.\n", id);
+            } else {
+                printf("Nome: ");
+                if (fgets(nome, sizeof(nome), stdin) != NULL) {
+                    nome[strcspn(nome, "\n")] = '\0';
+                }
+                printf("Preço: ");
+                preco = ler_float();
+                printf("Estoque: ");
+                estoque = ler_inteiro();
+                ctx->lista_produtos = adicionar_produto(ctx->lista_produtos, id, nome, preco, estoque);
+                printf("Produto '%s' adicionado com sucesso!\n", nome);
             }
-            printf("Preço: ");
-            preco = ler_float();
-            printf("Estoque: ");
-            estoque = ler_inteiro();
-            ctx->lista_produtos = adicionar_produto(ctx->lista_produtos, id, nome, preco, estoque);
         } else if (op == 2) {
             int id;
             printf("ID do produto a remover: ");
@@ -90,5 +126,10 @@ void menu_configuracao(Contexto *ctx) {
         } else if (op == 3) {
             listar_produtos(ctx->lista_produtos);
         }
+        
+        if (op != 0) {
+            pausar();
+        }
+
     } while (op != 0);
 }

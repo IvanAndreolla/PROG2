@@ -1,0 +1,5 @@
+<map id="ui.h" name="ui.h">
+<area shape="rect" id="Node000001" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="9,5,56,31"/>
+<area shape="rect" id="Node000002" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="5,79,60,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,31,35,65,30,65,30,31"/>
+</map>

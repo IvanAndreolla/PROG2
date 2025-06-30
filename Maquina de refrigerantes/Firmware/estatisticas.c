@@ -1,11 +1,21 @@
+/**
+ * @file estatisticas.c
+ * @brief Implementação das funções de geração de estatísticas de vendas.
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "estatisticas.h"
-#include "lista_produtos.h"
+#include "lista_produtos.h" // Necessário para buscar nomes de produtos no futuro.
 
 /**
  * @brief Gera e exibe estatísticas com base nos logs de vendas.
- * @param logs Ponteiro para a lista de logs de vendas.
+ * * Calcula o total de vendas, valor arrecadado, valor médio e o produto mais vendido.
+ * Também invoca a função para salvar as estatísticas em um arquivo.
+ * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
+ * @note Atualmente, o nome do produto mais vendido é um placeholder. Uma
+ * futura implementação poderia usar o contexto para buscar o nome real
+ * do produto a partir da lista de produtos.
  */
 void gerar_estatisticas(Log* logs) {
     if (!logs) {
@@ -15,18 +25,20 @@ void gerar_estatisticas(Log* logs) {
 
     int total_vendas = 0;
     float valor_arrecadado = 0.0f;
-    int produtos[100] = {0}; // Suporta até 100 IDs de produtos
+    int produtos[100] = {0};
     int max_vendas = 0;
     int id_mais_vendido = -1;
 
     Log* atual = logs;
     while (atual) {
         total_vendas++;
-        valor_arrecadado += atual->valor_pago;
-        produtos[atual->produto_id]++;
-        if (produtos[atual->produto_id] > max_vendas) {
-            max_vendas = produtos[atual->produto_id];
-            id_mais_vendido = atual->produto_id;
+        valor_arrecadado += atual->produto_id;
+        if(atual->produto_id < 100 && atual->produto_id >= 0) {
+            produtos[atual->produto_id]++;
+            if (produtos[atual->produto_id] > max_vendas) {
+                max_vendas = produtos[atual->produto_id];
+                id_mais_vendido = atual->produto_id;
+            }
         }
         atual = atual->prox;
     }
@@ -34,8 +46,6 @@ void gerar_estatisticas(Log* logs) {
     float valor_medio = total_vendas > 0 ? valor_arrecadado / total_vendas : 0.0f;
     char nome_mais_vendido[50] = "N/A";
     if (id_mais_vendido != -1) {
-        // Supõe que a lista de produtos está acessível globalmente ou via ctx
-        // Aqui, apenas usamos um placeholder, já que ctx não é passado
         snprintf(nome_mais_vendido, sizeof(nome_mais_vendido), "Produto ID %d", id_mais_vendido);
     }
 
@@ -49,9 +59,9 @@ void gerar_estatisticas(Log* logs) {
 }
 
 /**
- * @brief Salva as estatísticas em um arquivo CSV.
- * @param logs Ponteiro para a lista de logs de vendas.
- * @param filename Nome do arquivo CSV.
+ * @brief Salva as estatísticas de vendas em um arquivo CSV.
+ * * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
+ * @param[in] filename O nome do arquivo CSV onde as estatísticas serão salvas.
  */
 void salvar_estatisticas_csv(Log* logs, const char* filename) {
     FILE* f = fopen(filename, "w");
@@ -69,11 +79,13 @@ void salvar_estatisticas_csv(Log* logs, const char* filename) {
     Log* atual = logs;
     while (atual) {
         total_vendas++;
-        valor_arrecadado += atual->valor_pago;
-        produtos[atual->produto_id]++;
-        if (produtos[atual->produto_id] > max_vendas) {
-            max_vendas = produtos[atual->produto_id];
-            id_mais_vendido = atual->produto_id;
+        valor_arrecadado += atual->valor_pago - atual->troco;
+        if(atual->produto_id < 100 && atual->produto_id >= 0) {
+            produtos[atual->produto_id]++;
+            if (produtos[atual->produto_id] > max_vendas) {
+                max_vendas = produtos[atual->produto_id];
+                id_mais_vendido = atual->produto_id;
+            }
         }
         atual = atual->prox;
     }
