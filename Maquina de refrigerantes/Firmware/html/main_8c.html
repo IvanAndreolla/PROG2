@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: main.c File Reference</title>
+<title>Maquina de refrigerantes com Allegro 5: main.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Maquina de refrigerantes com Allegro 5
    </div>
   </td>
  </tr>
@@ -70,71 +70,689 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">main.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes.  
+<p>Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ui_8h_source.html">ui.h</a>&quot;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_font.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_ttf.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_primitives.h&gt;</code><br />
+<code>#include &lt;allegro5/allegro_image.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="states_8h_source.html">states.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="lista__produtos_8h_source.html">lista_produtos.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="log__vendas_8h_source.html">log_vendas.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pagamento_8h_source.html">pagamento.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="estatisticas_8h_source.html">estatisticas.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fila_8h_source.html">fila.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="pilha_8h_source.html">pilha.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#amain_8c" alt=""/></div>
 <map name="amain_8c" id="amain_8c">
-<area shape="rect" title="Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes." alt="" coords="427,5,493,31"/>
+<area shape="rect" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5." alt="" coords="984,5,1051,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,72,104"/>
-<area shape="poly" title=" " alt="" coords="427,26,283,47,86,81,85,76,282,42,426,21"/>
+<area shape="poly" title=" " alt="" coords="984,22,843,24,624,31,360,49,222,63,86,81,85,76,221,58,359,44,623,26,843,18,984,17"/>
 <area shape="rect" title=" " alt="" coords="97,79,167,104"/>
-<area shape="poly" title=" " alt="" coords="427,29,181,81,180,76,426,24"/>
-<area shape="rect" title=" " alt="" coords="192,79,256,104"/>
-<area shape="poly" title=" " alt="" coords="427,32,270,79,268,74,425,27"/>
-<area shape="rect" title=" " alt="" coords="281,79,351,104"/>
-<area shape="poly" title=" " alt="" coords="438,33,353,75,351,70,436,28"/>
-<area shape="rect" href="ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="375,79,422,104"/>
-<area shape="poly" title=" " alt="" coords="452,33,420,70,416,66,448,29"/>
-<area shape="rect" href="fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="391,152,446,177"/>
-<area shape="poly" title=" " alt="" coords="459,32,428,139,423,138,454,30"/>
-<area shape="rect" href="states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="481,152,556,177"/>
-<area shape="poly" title=" " alt="" coords="467,30,511,138,506,140,462,32"/>
-<area shape="rect" href="lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="590,152,717,177"/>
-<area shape="poly" title=" " alt="" coords="494,20,526,26,562,36,598,53,629,77,646,107,654,138,649,139,641,109,625,80,595,57,560,41,525,31,493,25"/>
-<area shape="rect" href="log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="745,152,853,177"/>
-<area shape="poly" title=" " alt="" coords="494,19,563,24,647,35,726,52,756,63,778,77,788,90,795,106,801,137,796,138,790,108,784,93,774,81,754,68,724,57,646,40,562,30,493,24"/>
-<area shape="rect" href="pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="548,79,615,104"/>
-<area shape="poly" title=" " alt="" coords="481,28,551,69,549,74,478,33"/>
-<area shape="rect" href="config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="690,79,763,104"/>
-<area shape="poly" title=" " alt="" coords="494,26,678,74,676,79,493,31"/>
-<area shape="poly" title=" " alt="" coords="405,104,414,138,409,140,399,105"/>
-<area shape="poly" title=" " alt="" coords="573,106,540,143,536,140,569,103"/>
-<area shape="poly" title=" " alt="" coords="716,106,677,144,673,140,713,102"/>
-<area shape="poly" title=" " alt="" coords="740,102,779,140,775,144,737,106"/>
+<area shape="poly" title=" " alt="" coords="984,22,856,25,660,34,425,52,181,81,180,76,425,47,660,29,856,20,984,17"/>
+<area shape="rect" title=" " alt="" coords="191,79,262,104"/>
+<area shape="poly" title=" " alt="" coords="984,23,696,37,490,55,276,82,275,76,490,49,696,32,984,18"/>
+<area shape="rect" title=" " alt="" coords="287,79,351,104"/>
+<area shape="poly" title=" " alt="" coords="984,24,728,40,551,57,370,81,365,82,364,77,369,76,550,52,728,35,984,18"/>
+<area shape="rect" title=" " alt="" coords="755,225,891,251"/>
+<area shape="poly" title=" " alt="" coords="984,23,849,27,668,37,502,55,445,67,426,73,415,81,402,99,396,116,397,131,405,145,418,158,437,170,486,190,548,205,615,217,741,230,741,235,614,222,547,210,485,195,434,175,415,162,400,149,392,133,391,116,397,97,411,77,424,69,443,61,501,49,667,32,849,22,984,17"/>
+<area shape="rect" title=" " alt="" coords="426,79,595,104"/>
+<area shape="poly" title=" " alt="" coords="984,27,606,79,605,74,983,21"/>
+<area shape="rect" title=" " alt="" coords="620,79,777,104"/>
+<area shape="poly" title=" " alt="" coords="984,29,764,78,763,73,983,24"/>
+<area shape="rect" title=" " alt="" coords="802,79,1011,104"/>
+<area shape="poly" title=" " alt="" coords="1001,33,938,73,935,69,998,28"/>
+<area shape="rect" title=" " alt="" coords="1036,79,1220,104"/>
+<area shape="poly" title=" " alt="" coords="1037,28,1100,69,1097,73,1034,33"/>
+<area shape="rect" href="config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="1295,79,1369,104"/>
+<area shape="poly" title=" " alt="" coords="1052,24,1283,76,1282,81,1050,29"/>
+<area shape="rect" href="lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="1194,152,1321,177"/>
+<area shape="poly" title=" " alt="" coords="1051,16,1092,20,1141,29,1191,47,1214,60,1234,77,1244,91,1252,106,1259,138,1254,139,1247,108,1240,93,1230,81,1210,64,1188,52,1140,34,1092,25,1051,22"/>
+<area shape="rect" href="log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="1353,152,1461,177"/>
+<area shape="poly" title=" " alt="" coords="1051,18,1130,22,1228,32,1320,50,1356,62,1382,77,1393,90,1401,106,1408,137,1403,138,1396,107,1389,93,1378,81,1354,67,1319,55,1227,38,1129,28,1051,23"/>
+<area shape="rect" href="states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="1444,79,1519,104"/>
+<area shape="poly" title=" " alt="" coords="1051,21,1213,43,1426,76,1430,77,1429,82,1425,81,1212,48,1050,26"/>
+<area shape="rect" href="pagamento_8h.html" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="1543,79,1651,104"/>
+<area shape="poly" title=" " alt="" coords="1051,20,1250,41,1530,76,1529,81,1249,46,1051,25"/>
+<area shape="rect" href="estatisticas_8h.html" title="Protótipos e estruturas para as funções de geração de estatísticas." alt="" coords="1676,79,1785,104"/>
+<area shape="poly" title=" " alt="" coords="1051,19,1301,38,1478,55,1663,76,1662,81,1477,60,1301,43,1051,24"/>
+<area shape="rect" href="fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="1810,79,1865,104"/>
+<area shape="poly" title=" " alt="" coords="1051,17,1171,19,1353,28,1571,46,1685,59,1797,77,1796,82,1684,64,1570,51,1353,33,1171,25,1051,22"/>
+<area shape="poly" title=" " alt="" coords="1322,106,1281,144,1278,141,1318,102"/>
+<area shape="poly" title=" " alt="" coords="1346,102,1386,141,1383,144,1342,106"/>
+<area shape="poly" title=" " alt="" coords="1194,179,905,226,904,221,1193,174"/>
+<area shape="poly" title=" " alt="" coords="1679,107,1473,152,1472,146,1678,101"/>
 </map>
 </div>
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnimacaoQueda.html">AnimacaoQueda</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Armazena os dados para a animação de queda de um produto.  <a href="structAnimacaoQueda.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAnimacaoEntrega.html">AnimacaoEntrega</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Armazena os dados para a animação de entrega do produto ao cliente.  <a href="structAnimacaoEntrega.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0f63b4b6f1fe36fbcd37583ffbce997a" id="r_a0f63b4b6f1fe36fbcd37583ffbce997a"><td class="memItemLeft" align="right" valign="top"><a id="a0f63b4b6f1fe36fbcd37583ffbce997a" name="a0f63b4b6f1fe36fbcd37583ffbce997a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LARGURA_JANELA</b>&#160;&#160;&#160;1280</td></tr>
+<tr class="separator:a0f63b4b6f1fe36fbcd37583ffbce997a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3ab39c7b54ac25788386e853d1fffc" id="r_a3c3ab39c7b54ac25788386e853d1fffc"><td class="memItemLeft" align="right" valign="top"><a id="a3c3ab39c7b54ac25788386e853d1fffc" name="a3c3ab39c7b54ac25788386e853d1fffc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ALTURA_JANELA</b>&#160;&#160;&#160;720</td></tr>
+<tr class="separator:a3c3ab39c7b54ac25788386e853d1fffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ca5ab87034a348decad7ee8d4bd1b" id="r_ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memItemLeft" align="right" valign="top"><a id="ac92ca5ab87034a348decad7ee8d4bd1b" name="ac92ca5ab87034a348decad7ee8d4bd1b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FPS</b>&#160;&#160;&#160;60.0</td></tr>
+<tr class="separator:ac92ca5ab87034a348decad7ee8d4bd1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae19f52708f679cc2af4e2c33943914" id="r_a3ae19f52708f679cc2af4e2c33943914"><td class="memItemLeft" align="right" valign="top"><a id="a3ae19f52708f679cc2af4e2c33943914" name="a3ae19f52708f679cc2af4e2c33943914"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TELA_X</b>&#160;&#160;&#160;607</td></tr>
+<tr class="separator:a3ae19f52708f679cc2af4e2c33943914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e110a3a4ca72906bd2d3bc505735b31" id="r_a7e110a3a4ca72906bd2d3bc505735b31"><td class="memItemLeft" align="right" valign="top"><a id="a7e110a3a4ca72906bd2d3bc505735b31" name="a7e110a3a4ca72906bd2d3bc505735b31"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TELA_Y</b>&#160;&#160;&#160;130</td></tr>
+<tr class="separator:a7e110a3a4ca72906bd2d3bc505735b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2f746df6889e0255a635c9fff490fe" id="r_a5c2f746df6889e0255a635c9fff490fe"><td class="memItemLeft" align="right" valign="top"><a id="a5c2f746df6889e0255a635c9fff490fe" name="a5c2f746df6889e0255a635c9fff490fe"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TELA_LARGURA</b>&#160;&#160;&#160;159</td></tr>
+<tr class="separator:a5c2f746df6889e0255a635c9fff490fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18bb49d2ce68f4af9651cad0173968f0" id="r_a18bb49d2ce68f4af9651cad0173968f0"><td class="memItemLeft" align="right" valign="top"><a id="a18bb49d2ce68f4af9651cad0173968f0" name="a18bb49d2ce68f4af9651cad0173968f0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TELA_ALTURA</b>&#160;&#160;&#160;190</td></tr>
+<tr class="separator:a18bb49d2ce68f4af9651cad0173968f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ac286f24348d97bc3272999e3345d5" id="r_af5ac286f24348d97bc3272999e3345d5"><td class="memItemLeft" align="right" valign="top"><a id="af5ac286f24348d97bc3272999e3345d5" name="af5ac286f24348d97bc3272999e3345d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROPAGANDA_X</b>&#160;&#160;&#160;335</td></tr>
+<tr class="separator:af5ac286f24348d97bc3272999e3345d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5434317b077cf90150f8e3d7375aa776" id="r_a5434317b077cf90150f8e3d7375aa776"><td class="memItemLeft" align="right" valign="top"><a id="a5434317b077cf90150f8e3d7375aa776" name="a5434317b077cf90150f8e3d7375aa776"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROPAGANDA_Y</b>&#160;&#160;&#160;110</td></tr>
+<tr class="separator:a5434317b077cf90150f8e3d7375aa776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab741dab6cacac69ffff256a25121e39f" id="r_ab741dab6cacac69ffff256a25121e39f"><td class="memItemLeft" align="right" valign="top"><a id="ab741dab6cacac69ffff256a25121e39f" name="ab741dab6cacac69ffff256a25121e39f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROPAGANDA_LARGURA</b>&#160;&#160;&#160;220</td></tr>
+<tr class="separator:ab741dab6cacac69ffff256a25121e39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f92aeb296c2fda8c9ed0e08be975bf" id="r_ac5f92aeb296c2fda8c9ed0e08be975bf"><td class="memItemLeft" align="right" valign="top"><a id="ac5f92aeb296c2fda8c9ed0e08be975bf" name="ac5f92aeb296c2fda8c9ed0e08be975bf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PROPAGANDA_ALTURA</b>&#160;&#160;&#160;60</td></tr>
+<tr class="separator:ac5f92aeb296c2fda8c9ed0e08be975bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8123cb9389dd3e195237af46f91484e8" id="r_a8123cb9389dd3e195237af46f91484e8"><td class="memItemLeft" align="right" valign="top"><a id="a8123cb9389dd3e195237af46f91484e8" name="a8123cb9389dd3e195237af46f91484e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PORTA_X</b>&#160;&#160;&#160;400</td></tr>
+<tr class="separator:a8123cb9389dd3e195237af46f91484e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac87ceef6bceb4f31c6ebafbee36bef1" id="r_aac87ceef6bceb4f31c6ebafbee36bef1"><td class="memItemLeft" align="right" valign="top"><a id="aac87ceef6bceb4f31c6ebafbee36bef1" name="aac87ceef6bceb4f31c6ebafbee36bef1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PORTA_Y</b>&#160;&#160;&#160;560</td></tr>
+<tr class="separator:aac87ceef6bceb4f31c6ebafbee36bef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a177811c82f287ee866f8c2c05402ae50" id="r_a177811c82f287ee866f8c2c05402ae50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a177811c82f287ee866f8c2c05402ae50">desenhar_produtos_estaticos</a> (<a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *lista_produtos, <a class="el" href="structAnimacaoQueda.html">AnimacaoQueda</a> *animacao_atual)</td></tr>
+<tr class="memdesc:a177811c82f287ee866f8c2c05402ae50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha os produtos na vitrine da máquina.  <br /></td></tr>
+<tr class="separator:a177811c82f287ee866f8c2c05402ae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2a05239f7c67d8a431f97eb243a715" id="r_a4d2a05239f7c67d8a431f97eb243a715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a4d2a05239f7c67d8a431f97eb243a715">desenhar_menu_principal</a> (ALLEGRO_FONT *fonte, int indice_selecionado)</td></tr>
+<tr class="memdesc:a4d2a05239f7c67d8a431f97eb243a715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha o menu principal na tela da máquina.  <br /></td></tr>
+<tr class="separator:a4d2a05239f7c67d8a431f97eb243a715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fc0774f6b68ed364c97363e9d5bffa" id="r_a17fc0774f6b68ed364c97363e9d5bffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a17fc0774f6b68ed364c97363e9d5bffa">desenhar_tela_propaganda</a> (ALLEGRO_FONT *fonte, const char *propaganda)</td></tr>
+<tr class="memdesc:a17fc0774f6b68ed364c97363e9d5bffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a mensagem de propaganda na área designada.  <br /></td></tr>
+<tr class="separator:a17fc0774f6b68ed364c97363e9d5bffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d35c91265cb43c1b90440d6472c6c32" id="r_a2d35c91265cb43c1b90440d6472c6c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2d35c91265cb43c1b90440d6472c6c32">desenhar_tela_produtos</a> (ALLEGRO_FONT *fonte, <a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *lista_produtos, int indice_selecionado)</td></tr>
+<tr class="memdesc:a2d35c91265cb43c1b90440d6472c6c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela de seleção de produtos.  <br /></td></tr>
+<tr class="separator:a2d35c91265cb43c1b90440d6472c6c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3387ebf9815a26f6dcd50d52c36cc6d5" id="r_a3387ebf9815a26f6dcd50d52c36cc6d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3387ebf9815a26f6dcd50d52c36cc6d5">desenhar_tela_pagamento</a> (ALLEGRO_FONT *fonte, <a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *produto_selecionado, float valor_inserido, int botao_pressionado_id)</td></tr>
+<tr class="memdesc:a3387ebf9815a26f6dcd50d52c36cc6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela de pagamento para um produto selecionado.  <br /></td></tr>
+<tr class="separator:a3387ebf9815a26f6dcd50d52c36cc6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae98d854651b4e4390e631469d6d2f56f" id="r_ae98d854651b4e4390e631469d6d2f56f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae98d854651b4e4390e631469d6d2f56f">desenhar_tela_estatisticas</a> (ALLEGRO_FONT *fonte, <a class="el" href="structContexto.html">Contexto</a> *ctx)</td></tr>
+<tr class="memdesc:ae98d854651b4e4390e631469d6d2f56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela de estatísticas de vendas.  <br /></td></tr>
+<tr class="separator:ae98d854651b4e4390e631469d6d2f56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5130a7d83677714b9ceb832fe50f8853" id="r_a5130a7d83677714b9ceb832fe50f8853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5130a7d83677714b9ceb832fe50f8853">desenhar_tela_senha</a> (ALLEGRO_FONT *fonte, const char *senha_digitada, bool cursor_visivel)</td></tr>
+<tr class="memdesc:a5130a7d83677714b9ceb832fe50f8853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela de inserção de senha para acesso à configuração.  <br /></td></tr>
+<tr class="separator:a5130a7d83677714b9ceb832fe50f8853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ada6c1984145c8105c56d4df71248e1" id="r_a6ada6c1984145c8105c56d4df71248e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6ada6c1984145c8105c56d4df71248e1">desenhar_menu_config</a> (ALLEGRO_FONT *fonte, int indice_selecionado)</td></tr>
+<tr class="memdesc:a6ada6c1984145c8105c56d4df71248e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha o menu principal de configurações.  <br /></td></tr>
+<tr class="separator:a6ada6c1984145c8105c56d4df71248e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d96966343b0b18435e0981713f473cb" id="r_a7d96966343b0b18435e0981713f473cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7d96966343b0b18435e0981713f473cb">desenhar_tela_add_produto</a> (ALLEGRO_FONT *fonte, char *id, char *nome, char *preco, char *estoque, char *img_path, char *pos_x, char *pos_y, int campo_ativo, bool cursor_visivel)</td></tr>
+<tr class="memdesc:a7d96966343b0b18435e0981713f473cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha o formulário para adicionar um novo produto.  <br /></td></tr>
+<tr class="separator:a7d96966343b0b18435e0981713f473cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75c4c5fbb48184e8b1ae7c62a333f81" id="r_ad75c4c5fbb48184e8b1ae7c62a333f81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad75c4c5fbb48184e8b1ae7c62a333f81">desenhar_tela_remove_produto</a> (ALLEGRO_FONT *fonte, char *id_str, bool cursor_visivel)</td></tr>
+<tr class="memdesc:ad75c4c5fbb48184e8b1ae7c62a333f81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela para remover um produto.  <br /></td></tr>
+<tr class="separator:ad75c4c5fbb48184e8b1ae7c62a333f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93559e4a51e6517189e884f2e160713d" id="r_a93559e4a51e6517189e884f2e160713d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a93559e4a51e6517189e884f2e160713d">desenhar_tela_atualizar_estoque</a> (ALLEGRO_FONT *fonte, char *id_str, char *estoque_str, int campo_ativo, bool cursor_visivel)</td></tr>
+<tr class="memdesc:a93559e4a51e6517189e884f2e160713d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha a tela para atualizar o estoque de um produto.  <br /></td></tr>
+<tr class="separator:a93559e4a51e6517189e884f2e160713d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal que executa a máquina de refrigerantes.  <br /></td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função principal da aplicação.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes. </p>
-<ul>
-<li>Este arquivo inicializa todas as estruturas de dados, gerencia a máquina de estados finitos (FSM) e controla o fluxo principal da aplicação. </li>
-</ul>
+<div class="textblock"><p>Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5. </p>
+<p>Este arquivo inicializa a biblioteca Allegro, cria a janela, gerencia o laço de eventos principal e controla a máquina de estados finitos que rege a aplicação. Toda a lógica de renderização das telas e de interação do usuário (teclado e mouse) está contida aqui. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a6ada6c1984145c8105c56d4df71248e1" name="a6ada6c1984145c8105c56d4df71248e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ada6c1984145c8105c56d4df71248e1">&#9670;&#160;</a></span>desenhar_menu_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_menu_config </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indice_selecionado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha o menu principal de configurações. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">indice_selecionado</td><td>Índice da opção de configuração selecionada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d2a05239f7c67d8a431f97eb243a715" name="a4d2a05239f7c67d8a431f97eb243a715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2a05239f7c67d8a431f97eb243a715">&#9670;&#160;</a></span>desenhar_menu_principal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_menu_principal </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indice_selecionado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha o menu principal na tela da máquina. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">indice_selecionado</td><td>Índice da opção de menu atualmente selecionada. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a177811c82f287ee866f8c2c05402ae50" name="a177811c82f287ee866f8c2c05402ae50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a177811c82f287ee866f8c2c05402ae50">&#9670;&#160;</a></span>desenhar_produtos_estaticos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_produtos_estaticos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *&#160;</td>
+          <td class="paramname"><em>lista_produtos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structAnimacaoQueda.html">AnimacaoQueda</a> *&#160;</td>
+          <td class="paramname"><em>animacao_atual</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha os produtos na vitrine da máquina. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lista_produtos</td><td>Ponteiro para a lista de produtos. </td></tr>
+    <tr><td class="paramname">animacao_atual</td><td>Ponteiro para a animação de queda, para não desenhar o produto que está caindo. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7d96966343b0b18435e0981713f473cb" name="a7d96966343b0b18435e0981713f473cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d96966343b0b18435e0981713f473cb">&#9670;&#160;</a></span>desenhar_tela_add_produto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_add_produto </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>preco</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>estoque</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>img_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pos_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pos_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>campo_ativo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cursor_visivel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha o formulário para adicionar um novo produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">id</td><td>String para o campo ID. </td></tr>
+    <tr><td class="paramname">nome</td><td>String para o campo Nome. </td></tr>
+    <tr><td class="paramname">preco</td><td>String para o campo Preço. </td></tr>
+    <tr><td class="paramname">estoque</td><td>String para o campo Estoque. </td></tr>
+    <tr><td class="paramname">img_path</td><td>String para o caminho da imagem. </td></tr>
+    <tr><td class="paramname">pos_x</td><td>String para a posição X. </td></tr>
+    <tr><td class="paramname">pos_y</td><td>String para a posição Y. </td></tr>
+    <tr><td class="paramname">campo_ativo</td><td>Índice do campo do formulário atualmente ativo. </td></tr>
+    <tr><td class="paramname">cursor_visivel</td><td>Flag para controlar o piscar do cursor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93559e4a51e6517189e884f2e160713d" name="a93559e4a51e6517189e884f2e160713d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93559e4a51e6517189e884f2e160713d">&#9670;&#160;</a></span>desenhar_tela_atualizar_estoque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_atualizar_estoque </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>id_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>estoque_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>campo_ativo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cursor_visivel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela para atualizar o estoque de um produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">id_str</td><td>String para o campo ID. </td></tr>
+    <tr><td class="paramname">estoque_str</td><td>String para o novo valor de estoque. </td></tr>
+    <tr><td class="paramname">campo_ativo</td><td>Índice do campo do formulário atualmente ativo. </td></tr>
+    <tr><td class="paramname">cursor_visivel</td><td>Flag para controlar o piscar do cursor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae98d854651b4e4390e631469d6d2f56f" name="ae98d854651b4e4390e631469d6d2f56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98d854651b4e4390e631469d6d2f56f">&#9670;&#160;</a></span>desenhar_tela_estatisticas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_estatisticas </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structContexto.html">Contexto</a> *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela de estatísticas de vendas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">ctx</td><td>Ponteiro para o contexto da aplicação, contendo os logs de vendas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3387ebf9815a26f6dcd50d52c36cc6d5" name="a3387ebf9815a26f6dcd50d52c36cc6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3387ebf9815a26f6dcd50d52c36cc6d5">&#9670;&#160;</a></span>desenhar_tela_pagamento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_pagamento </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *&#160;</td>
+          <td class="paramname"><em>produto_selecionado</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>valor_inserido</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>botao_pressionado_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela de pagamento para um produto selecionado. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">produto_selecionado</td><td>Ponteiro para o produto que está sendo comprado. </td></tr>
+    <tr><td class="paramname">valor_inserido</td><td>Valor monetário já inserido pelo usuário. </td></tr>
+    <tr><td class="paramname">botao_pressionado_id</td><td>ID do botão sendo pressionado (para feedback visual). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d35c91265cb43c1b90440d6472c6c32" name="a2d35c91265cb43c1b90440d6472c6c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d35c91265cb43c1b90440d6472c6c32">&#9670;&#160;</a></span>desenhar_tela_produtos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_produtos </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lista__produtos_8h.html#aab5e6b4227111edb38705df89c619b76">Produto</a> *&#160;</td>
+          <td class="paramname"><em>lista_produtos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indice_selecionado</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela de seleção de produtos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">lista_produtos</td><td>Ponteiro para a lista de produtos a ser exibida. </td></tr>
+    <tr><td class="paramname">indice_selecionado</td><td>Índice do produto atualmente selecionado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17fc0774f6b68ed364c97363e9d5bffa" name="a17fc0774f6b68ed364c97363e9d5bffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fc0774f6b68ed364c97363e9d5bffa">&#9670;&#160;</a></span>desenhar_tela_propaganda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_propaganda </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>propaganda</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a mensagem de propaganda na área designada. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">propaganda</td><td>String contendo a propaganda a ser exibida. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad75c4c5fbb48184e8b1ae7c62a333f81" name="ad75c4c5fbb48184e8b1ae7c62a333f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75c4c5fbb48184e8b1ae7c62a333f81">&#9670;&#160;</a></span>desenhar_tela_remove_produto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_remove_produto </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>id_str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cursor_visivel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela para remover um produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">id_str</td><td>String para o campo ID do produto a ser removido. </td></tr>
+    <tr><td class="paramname">cursor_visivel</td><td>Flag para controlar o piscar do cursor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5130a7d83677714b9ceb832fe50f8853" name="a5130a7d83677714b9ceb832fe50f8853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5130a7d83677714b9ceb832fe50f8853">&#9670;&#160;</a></span>desenhar_tela_senha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void desenhar_tela_senha </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_FONT *&#160;</td>
+          <td class="paramname"><em>fonte</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>senha_digitada</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>cursor_visivel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desenha a tela de inserção de senha para acesso à configuração. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fonte</td><td>Ponteiro para a fonte a ser usada. </td></tr>
+    <tr><td class="paramname">senha_digitada</td><td>String com a senha atualmente digitada pelo usuário. </td></tr>
+    <tr><td class="paramname">cursor_visivel</td><td>Flag para controlar o piscar do cursor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
@@ -150,11 +768,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Função principal que executa a máquina de refrigerantes. </p>
-<ul>
-<li>Inicializa o contexto, as estruturas de dados, carrega os dados de arquivos e entra no loop da máquina de estados. Ao sair, salva os dados e libera a memória alocada. <dl class="section return"><dt>Returns</dt><dd>0 em caso de sucesso, 1 em caso de erro de alocação. </dd></dl>
-</li>
-</ul>
+<p>Função principal da aplicação. </p>
+<p>Inicializa o Allegro, carrega recursos, gerencia o laço de eventos (entradas do usuário, timer, redesenho da tela) e, ao final, salva os dados e libera os recursos alocados. </p><dl class="section return"><dt>Returns</dt><dd>0 em caso de sucesso, -1 em caso de erro de inicialização. </dd></dl>
 
 </div>
 </div>

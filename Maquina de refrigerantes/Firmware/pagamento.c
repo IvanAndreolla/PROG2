@@ -1,6 +1,9 @@
 /**
  * @file pagamento.c
  * @brief Implementação das funções de pagamento.
+ * @note Este módulo contém implementações originalmente pensadas para uma versão de
+ * console. Na versão gráfica final (main.c), a função `inserir_moedas` é substituída
+ * por uma lógica de interface gráfica. A função `calcular_troco` continua sendo utilizada.
  */
 
 #include <stdio.h>
@@ -9,7 +12,7 @@
 
 /**
  * @brief Pilha estática para armazenar as moedas inseridas em uma transação.
- * * Usada pela funcionalidade de "desfazer".
+ * @details Usada pela funcionalidade de "desfazer" na versão console.
  */
 static Pilha moedas;
 
@@ -21,8 +24,8 @@ static void inicializar_moedas() {
 }
 
 /**
- * @brief Coleta as moedas inseridas pelo usuário.
- * * A função usa um ponteiro para retornar o valor total acumulado.
+ * @brief Coleta as moedas inseridas pelo usuário (versão console).
+ * @details A função usa um ponteiro para retornar o valor total acumulado.
  * O valor de retorno da função indica o status da operação.
  * @param[out] valor_acumulado Ponteiro para a variável que armazenará o total inserido.
  * @return 1 se a operação foi concluída com sucesso (usuário digitou 0).

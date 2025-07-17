@@ -5,6 +5,15 @@
 Definições e protótipos para a lista duplamente encadeada de produtos.  
 
 
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+Include dependency graph for lista\+\_\+produtos.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{lista__produtos_8h__incl}
+\end{center}
+\end{figure}
 This graph shows which files directly or indirectly include this file\+:
 \nopagebreak
 \begin{figure}[H]
@@ -13,7 +22,7 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=350pt]{lista__produtos_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structproduto}{produto}}
@@ -27,7 +36,7 @@ typedef struct \mbox{\hyperlink{structproduto}{produto}} {\bfseries Produto}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8h_a40e96781cf0250c5c440078eedf133ee}{adicionar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}nome, float preco, int estoque)
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8h_afed84dc4b88c3d291ff6ab48983a7ab5}{adicionar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}nome, float preco, int estoque, const char \texorpdfstring{$\ast$}{*}img\+\_\+path, float pos\+\_\+x, float pos\+\_\+y)
 \begin{DoxyCompactList}\small\item\em Adiciona um novo produto ao início da lista duplamente encadeada. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8h_aa43d104180d153dfc883772654d1b54c}{remover\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id)
 \begin{DoxyCompactList}\small\item\em Remove um produto da lista pelo seu ID. \end{DoxyCompactList}\item 
@@ -49,11 +58,11 @@ Definições e protótipos para a lista duplamente encadeada de produtos.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{lista__produtos_8h_a40e96781cf0250c5c440078eedf133ee}\label{lista__produtos_8h_a40e96781cf0250c5c440078eedf133ee} 
+\Hypertarget{lista__produtos_8h_afed84dc4b88c3d291ff6ab48983a7ab5}\label{lista__produtos_8h_afed84dc4b88c3d291ff6ab48983a7ab5} 
 \index{lista\_produtos.h@{lista\_produtos.h}!adicionar\_produto@{adicionar\_produto}}
 \index{adicionar\_produto@{adicionar\_produto}!lista\_produtos.h@{lista\_produtos.h}}
 \doxysubsubsection{\texorpdfstring{adicionar\_produto()}{adicionar\_produto()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{float}]{preco,  }\item[{int}]{estoque }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{float}]{preco,  }\item[{int}]{estoque,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{img\+\_\+path,  }\item[{float}]{pos\+\_\+x,  }\item[{float}]{pos\+\_\+y }\end{DoxyParamCaption})}
 
 
 
@@ -70,6 +79,12 @@ Adiciona um novo produto ao início da lista duplamente encadeada.
 \mbox{\texttt{ in}}  & {\em preco} & Preço do novo produto. \\
 \hline
 \mbox{\texttt{ in}}  & {\em estoque} & Quantidade em estoque do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em img\+\_\+path} & Caminho do arquivo de imagem para a animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+x} & Posição X inicial da animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+y} & Posição Y inicial da animação. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

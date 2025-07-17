@@ -6,16 +6,25 @@
 #ifndef LISTA_PRODUTOS_H
 #define LISTA_PRODUTOS_H
 
+#include <allegro5/allegro.h>
+
 /**
  * @brief Estrutura para representar um produto na máquina de refrigerantes.
  */
 typedef struct produto {
-    int id;                /**< Identificador único do produto. */
-    char nome[50];         /**< Nome do produto. */
-    float preco;           /**< Preço do produto em reais. */
-    int estoque;           /**< Quantidade disponível em estoque. */
+    int id;                   /**< Identificador único do produto. */
+    char nome[50];            /**< Nome do produto. */
+    float preco;                /**< Preço do produto em reais. */
+    int estoque;                /**< Quantidade disponível em estoque. */
+
+    // --- CAMPOS ADICIONADOS PARA ANIMAÇÃO ---
+    char imagem_path[100];      /**< Caminho do arquivo de imagem para a animação. */
+    float pos_x_inicial;        /**< Posição X inicial para a animação de queda. */
+    float pos_y_inicial;        /**< Posição Y inicial para a animação de queda. */
+    ALLEGRO_BITMAP* imagem_animacao; /**< Ponteiro para o bitmap da animação carregado. */
+
     struct produto* prox;   /**< Ponteiro para o próximo produto na lista. */
-    struct produto* ant;   /**< Ponteiro para o produto anterior na lista. */
+    struct produto* ant;    /**< Ponteiro para o produto anterior na lista. */
 } Produto;
 
 /**
@@ -25,9 +34,12 @@ typedef struct produto {
  * @param[in] nome Nome do novo produto.
  * @param[in] preco Preço do novo produto.
  * @param[in] estoque Quantidade em estoque do novo produto.
+ * @param[in] img_path Caminho do arquivo de imagem para a animação.
+ * @param[in] pos_x Posição X inicial da animação.
+ * @param[in] pos_y Posição Y inicial da animação.
  * @return Ponteiro para a nova cabeça da lista.
  */
-Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco, int estoque);
+Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco, int estoque, const char* img_path, float pos_x, float pos_y);
 
 /**
  * @brief Remove um produto da lista pelo seu ID.

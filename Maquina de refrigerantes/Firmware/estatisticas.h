@@ -1,6 +1,6 @@
 /**
  * @file estatisticas.h
- * @brief Protótipos para as funções de geração de estatísticas de vendas.
+ * @brief Protótipos e estruturas para as funções de geração de estatísticas.
  */
 
 #ifndef ESTATISTICAS_H
@@ -9,16 +9,26 @@
 #include "log_vendas.h"
 
 /**
- * @brief Gera e exibe estatísticas com base nos logs de vendas.
- * * Calcula o total de vendas, valor arrecadado, valor médio e o produto mais vendido.
- * Também invoca a função para salvar as estatísticas em um arquivo.
- * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
+ * @brief Estrutura para armazenar os dados das estatísticas calculadas.
  */
-void gerar_estatisticas(Log* logs);
+typedef struct {
+    int total_vendas;
+    float valor_arrecadado;
+    float valor_medio;
+    int id_mais_vendido;
+    int qtd_mais_vendido;
+} EstatisticasData;
+
+/**
+ * @brief Calcula as estatísticas com base nos logs e preenche uma struct.
+ * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
+ * @param[out] data Ponteiro para a struct que será preenchida com os dados.
+ */
+void calcular_estatisticas(Log* logs, EstatisticasData* data);
 
 /**
  * @brief Salva as estatísticas de vendas em um arquivo CSV.
- * * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
+ * @param[in] logs Ponteiro para a cabeça da lista de logs de vendas.
  * @param[in] filename O nome do arquivo CSV onde as estatísticas serão salvas.
  */
 void salvar_estatisticas_csv(Log* logs, const char* filename);

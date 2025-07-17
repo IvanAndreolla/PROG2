@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: states.h File Reference</title>
+<title>Maquina de refrigerantes com Allegro 5: states.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Maquina de refrigerantes com Allegro 5
    </div>
   </td>
  </tr>
@@ -83,18 +83,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="states_8h__dep__incl.png" border="0" usemap="#astates_8hdep" alt=""/></div>
 <map name="astates_8hdep" id="astates_8hdep">
-<area shape="rect" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="101,5,176,31"/>
-<area shape="rect" href="main_8c.html" title="Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes." alt="" coords="5,152,72,177"/>
-<area shape="poly" title=" " alt="" coords="123,43,96,80,48,153,44,150,91,77,119,40"/>
-<area shape="rect" href="pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="105,79,172,104"/>
-<area shape="poly" title=" " alt="" coords="141,44,141,79,136,79,136,44"/>
-<area shape="rect" href="states_8c.html" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="197,79,270,104"/>
-<area shape="poly" title=" " alt="" coords="166,37,219,76,216,81,163,41"/>
-<area shape="poly" title=" " alt="" coords="113,114,57,154,53,150,110,110"/>
-<area shape="rect" href="pagamento_8c.html" title="Implementação das funções de pagamento." alt="" coords="96,152,203,177"/>
-<area shape="poly" title=" " alt="" coords="145,117,150,151,145,152,140,118"/>
-<area shape="rect" href="pilha_8c.html" title="Implementação da estrutura de dados de pilha." alt="" coords="227,152,293,177"/>
-<area shape="poly" title=" " alt="" coords="172,109,241,149,239,154,169,113"/>
+<area shape="rect" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="92,5,167,31"/>
+<area shape="rect" href="main_8c.html" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5." alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="105,41,55,81,52,76,102,37"/>
+<area shape="rect" href="pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="96,79,163,104"/>
+<area shape="poly" title=" " alt="" coords="132,44,132,79,127,79,127,44"/>
+<area shape="rect" href="states_8c.html" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="187,79,261,104"/>
+<area shape="poly" title=" " alt="" coords="157,37,210,76,207,81,154,41"/>
+<area shape="rect" href="pagamento_8c.html" title="Implementação das funções de pagamento." alt="" coords="20,152,127,177"/>
+<area shape="poly" title=" " alt="" coords="114,117,84,154,80,150,109,113"/>
+<area shape="rect" href="pilha_8c.html" title="Implementação da estrutura de dados de pilha." alt="" coords="151,152,217,177"/>
+<area shape="poly" title=" " alt="" coords="149,113,177,150,173,154,145,117"/>
 </map>
 </div>
 </div>
@@ -102,149 +101,48 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8" id="r_a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
-&#160;&#160;<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8ad84154820fb7cc5480aa99b8e888ef2e">MENU_PRINCIPAL</a>
-, <a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a6477073ef6a2fed6ffe36501524841d3">SELECAO_PRODUTO</a>
-, <a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8accfc0ee10960370f4f5ceb484b0a082e">PAGAMENTO</a>
-, <a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a427d77669552dc6f051e6ae4b268533b">CONFIGURACAO</a>
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8" id="r_a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top"><a id="a5d74787dedbc4e11c1ab15bf487e61f8" name="a5d74787dedbc4e11c1ab15bf487e61f8"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
+&#160;&#160;<b>MENU_PRINCIPAL</b>
+, <b>SELECAO_PRODUTO</b>
+, <b>PAGAMENTO</b>
+, <b>SAIR</b>
 , <br />
-&#160;&#160;<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a109d1f6a14fd6870ba891dec59fb9755">SAIR</a>
-, <a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7776b8463f377ff4e003bc4f5107ce17">VOLTAR</a>
+&#160;&#160;<b>VOLTAR</b>
+, <b>ESTATISTICAS</b>
+, <b>TELA_SENHA</b>
+, <b>CONFIGURACAO_MENU</b>
+, <br />
+&#160;&#160;<b>CONFIG_LISTAR_PRODUTOS</b>
+, <b>CONFIG_ADICIONAR_PRODUTO</b>
+, <b>CONFIG_REMOVER_PRODUTO</b>
+, <b>CONFIG_ATUALIZAR_ESTOQUE</b>
+, <br />
+&#160;&#160;<b>ANIMACAO_QUEDA</b>
+, <b>ANIMACAO_PORTA</b>
+, <b>ANIMACAO_ENTREGA</b>
 <br />
  }</td></tr>
-<tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeração dos possíveis estados da máquina de estados finitos (FSM).  <a href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">More...</a><br /></td></tr>
+<tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeração dos possíveis estados da máquina de estados finitos (FSM). <br /></td></tr>
 <tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a69fac538c0534f3531ce9fdf9508c044" id="r_a69fac538c0534f3531ce9fdf9508c044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a69fac538c0534f3531ce9fdf9508c044">estado_menu_principal</a> ()</td></tr>
-<tr class="memdesc:a69fac538c0534f3531ce9fdf9508c044"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que implementa a lógica do estado MENU_PRINCIPAL.  <br /></td></tr>
+<tr class="memitem:a69fac538c0534f3531ce9fdf9508c044" id="r_a69fac538c0534f3531ce9fdf9508c044"><td class="memItemLeft" align="right" valign="top"><a id="a69fac538c0534f3531ce9fdf9508c044" name="a69fac538c0534f3531ce9fdf9508c044"></a>
+<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>estado_menu_principal</b> ()</td></tr>
 <tr class="separator:a69fac538c0534f3531ce9fdf9508c044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68eab00c37d898a6da89f2552623f6aa" id="r_a68eab00c37d898a6da89f2552623f6aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a68eab00c37d898a6da89f2552623f6aa">estado_selecao_produto</a> ()</td></tr>
-<tr class="memdesc:a68eab00c37d898a6da89f2552623f6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que implementa a lógica do estado SELECAO_PRODUTO.  <br /></td></tr>
+<tr class="memitem:a68eab00c37d898a6da89f2552623f6aa" id="r_a68eab00c37d898a6da89f2552623f6aa"><td class="memItemLeft" align="right" valign="top"><a id="a68eab00c37d898a6da89f2552623f6aa" name="a68eab00c37d898a6da89f2552623f6aa"></a>
+<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>estado_selecao_produto</b> ()</td></tr>
 <tr class="separator:a68eab00c37d898a6da89f2552623f6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80b007f0369d8dd6bef11a51f3a5e688" id="r_a80b007f0369d8dd6bef11a51f3a5e688"><td class="memItemLeft" align="right" valign="top"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a80b007f0369d8dd6bef11a51f3a5e688">estado_pagamento</a> ()</td></tr>
-<tr class="memdesc:a80b007f0369d8dd6bef11a51f3a5e688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que implementa a lógica do estado PAGAMENTO.  <br /></td></tr>
+<tr class="memitem:a80b007f0369d8dd6bef11a51f3a5e688" id="r_a80b007f0369d8dd6bef11a51f3a5e688"><td class="memItemLeft" align="right" valign="top"><a id="a80b007f0369d8dd6bef11a51f3a5e688" name="a80b007f0369d8dd6bef11a51f3a5e688"></a>
+<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>estado_pagamento</b> ()</td></tr>
 <tr class="separator:a80b007f0369d8dd6bef11a51f3a5e688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e1a737fd94061732db2f5a3791d5e03" id="r_a8e1a737fd94061732db2f5a3791d5e03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="states_8h.html#a8e1a737fd94061732db2f5a3791d5e03">estado_configuracao</a> ()</td></tr>
-<tr class="memdesc:a8e1a737fd94061732db2f5a3791d5e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que implementa a lógica do estado CONFIGURACAO.  <br /></td></tr>
+<tr class="memitem:a8e1a737fd94061732db2f5a3791d5e03" id="r_a8e1a737fd94061732db2f5a3791d5e03"><td class="memItemLeft" align="right" valign="top"><a id="a8e1a737fd94061732db2f5a3791d5e03" name="a8e1a737fd94061732db2f5a3791d5e03"></a>
+<a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><b>estado_configuracao</b> ()</td></tr>
 <tr class="separator:a8e1a737fd94061732db2f5a3791d5e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definição dos estados da máquina e protótipos das funções de estado. </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a5d74787dedbc4e11c1ab15bf487e61f8" name="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&#160;</a></span>State</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Enumeração dos possíveis estados da máquina de estados finitos (FSM). </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ad84154820fb7cc5480aa99b8e888ef2e" name="a5d74787dedbc4e11c1ab15bf487e61f8ad84154820fb7cc5480aa99b8e888ef2e"></a>MENU_PRINCIPAL&#160;</td><td class="fielddoc"><p>Estado do menu principal. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a6477073ef6a2fed6ffe36501524841d3" name="a5d74787dedbc4e11c1ab15bf487e61f8a6477073ef6a2fed6ffe36501524841d3"></a>SELECAO_PRODUTO&#160;</td><td class="fielddoc"><p>Estado de seleção de produto. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8accfc0ee10960370f4f5ceb484b0a082e" name="a5d74787dedbc4e11c1ab15bf487e61f8accfc0ee10960370f4f5ceb484b0a082e"></a>PAGAMENTO&#160;</td><td class="fielddoc"><p>Estado de pagamento. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a427d77669552dc6f051e6ae4b268533b" name="a5d74787dedbc4e11c1ab15bf487e61f8a427d77669552dc6f051e6ae4b268533b"></a>CONFIGURACAO&#160;</td><td class="fielddoc"><p>Estado do menu de configuração. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a109d1f6a14fd6870ba891dec59fb9755" name="a5d74787dedbc4e11c1ab15bf487e61f8a109d1f6a14fd6870ba891dec59fb9755"></a>SAIR&#160;</td><td class="fielddoc"><p>Estado final para encerrar a aplicação. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a7776b8463f377ff4e003bc4f5107ce17" name="a5d74787dedbc4e11c1ab15bf487e61f8a7776b8463f377ff4e003bc4f5107ce17"></a>VOLTAR&#160;</td><td class="fielddoc"><p>Estado especial para acionar a funcionalidade "voltar". </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a8e1a737fd94061732db2f5a3791d5e03" name="a8e1a737fd94061732db2f5a3791d5e03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e1a737fd94061732db2f5a3791d5e03">&#9670;&#160;</a></span>estado_configuracao()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> estado_configuracao </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Função que implementa a lógica do estado CONFIGURACAO. </p>
-<dl class="section return"><dt>Returns</dt><dd>O próximo estado para o qual a máquina deve transitar. </dd></dl>
-
-</div>
-</div>
-<a id="a69fac538c0534f3531ce9fdf9508c044" name="a69fac538c0534f3531ce9fdf9508c044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69fac538c0534f3531ce9fdf9508c044">&#9670;&#160;</a></span>estado_menu_principal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> estado_menu_principal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Função que implementa a lógica do estado MENU_PRINCIPAL. </p>
-<dl class="section return"><dt>Returns</dt><dd>O próximo estado para o qual a máquina deve transitar. </dd></dl>
-
-</div>
-</div>
-<a id="a80b007f0369d8dd6bef11a51f3a5e688" name="a80b007f0369d8dd6bef11a51f3a5e688"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80b007f0369d8dd6bef11a51f3a5e688">&#9670;&#160;</a></span>estado_pagamento()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> estado_pagamento </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Função que implementa a lógica do estado PAGAMENTO. </p>
-<dl class="section return"><dt>Returns</dt><dd>O próximo estado para o qual a máquina deve transitar. </dd></dl>
-
-</div>
-</div>
-<a id="a68eab00c37d898a6da89f2552623f6aa" name="a68eab00c37d898a6da89f2552623f6aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68eab00c37d898a6da89f2552623f6aa">&#9670;&#160;</a></span>estado_selecao_produto()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="states_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> estado_selecao_produto </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Função que implementa a lógica do estado SELECAO_PRODUTO. </p>
-<dl class="section return"><dt>Returns</dt><dd>O próximo estado para o qual a máquina deve transitar. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

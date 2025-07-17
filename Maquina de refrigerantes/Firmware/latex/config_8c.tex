@@ -30,6 +30,9 @@ void \mbox{\hyperlink{config_8c_af5ce1a4013659b0781ca89a069836ea9}{menu\+\_\+con
 \doxysubsection{Detailed Description}
 Implementação das funcionalidades do menu de configuração. 
 
+\begin{DoxyNote}{Note}
+Este módulo foi projetado para uma versão de console da aplicação. Na versão gráfica final (\doxylink{main_8c}{main.\+c}), toda a interface e lógica de configuração foram reimplementadas com Allegro, e as funções deste arquivo (exceto {\ttfamily verificar\+\_\+senha}, cuja lógica foi adaptada) não são utilizadas. 
+\end{DoxyNote}
 
 
 \doxysubsection{Function Documentation}
@@ -58,10 +61,6 @@ Permite que o administrador adicione, remova e liste produtos. O acesso a este m
 
 Solicita e verifica a senha do administrador. 
 
-
-\begin{DoxyItemize}
-\item Permite até 3 tentativas antes de bloquear o acesso. \begin{DoxyReturn}{Returns}
+Permite até 3 tentativas antes de bloquear o acesso. \begin{DoxyReturn}{Returns}
 1 se a senha estiver correta, 0 caso contrário. 
 \end{DoxyReturn}
-
-\end{DoxyItemize}

@@ -10,7 +10,7 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=234pt]{pagamento_8h__dep__incl}
+\includegraphics[width=228pt]{pagamento_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Functions}
@@ -76,6 +76,18 @@ Coleta as moedas inseridas pelo usuário.
 
 \begin{DoxyItemize}
 \item A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em valor\+\_\+acumulado} & Ponteiro para a variável que armazenará o total inserido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se a operação foi concluída com sucesso (usuário digitou 0). 
+
+0 se a operação foi cancelada (usuário digitou -\/2).
+\end{DoxyReturn}
+Coleta as moedas inseridas pelo usuário.
+
+A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ out}}  & {\em valor\+\_\+acumulado} & Ponteiro para a variável que armazenará o total inserido. \\
 \hline

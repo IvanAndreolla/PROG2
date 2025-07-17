@@ -5,29 +5,36 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ LISTA\_PRODUTOS\_H}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ LISTA\_PRODUTOS\_H}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}\ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_afda9eec7aba2d91219870174a360dd99}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structproduto_a73f5751f0cdfedb0ddf20ca606151f8a}{nome}}[50];\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_a8309215e5b4ca69c637997d10b217cfe}{preco}};\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_a3032ee8cb13cd38af30d8c170ccfa08e}{estoque}};\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}*\ \mbox{\hyperlink{structproduto_ab4e7e9e688c4a96177d15b968fa37e74}{prox}};\ \ \ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}*\ \mbox{\hyperlink{structproduto_ac9f8b05f663d3c3e4828b8f6e4be7c46}{ant}};\ \ \ }
-\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00030\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_a40e96781cf0250c5c440078eedf133ee}{adicionar\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structproduto_a73f5751f0cdfedb0ddf20ca606151f8a}{nome}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_a8309215e5b4ca69c637997d10b217cfe}{preco}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_a3032ee8cb13cd38af30d8c170ccfa08e}{estoque}});}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00038\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_aa43d104180d153dfc883772654d1b54c}{remover\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00046\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_a9d0432b6528c2948479b52aa6bccb94f}{buscar\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_aa276a95b7dceac0c0bff1aba4a1507af}{listar\_produtos}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head);}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_a4707176ff4cc8198d554e8d826465d32}{liberar\_lista\_produtos}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head);}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <allegro5/allegro.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structproduto_ad9b32a94f9054fd81f59b1118b8d53d2}{nome}}[50];\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_a163a15b8a93cd0e9afb3ca78f69c28d6}{preco}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_a91467f7c7aaac1cb047467e734edb66e}{estoque}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ CAMPOS\ ADICIONADOS\ PARA\ ANIMAÇÃO\ -\/-\/-\/}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structproduto_a4143b7bf20bc1d1ddf0bb8f6f9deb92c}{imagem\_path}}[100];\ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_afb4f5432af70fe7be7c1fc6e360e3c38}{pos\_x\_inicial}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_a3eebc67279cb1d44261c4e0e0414bd0f}{pos\_y\_inicial}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ ALLEGRO\_BITMAP*\ \mbox{\hyperlink{structproduto_af0e8e4e1730ff20be7d3c94894803b39}{imagem\_animacao}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}*\ \mbox{\hyperlink{structproduto_a1b71065e066acc71f8ab93f6d9b85f52}{prox}};\ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structproduto}{produto}}*\ \mbox{\hyperlink{structproduto_a989e0da84ed120e962720b3a830850e5}{ant}};\ \ \ \ }
+\DoxyCodeLine{00028\ \}\ \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_afed84dc4b88c3d291ff6ab48983a7ab5}{adicionar\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structproduto_ad9b32a94f9054fd81f59b1118b8d53d2}{nome}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structproduto_a163a15b8a93cd0e9afb3ca78f69c28d6}{preco}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structproduto_a91467f7c7aaac1cb047467e734edb66e}{estoque}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ img\_path,\ \textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{float}\ pos\_y);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_aa43d104180d153dfc883772654d1b54c}{remover\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_a9d0432b6528c2948479b52aa6bccb94f}{buscar\_produto}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
 \DoxyCodeLine{00059\ }
-\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_acaafe63f7b37a49e193b0f8b36f07c5a}{salvar\_produtos\_csv}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00072\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_a0d4333cb55160fbec0a2e2a58b67d7be}{carregar\_produtos\_csv}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_aa276a95b7dceac0c0bff1aba4a1507af}{listar\_produtos}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_a4707176ff4cc8198d554e8d826465d32}{liberar\_lista\_produtos}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{lista__produtos_8h_acaafe63f7b37a49e193b0f8b36f07c5a}{salvar\_produtos\_csv}}(\mbox{\hyperlink{structproduto}{Produto}}*\ head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \mbox{\hyperlink{structproduto}{Produto}}*\ \mbox{\hyperlink{lista__produtos_8h_a0d4333cb55160fbec0a2e2a58b67d7be}{carregar\_produtos\_csv}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

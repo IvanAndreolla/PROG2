@@ -1,23 +1,47 @@
+# Nome do compilador
 CC = gcc
-CFLAGS = -Wall -g
 
-OBJS = main.o states.o ui.o fila.o pilha.o lista_produtos.o log_vendas.o pagamento.o config.o estatisticas.o
+# Nome do executável que será gerado
+EXEC = maquina_allegro
 
-all: vending
+# Flags do compilador: -Wall (mostra todos os avisos), -g (inclui informações para debug)
+# Adicionamos as flags do Allegro usando pkg-config
+CFLAGS = -Wall -g $(shell pkg-config --cflags allegro-5 allegro_primitives-5 allegro_font-5 allegro_ttf-5 allegro_image-5)
 
-vending: $(OBJS)
-	$(CC) $(CFLAGS) -o vending $(OBJS)
+# Flags do linker e bibliotecas do Allegro
+LDFLAGS =
+LIBS = $(shell pkg-config --libs allegro-5 allegro_primitives-5 allegro_font-5 allegro_ttf-5 allegro_image-5)
 
-main.o: main.c states.h ui.h
-states.o: states.c states.h ui.h
-ui.o: ui.c ui.h
-fila.o: fila.c fila.h
-pilha.o: pilha.c pilha.h
-lista_produtos.o: lista_produtos.c lista_produtos.h
-log_vendas.o: log_vendas.c log_vendas.h
-pagamento.o: pagamento.c pagamento.h
-config.o: config.c config.h lista_produtos.h
-estatisticas.o: estatisticas.c estatisticas.h log_vendas.h
+# Lista de todos os seus arquivos de código-fonte (.c)
+SRCS =  main.c \
+		states.c \
+		config.c \
+		estatisticas.c \
+		fila.c \
+		lista_produtos.c \
+		log_vendas.c \
+		pagamento.c \
+		pilha.c \
+		ui.c
 
+# Gera a lista de arquivos objeto (.o) a partir dos arquivos de código (.c)
+OBJS = $(SRCS:.c=.o)
+
+# --- REGRAS ---
+
+# A regra padrão
+all: $(EXEC)
+
+# Regra para linkar e criar o executável final
+$(EXEC): $(OBJS)
+	$(CC) $(LDFLAGS) -o $(EXEC) $(OBJS) $(LIBS)
+
+# Regra genérica para compilar um arquivo .c em um arquivo .o
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Regra para limpar os arquivos gerados (executada com 'make clean')
 clean:
-	rm -f *.o vending
+	rm -f $(OBJS) $(EXEC)
+
+.PHONY: all clean

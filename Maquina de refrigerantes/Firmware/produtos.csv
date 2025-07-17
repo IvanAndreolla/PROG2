@@ -1,5 +1,7 @@
-ID,Nome,Preco,Estoque
-4,lele,2.00,8
-1,Pureza,1.50,10
-2,Guaraná Jesus,1.50,9
-3,Coca,2.00,10
+ID,Nome,Preco,Estoque,ImagemPath,PosX,PosY
+4,Coca - Colar,2.00,67,lata_coca.png,483.0,258.0
+6,Guarana Jesus,2.00,63,lata_jesus.png,483.0,338.0
+5,Lelé,2.00,10,lata_lele.png,353.0,258.0
+3,Guaraná,2.00,3,lata_guarana.png,353.0,338.0
+2,Laranjinha,1.50,6,lata_laranjinha.png,483.0,190.0
+1,Pureza,1.50,9,lata_pureza.png,353.0,190.0

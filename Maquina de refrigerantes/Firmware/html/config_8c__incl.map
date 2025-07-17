@@ -7,12 +7,14 @@
 <area shape="rect" id="Node000004" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="243,79,317,104"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,29,260,67,256,71,215,33"/>
 <area shape="rect" id="Node000005" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="109,152,235,177"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="205,32,180,139,175,138,200,31"/>
-<area shape="rect" id="Node000007" href="$ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="385,79,431,104"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="239,28,372,75,371,80,237,33"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="205,32,180,139,175,138,200,31"/>
+<area shape="rect" id="Node000008" href="$ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="385,79,431,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="239,28,372,75,371,80,237,33"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="264,106,203,147,200,142,261,102"/>
-<area shape="rect" id="Node000006" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="259,152,367,177"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="288,103,305,139,300,141,283,105"/>
-<area shape="rect" id="Node000008" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="391,152,446,177"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="412,104,418,138,412,139,407,105"/>
+<area shape="rect" id="Node000007" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="259,152,367,177"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="288,103,305,139,300,141,283,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="104,225,240,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="175,178,175,212,169,212,169,178"/>
+<area shape="rect" id="Node000009" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="391,152,446,177"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="412,104,418,138,412,139,407,105"/>
 </map>

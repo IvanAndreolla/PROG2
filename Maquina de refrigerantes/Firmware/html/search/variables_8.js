@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['tamanho_0',['tamanho',['../structFila.html#a46bbd844d92a49df2f9f1dff542301db',1,'Fila']]],
-  ['timestamp_1',['timestamp',['../structLog.html#aa4cb96e517065c1f33b274be3fefafe4',1,'Log']]],
-  ['topo_2',['topo',['../structPilha.html#a565d8a5495fec84a57434c383b1e3e6e',1,'Pilha::topo'],['../structPilhaEstados.html#a10ee71a2378e223ad8aedac02be04745',1,'PilhaEstados::topo']]],
-  ['tras_3',['tras',['../structFila.html#af05905804bfcba29780b7b709690c4d4',1,'Fila']]],
-  ['troco_4',['troco',['../structLog.html#aa963e3cc34551710654d354d44f2f094',1,'Log']]]
+  ['pos_5fx_5finicial_0',['pos_x_inicial',['../structproduto.html#afb4f5432af70fe7be7c1fc6e360e3c38',1,'produto']]],
+  ['pos_5fy_5finicial_1',['pos_y_inicial',['../structproduto.html#a3eebc67279cb1d44261c4e0e0414bd0f',1,'produto']]],
+  ['preco_2',['preco',['../structproduto.html#a163a15b8a93cd0e9afb3ca78f69c28d6',1,'produto']]],
+  ['produto_5fid_3',['produto_id',['../structLog.html#a0d4b79b1f655ecde14a07aa491f3a026',1,'Log']]],
+  ['produto_5fselecionado_4',['produto_selecionado',['../structContexto.html#a565192b9412a257aabdfb27e8db8491f',1,'Contexto']]],
+  ['prox_5',['prox',['../structproduto.html#a1b71065e066acc71f8ab93f6d9b85f52',1,'produto::prox'],['../structLog.html#a1c4eff78b9a6d55cede94771943d37ce',1,'Log::prox']]]
 ];

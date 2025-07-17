@@ -6,18 +6,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <allegro5/allegro.h>
 #include "lista_produtos.h"
 
 /**
  * @brief Adiciona um novo produto ao início da lista duplamente encadeada.
- * @param[in] head Ponteiro para a cabeça da lista.
- * @param[in] id ID do novo produto.
- * @param[in] nome Nome do novo produto.
- * @param[in] preco Preço do novo produto.
- * @param[in] estoque Quantidade em estoque do novo produto.
- * @return Ponteiro para a nova cabeça da lista.
  */
-Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco, int estoque) {
+Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco, int estoque, const char* img_path, float pos_x, float pos_y) {
     Produto* novo = (Produto*)malloc(sizeof(Produto));
     if (!novo) {
         fprintf(stderr, "Erro de alocação de memória para novo produto.\n");
@@ -28,6 +23,17 @@ Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco,
     novo->nome[sizeof(novo->nome) - 1] = '\0';
     novo->preco = preco;
     novo->estoque = estoque;
+
+    strncpy(novo->imagem_path, img_path, sizeof(novo->imagem_path) - 1);
+    novo->imagem_path[sizeof(novo->imagem_path) - 1] = '\0';
+    novo->pos_x_inicial = pos_x;
+    novo->pos_y_inicial = pos_y;
+
+    novo->imagem_animacao = al_load_bitmap(img_path);
+    if (!novo->imagem_animacao) {
+        fprintf(stderr, "Aviso: Falha ao carregar a imagem de animacao: %s\n", img_path);
+    }
+    
     novo->prox = head;
     novo->ant = NULL;
     if (head) {
@@ -38,9 +44,6 @@ Produto* adicionar_produto(Produto* head, int id, const char* nome, float preco,
 
 /**
  * @brief Remove um produto da lista pelo seu ID.
- * @param[in] head Ponteiro para a cabeça da lista.
- * @param[in] id ID do produto a ser removido.
- * @return Ponteiro para a nova cabeça da lista.
  */
 Produto* remover_produto(Produto* head, int id) {
     Produto* atual = head;
@@ -54,8 +57,13 @@ Produto* remover_produto(Produto* head, int id) {
             if (atual->prox) {
                 atual->prox->ant = atual->ant;
             }
-            printf("Produto com ID %d removido.\n", id);
+
+            // Libera a memória da imagem da animação antes de liberar o nó
+            if (atual->imagem_animacao) {
+                al_destroy_bitmap(atual->imagem_animacao);
+            }
             free(atual);
+            printf("Produto com ID %d removido.\n", id);
             return head;
         }
         atual = atual->prox;
@@ -66,9 +74,6 @@ Produto* remover_produto(Produto* head, int id) {
 
 /**
  * @brief Busca um produto na lista pelo seu ID.
- * @param[in] head Ponteiro para a cabeça da lista.
- * @param[in] id ID do produto a ser buscado.
- * @return Ponteiro para o nó do produto encontrado, ou NULL se não for encontrado.
  */
 Produto* buscar_produto(Produto* head, int id) {
     Produto* atual = head;
@@ -83,7 +88,6 @@ Produto* buscar_produto(Produto* head, int id) {
 
 /**
  * @brief Lista todos os produtos da lista no terminal.
- * @param[in] head Ponteiro para a cabeça da lista.
  */
 void listar_produtos(Produto* head) {
     if (!head) {
@@ -93,29 +97,30 @@ void listar_produtos(Produto* head) {
     printf("\n--- Produtos Disponíveis ---\n");
     Produto* temp = head;
     while (temp) {
-        printf("ID: %d | Nome: %s | Preço: R$%.2f | Estoque: %d\n",
-               temp->id, temp->nome, temp->preco, temp->estoque);
+        printf("ID: %d | Nome: %s | Preço: R$%.2f | Estoque: %d | Img: %s, (%.0f,%.0f)\n",
+               temp->id, temp->nome, temp->preco, temp->estoque,
+               temp->imagem_path, temp->pos_x_inicial, temp->pos_y_inicial);
         temp = temp->prox;
     }
 }
 
 /**
  * @brief Libera toda a memória alocada para a lista de produtos.
- * @param[in] head Ponteiro para a cabeça da lista a ser liberada.
  */
 void liberar_lista_produtos(Produto* head) {
     Produto* temp;
     while (head) {
         temp = head;
         head = head->prox;
+        if (temp->imagem_animacao) {
+            al_destroy_bitmap(temp->imagem_animacao);
+        }
         free(temp);
     }
 }
 
 /**
  * @brief Salva a lista de produtos em um arquivo no formato CSV.
- * @param[in] head Ponteiro para a cabeça da lista.
- * @param[in] filename Nome do arquivo CSV de destino.
  */
 void salvar_produtos_csv(Produto* head, const char* filename) {
     FILE* f = fopen(filename, "w");
@@ -123,10 +128,13 @@ void salvar_produtos_csv(Produto* head, const char* filename) {
         fprintf(stderr, "Erro ao abrir o arquivo %s para escrita.\n", filename);
         return;
     }
-    fprintf(f, "ID,Nome,Preco,Estoque\n");
+    fprintf(f, "ID,Nome,Preco,Estoque,ImagemPath,PosX,PosY\n");
+    
     Produto* temp = head;
     while (temp) {
-        fprintf(f, "%d,%s,%.2f,%d\n", temp->id, temp->nome, temp->preco, temp->estoque);
+        fprintf(f, "%d,%s,%.2f,%d,%s,%.1f,%.1f\n", 
+                temp->id, temp->nome, temp->preco, temp->estoque, 
+                temp->imagem_path, temp->pos_x_inicial, temp->pos_y_inicial);
         temp = temp->prox;
     }
     fclose(f);
@@ -134,26 +142,43 @@ void salvar_produtos_csv(Produto* head, const char* filename) {
 
 /**
  * @brief Carrega uma lista de produtos a partir de um arquivo CSV.
- * @param[in] filename Nome do arquivo CSV a ser lido.
- * @return Ponteiro para a cabeça da nova lista de produtos carregada.
  */
 Produto* carregar_produtos_csv(const char* filename) {
     FILE* f = fopen(filename, "r");
     if (!f) {
-        //fprintf(stderr, "Aviso: Arquivo de produtos '%s' não encontrado. Começando com lista vazia.\n", filename);
         return NULL;
     }
+
     Produto* head = NULL;
     char linha[256];
-    fgets(linha, sizeof(linha), f);
+    
+    fgets(linha, sizeof(linha), f); 
+    
     while (fgets(linha, sizeof(linha), f)) {
         int id, estoque;
-        char nome[50];
-        float preco;
-        if (sscanf(linha, "%d,%49[^,],%f,%d", &id, nome, &preco, &estoque) == 4) {
-            head = adicionar_produto(head, id, nome, preco, estoque);
+        char nome[50], img_path[100];
+        float preco, pos_x, pos_y;
+
+        if (sscanf(linha, "%d,%49[^,],%f,%d,%99[^,],%f,%f", &id, nome, &preco, &estoque, img_path, &pos_x, &pos_y) == 7) {
+            head = adicionar_produto(head, id, nome, preco, estoque, img_path, pos_x, pos_y);
         }
     }
     fclose(f);
-    return head;
+
+    Produto* revertida = NULL;
+    Produto* atual = head;
+    while (atual != NULL) {
+        Produto* proximo = atual->prox;
+        atual->prox = revertida;
+        if (revertida != NULL) {
+            revertida->ant = atual;
+        }
+        revertida = atual;
+        atual = proximo;
+    }
+    if (revertida != NULL) {
+        revertida->ant = NULL;
+    }
+
+    return revertida;
 }

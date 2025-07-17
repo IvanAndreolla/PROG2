@@ -31,6 +31,9 @@ void \mbox{\hyperlink{ui_8c_a66a15eb8f3a2b2efbc600b0926800c70}{inicializar\+\_\+
 \doxysubsection{Detailed Description}
 Implementação das funções de interface de usuário. 
 
+\begin{DoxyNote}{Note}
+Estas funções foram criadas para uma versão de console da aplicação e não são utilizadas pela interface gráfica principal implementada em \doxylink{main_8c}{main.\+c}. 
+\end{DoxyNote}
 
 
 \doxysubsection{Function Documentation}
@@ -59,10 +62,7 @@ Exibe a tela de boas-\/vindas da aplicação.
 
 Limpa a tela do terminal. 
 
-
-\begin{DoxyItemize}
-\item Tenta usar "{}clear"{} (Linux/mac\+OS) ou "{}cls"{} (Windows). 
-\end{DoxyItemize}\Hypertarget{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71}\label{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71} 
+Tenta usar "{}clear"{} (Linux/mac\+OS) ou "{}cls"{} (Windows). \Hypertarget{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71}\label{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71} 
 \index{ui.c@{ui.c}!pausar@{pausar}}
 \index{pausar@{pausar}!ui.c@{ui.c}}
 \doxysubsubsection{\texorpdfstring{pausar()}{pausar()}}
@@ -72,7 +72,4 @@ Limpa a tela do terminal.
 
 Pausa a execução do programa até que o usuário pressione Enter. 
 
-
-\begin{DoxyItemize}
-\item Esta versão corrigida consome quaisquer caracteres residuais no buffer de entrada e espera por um único Enter para continuar. 
-\end{DoxyItemize}
+Esta versão corrigida consome quaisquer caracteres residuais no buffer de entrada e espera por um único Enter para continuar. 

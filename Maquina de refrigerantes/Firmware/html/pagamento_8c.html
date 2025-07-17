@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: pagamento.c File Reference</title>
+<title>Maquina de refrigerantes com Allegro 5: pagamento.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Maquina de refrigerantes com Allegro 5
    </div>
   </td>
  </tr>
@@ -100,7 +100,7 @@ Include dependency graph for pagamento.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa9f67533c50d6fd5dea7962c2e43b6ee" id="r_aa9f67533c50d6fd5dea7962c2e43b6ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pagamento_8c.html#aa9f67533c50d6fd5dea7962c2e43b6ee">inserir_moedas</a> (float *valor_acumulado)</td></tr>
-<tr class="memdesc:aa9f67533c50d6fd5dea7962c2e43b6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coleta as moedas inseridas pelo usuário.  <br /></td></tr>
+<tr class="memdesc:aa9f67533c50d6fd5dea7962c2e43b6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coleta as moedas inseridas pelo usuário (versão console).  <br /></td></tr>
 <tr class="separator:aa9f67533c50d6fd5dea7962c2e43b6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31e16657005cd61dc632cf47e19336ab" id="r_a31e16657005cd61dc632cf47e19336ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pagamento_8c.html#a31e16657005cd61dc632cf47e19336ab">calcular_troco</a> (float valor_inserido, float preco)</td></tr>
 <tr class="memdesc:a31e16657005cd61dc632cf47e19336ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o troco com base no valor inserido e no preço do produto.  <br /></td></tr>
@@ -111,6 +111,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementação das funções de pagamento. </p>
+<dl class="section note"><dt>Note</dt><dd>Este módulo contém implementações originalmente pensadas para uma versão de console. Na versão gráfica final (<a class="el" href="main_8c.html" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5.">main.c</a>), a função <code>inserir_moedas</code> é substituída por uma lógica de interface gráfica. A função <code>calcular_troco</code> continua sendo utilizada. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a31e16657005cd61dc632cf47e19336ab" name="a31e16657005cd61dc632cf47e19336ab"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31e16657005cd61dc632cf47e19336ab">&#9670;&#160;</a></span>calcular_troco()</h2>
@@ -186,9 +187,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Coleta as moedas inseridas pelo usuário. </p>
-<ul>
-<li>A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. <dl class="params"><dt>Parameters</dt><dd>
+<p>Coleta as moedas inseridas pelo usuário (versão console). </p>
+<p>Coleta as moedas inseridas pelo usuário.</p>
+<p>A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">valor_acumulado</td><td>Ponteiro para a variável que armazenará o total inserido. </td></tr>
   </table>
@@ -197,8 +198,6 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>1 se a operação foi concluída com sucesso (usuário digitou 0). </dd>
 <dd>
 0 se a operação foi cancelada (usuário digitou -2). </dd></dl>
-</li>
-</ul>
 
 </div>
 </div>

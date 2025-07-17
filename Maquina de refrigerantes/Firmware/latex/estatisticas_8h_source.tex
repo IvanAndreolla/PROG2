@@ -7,10 +7,18 @@
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{log__vendas_8h}{log\_vendas.h}}"{}}}
 \DoxyCodeLine{00010\ }
-\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{estatisticas_8h_a121996d83ba2c43b90dfbddffd75f480}{gerar\_estatisticas}}(\mbox{\hyperlink{structLog}{Log}}*\ logs);}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{estatisticas_8h_a67e9adac089d0423c809cb27bcd08d23}{salvar\_estatisticas\_csv}}(\mbox{\hyperlink{structLog}{Log}}*\ logs,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ total\_vendas;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ valor\_arrecadado;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{float}\ valor\_medio;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ id\_mais\_vendido;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ qtd\_mais\_vendido;}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structEstatisticasData}{EstatisticasData}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{estatisticas_8h_a7f56c49e835dd5778993d47e79b3dd1f}{calcular\_estatisticas}}(\mbox{\hyperlink{structLog}{Log}}*\ logs,\ \mbox{\hyperlink{structEstatisticasData}{EstatisticasData}}*\ data);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{estatisticas_8h_a67e9adac089d0423c809cb27bcd08d23}{salvar\_estatisticas\_csv}}(\mbox{\hyperlink{structLog}{Log}}*\ logs,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ filename);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

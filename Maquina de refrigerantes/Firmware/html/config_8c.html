@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: config.c File Reference</title>
+<title>Maquina de refrigerantes com Allegro 5: config.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Maquina de refrigerantes com Allegro 5
    </div>
   </td>
  </tr>
@@ -101,6 +101,8 @@ Include dependency graph for config.c:</div>
 <area shape="poly" title=" " alt="" coords="264,106,203,147,200,142,261,102"/>
 <area shape="rect" href="log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="259,152,367,177"/>
 <area shape="poly" title=" " alt="" coords="288,103,305,139,300,141,283,105"/>
+<area shape="rect" title=" " alt="" coords="104,225,240,251"/>
+<area shape="poly" title=" " alt="" coords="175,178,175,212,169,212,169,178"/>
 <area shape="rect" href="fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="391,152,446,177"/>
 <area shape="poly" title=" " alt="" coords="412,104,418,138,412,139,407,105"/>
 </map>
@@ -117,6 +119,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementação das funcionalidades do menu de configuração. </p>
+<dl class="section note"><dt>Note</dt><dd>Este módulo foi projetado para uma versão de console da aplicação. Na versão gráfica final (<a class="el" href="main_8c.html" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5.">main.c</a>), toda a interface e lógica de configuração foram reimplementadas com Allegro, e as funções deste arquivo (exceto <code>verificar_senha</code>, cuja lógica foi adaptada) não são utilizadas. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="af5ce1a4013659b0781ca89a069836ea9" name="af5ce1a4013659b0781ca89a069836ea9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5ce1a4013659b0781ca89a069836ea9">&#9670;&#160;</a></span>menu_configuracao()</h2>
@@ -160,10 +163,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Solicita e verifica a senha do administrador. </p>
-<ul>
-<li>Permite até 3 tentativas antes de bloquear o acesso. <dl class="section return"><dt>Returns</dt><dd>1 se a senha estiver correta, 0 caso contrário. </dd></dl>
-</li>
-</ul>
+<p>Permite até 3 tentativas antes de bloquear o acesso. </p><dl class="section return"><dt>Returns</dt><dd>1 se a senha estiver correta, 0 caso contrário. </dd></dl>
 
 </div>
 </div>

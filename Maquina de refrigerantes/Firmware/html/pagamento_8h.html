@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: pagamento.h File Reference</title>
+<title>Maquina de refrigerantes com Allegro 5: pagamento.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Maquina de refrigerantes com Allegro 5
    </div>
   </td>
  </tr>
@@ -82,11 +82,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="pagamento_8h__dep__incl.png" border="0" usemap="#apagamento_8hdep" alt=""/></div>
 <map name="apagamento_8hdep" id="apagamento_8hdep">
-<area shape="rect" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="62,5,170,31"/>
-<area shape="rect" href="pagamento_8c.html" title="Implementação das funções de pagamento." alt="" coords="5,79,112,104"/>
-<area shape="poly" title=" " alt="" coords="100,43,70,80,66,77,96,40"/>
-<area shape="rect" href="states_8c.html" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="137,79,210,104"/>
-<area shape="poly" title=" " alt="" coords="136,40,166,77,162,80,132,43"/>
+<area shape="rect" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="39,5,147,31"/>
+<area shape="rect" href="main_8c.html" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5." alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="78,43,50,80,45,77,74,40"/>
+<area shape="rect" href="pagamento_8c.html" title="Implementação das funções de pagamento." alt="" coords="96,79,203,104"/>
+<area shape="poly" title=" " alt="" coords="113,40,142,77,138,80,109,43"/>
 </map>
 </div>
 </div>
@@ -183,7 +183,17 @@ Functions</h2></td></tr>
 
 <p>Coleta as moedas inseridas pelo usuário. </p>
 <ul>
-<li>A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. <dl class="params"><dt>Parameters</dt><dd>
+<li><p class="startli">A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">valor_acumulado</td><td>Ponteiro para a variável que armazenará o total inserido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 se a operação foi concluída com sucesso (usuário digitou 0). </dd>
+<dd>
+0 se a operação foi cancelada (usuário digitou -2).</dd></dl>
+<p>Coleta as moedas inseridas pelo usuário.</p>
+<p class="startli">A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">valor_acumulado</td><td>Ponteiro para a variável que armazenará o total inserido. </td></tr>
   </table>

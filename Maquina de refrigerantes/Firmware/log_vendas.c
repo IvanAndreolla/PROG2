@@ -63,18 +63,15 @@ void salvar_logs(const char* filename, Log* head) {
 Log* carregar_logs(const char* filename) {
     FILE* f = fopen(filename, "rb");
     if (!f) {
-        //fprintf(stderr, "Aviso: Arquivo de logs '%s' não encontrado. Começando com lista vazia.\n", filename);
+        fprintf(stderr, "Aviso: Arquivo de logs '%s' não encontrado. Começando com lista vazia.\n", filename);
         return NULL;
     }
     Log* head = NULL;
     Log temp_log;
     while (fread(&temp_log, sizeof(Log), 1, f) == 1) {
-        // Adiciona no final para manter a ordem cronológica na memória (opcional)
         head = adicionar_log(head, temp_log.timestamp, temp_log.produto_id, temp_log.valor_pago, temp_log.troco);
     }
     fclose(f);
-    // Como adicionamos no início, a lista fica invertida. Para exibir em ordem, pode-se revertê-la.
-    // Para este projeto, a ordem em memória não é crítica.
     return head;
 }
 

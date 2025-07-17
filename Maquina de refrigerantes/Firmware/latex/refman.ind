@@ -1,315 +1,319 @@
 \begin{theindex}
 
   \item {adicionar\_log}
-    \subitem {log\_vendas.c}, \hyperpage{33}
-    \subitem {log\_vendas.h}, \hyperpage{36}
+    \subitem {log\_vendas.c}, \hyperpage{35}
+    \subitem {log\_vendas.h}, \hyperpage{38}
   \item {adicionar\_produto}
-    \subitem {lista\_produtos.c}, \hyperpage{26}
-    \subitem {lista\_produtos.h}, \hyperpage{30}
+    \subitem {lista\_produtos.c}, \hyperpage{28}
+    \subitem {lista\_produtos.h}, \hyperpage{32}
+  \item {AnimacaoEntrega}, \hyperpage{5}
+  \item {AnimacaoQueda}, \hyperpage{5}
   \item {ant}
-    \subitem {produto}, \hyperpage{11}
+    \subitem {produto}, \hyperpage{13}
 
   \indexspace
 
   \item {buscar\_produto}
-    \subitem {lista\_produtos.c}, \hyperpage{26}
-    \subitem {lista\_produtos.h}, \hyperpage{30}
+    \subitem {lista\_produtos.c}, \hyperpage{28}
+    \subitem {lista\_produtos.h}, \hyperpage{32}
 
   \indexspace
 
+  \item {calcular\_estatisticas}
+    \subitem {estatisticas.c}, \hyperpage{19}
+    \subitem {estatisticas.h}, \hyperpage{21}
   \item {calcular\_troco}
-    \subitem {pagamento.c}, \hyperpage{39}
-    \subitem {pagamento.h}, \hyperpage{41}
+    \subitem {pagamento.c}, \hyperpage{46}
+    \subitem {pagamento.h}, \hyperpage{48}
   \item {carregar\_logs}
-    \subitem {log\_vendas.c}, \hyperpage{34}
-    \subitem {log\_vendas.h}, \hyperpage{36}
+    \subitem {log\_vendas.c}, \hyperpage{36}
+    \subitem {log\_vendas.h}, \hyperpage{38}
   \item {carregar\_produtos\_csv}
-    \subitem {lista\_produtos.c}, \hyperpage{27}
-    \subitem {lista\_produtos.h}, \hyperpage{30}
-  \item {config.c}, \hyperpage{13}
-    \subitem {menu\_configuracao}, \hyperpage{14}
-    \subitem {verificar\_senha}, \hyperpage{14}
-  \item {config.h}, \hyperpage{14}
-    \subitem {menu\_configuracao}, \hyperpage{15}
+    \subitem {lista\_produtos.c}, \hyperpage{29}
+    \subitem {lista\_produtos.h}, \hyperpage{32}
+  \item {config.c}, \hyperpage{15}
+    \subitem {menu\_configuracao}, \hyperpage{16}
     \subitem {verificar\_senha}, \hyperpage{16}
-  \item {CONFIGURACAO}
-    \subitem {states.h}, \hyperpage{49}
-  \item {Contexto}, \hyperpage{5}
-    \subitem {lista\_produtos}, \hyperpage{6}
-    \subitem {logs\_vendas}, \hyperpage{6}
-    \subitem {produto\_selecionado}, \hyperpage{6}
+  \item {config.h}, \hyperpage{16}
+    \subitem {menu\_configuracao}, \hyperpage{18}
+    \subitem {verificar\_senha}, \hyperpage{18}
+  \item {Contexto}, \hyperpage{6}
+    \subitem {lista\_produtos}, \hyperpage{7}
+    \subitem {logs\_vendas}, \hyperpage{7}
+    \subitem {produto\_selecionado}, \hyperpage{7}
 
   \indexspace
 
   \item {desenfileirar}
-    \subitem {fila.c}, \hyperpage{21}
-    \subitem {fila.h}, \hyperpage{24}
+    \subitem {fila.c}, \hyperpage{23}
+    \subitem {fila.h}, \hyperpage{25}
+  \item {desenhar\_menu\_config}
+    \subitem {main.c}, \hyperpage{42}
+  \item {desenhar\_menu\_principal}
+    \subitem {main.c}, \hyperpage{42}
+  \item {desenhar\_produtos\_estaticos}
+    \subitem {main.c}, \hyperpage{42}
+  \item {desenhar\_tela\_add\_produto}
+    \subitem {main.c}, \hyperpage{42}
+  \item {desenhar\_tela\_atualizar\_estoque}
+    \subitem {main.c}, \hyperpage{43}
+  \item {desenhar\_tela\_estatisticas}
+    \subitem {main.c}, \hyperpage{43}
+  \item {desenhar\_tela\_pagamento}
+    \subitem {main.c}, \hyperpage{44}
+  \item {desenhar\_tela\_produtos}
+    \subitem {main.c}, \hyperpage{44}
+  \item {desenhar\_tela\_propaganda}
+    \subitem {main.c}, \hyperpage{44}
+  \item {desenhar\_tela\_remove\_produto}
+    \subitem {main.c}, \hyperpage{45}
+  \item {desenhar\_tela\_senha}
+    \subitem {main.c}, \hyperpage{45}
   \item {desfazer\_moeda}
-    \subitem {pagamento.c}, \hyperpage{40}
-    \subitem {pagamento.h}, \hyperpage{41}
+    \subitem {pagamento.c}, \hyperpage{47}
+    \subitem {pagamento.h}, \hyperpage{48}
 
   \indexspace
 
   \item {enfileirar}
-    \subitem {fila.c}, \hyperpage{21}
-    \subitem {fila.h}, \hyperpage{24}
-  \item {estado\_configuracao}
-    \subitem {states.c}, \hyperpage{46}
-    \subitem {states.h}, \hyperpage{49}
-  \item {estado\_menu\_principal}
-    \subitem {states.c}, \hyperpage{46}
-    \subitem {states.h}, \hyperpage{49}
-  \item {estado\_pagamento}
-    \subitem {states.c}, \hyperpage{46}
-    \subitem {states.h}, \hyperpage{49}
-  \item {estado\_selecao\_produto}
-    \subitem {states.c}, \hyperpage{47}
-    \subitem {states.h}, \hyperpage{49}
+    \subitem {fila.c}, \hyperpage{23}
+    \subitem {fila.h}, \hyperpage{26}
   \item {estados}
-    \subitem {PilhaEstados}, \hyperpage{10}
-  \item {estatisticas.c}, \hyperpage{16}
-    \subitem {gerar\_estatisticas}, \hyperpage{17}
-    \subitem {salvar\_estatisticas\_csv}, \hyperpage{18}
-  \item {estatisticas.h}, \hyperpage{18}
-    \subitem {gerar\_estatisticas}, \hyperpage{19}
+    \subitem {PilhaEstados}, \hyperpage{11}
+  \item {estatisticas.c}, \hyperpage{19}
+    \subitem {calcular\_estatisticas}, \hyperpage{19}
     \subitem {salvar\_estatisticas\_csv}, \hyperpage{20}
+  \item {estatisticas.h}, \hyperpage{20}
+    \subitem {calcular\_estatisticas}, \hyperpage{21}
+    \subitem {salvar\_estatisticas\_csv}, \hyperpage{21}
+  \item {EstatisticasData}, \hyperpage{7}
   \item {estoque}
-    \subitem {produto}, \hyperpage{11}
+    \subitem {produto}, \hyperpage{13}
   \item {exibir\_logs}
-    \subitem {log\_vendas.c}, \hyperpage{34}
-    \subitem {log\_vendas.h}, \hyperpage{36}
+    \subitem {log\_vendas.c}, \hyperpage{36}
+    \subitem {log\_vendas.h}, \hyperpage{39}
 
   \indexspace
 
-  \item {Fila}, \hyperpage{6}
-    \subitem {frente}, \hyperpage{6}
-    \subitem {mensagens}, \hyperpage{6}
-    \subitem {tamanho}, \hyperpage{7}
-    \subitem {tras}, \hyperpage{7}
-  \item {fila.c}, \hyperpage{20}
-    \subitem {desenfileirar}, \hyperpage{21}
-    \subitem {enfileirar}, \hyperpage{21}
-    \subitem {frente\_fila}, \hyperpage{22}
-    \subitem {inicializar\_fila}, \hyperpage{22}
-  \item {fila.h}, \hyperpage{22}
-    \subitem {desenfileirar}, \hyperpage{24}
-    \subitem {enfileirar}, \hyperpage{24}
-    \subitem {frente\_fila}, \hyperpage{24}
+  \item {Fila}, \hyperpage{8}
+    \subitem {frente}, \hyperpage{8}
+    \subitem {mensagens}, \hyperpage{8}
+    \subitem {tamanho}, \hyperpage{8}
+    \subitem {tras}, \hyperpage{9}
+  \item {fila.c}, \hyperpage{22}
+    \subitem {desenfileirar}, \hyperpage{23}
+    \subitem {enfileirar}, \hyperpage{23}
+    \subitem {frente\_fila}, \hyperpage{23}
     \subitem {inicializar\_fila}, \hyperpage{24}
+  \item {fila.h}, \hyperpage{24}
+    \subitem {desenfileirar}, \hyperpage{25}
+    \subitem {enfileirar}, \hyperpage{26}
+    \subitem {frente\_fila}, \hyperpage{26}
+    \subitem {inicializar\_fila}, \hyperpage{26}
   \item {frente}
-    \subitem {Fila}, \hyperpage{6}
+    \subitem {Fila}, \hyperpage{8}
   \item {frente\_fila}
-    \subitem {fila.c}, \hyperpage{22}
-    \subitem {fila.h}, \hyperpage{24}
-
-  \indexspace
-
-  \item {gerar\_estatisticas}
-    \subitem {estatisticas.c}, \hyperpage{17}
-    \subitem {estatisticas.h}, \hyperpage{19}
+    \subitem {fila.c}, \hyperpage{23}
+    \subitem {fila.h}, \hyperpage{26}
 
   \indexspace
 
   \item {id}
-    \subitem {produto}, \hyperpage{11}
+    \subitem {produto}, \hyperpage{13}
+  \item {imagem\_animacao}
+    \subitem {produto}, \hyperpage{13}
+  \item {imagem\_path}
+    \subitem {produto}, \hyperpage{13}
   \item {inicializar\_fila}
-    \subitem {fila.c}, \hyperpage{22}
-    \subitem {fila.h}, \hyperpage{24}
+    \subitem {fila.c}, \hyperpage{24}
+    \subitem {fila.h}, \hyperpage{26}
   \item {inicializar\_interface}
-    \subitem {ui.c}, \hyperpage{51}
-    \subitem {ui.h}, \hyperpage{52}
+    \subitem {ui.c}, \hyperpage{56}
+    \subitem {ui.h}, \hyperpage{58}
   \item {inserir\_moedas}
-    \subitem {pagamento.c}, \hyperpage{40}
-    \subitem {pagamento.h}, \hyperpage{42}
+    \subitem {pagamento.c}, \hyperpage{47}
+    \subitem {pagamento.h}, \hyperpage{49}
 
   \indexspace
 
   \item {liberar\_lista\_produtos}
-    \subitem {lista\_produtos.c}, \hyperpage{27}
-    \subitem {lista\_produtos.h}, \hyperpage{31}
+    \subitem {lista\_produtos.c}, \hyperpage{29}
+    \subitem {lista\_produtos.h}, \hyperpage{33}
   \item {liberar\_logs}
-    \subitem {log\_vendas.c}, \hyperpage{34}
-    \subitem {log\_vendas.h}, \hyperpage{37}
+    \subitem {log\_vendas.c}, \hyperpage{36}
+    \subitem {log\_vendas.h}, \hyperpage{39}
   \item {limpar\_tela}
-    \subitem {ui.c}, \hyperpage{51}
-    \subitem {ui.h}, \hyperpage{53}
+    \subitem {ui.c}, \hyperpage{56}
+    \subitem {ui.h}, \hyperpage{58}
   \item {lista\_produtos}
-    \subitem {Contexto}, \hyperpage{6}
-  \item {lista\_produtos.c}, \hyperpage{25}
-    \subitem {adicionar\_produto}, \hyperpage{26}
-    \subitem {buscar\_produto}, \hyperpage{26}
-    \subitem {carregar\_produtos\_csv}, \hyperpage{27}
-    \subitem {liberar\_lista\_produtos}, \hyperpage{27}
-    \subitem {listar\_produtos}, \hyperpage{27}
-    \subitem {remover\_produto}, \hyperpage{28}
-    \subitem {salvar\_produtos\_csv}, \hyperpage{28}
-  \item {lista\_produtos.h}, \hyperpage{28}
-    \subitem {adicionar\_produto}, \hyperpage{30}
-    \subitem {buscar\_produto}, \hyperpage{30}
-    \subitem {carregar\_produtos\_csv}, \hyperpage{30}
-    \subitem {liberar\_lista\_produtos}, \hyperpage{31}
-    \subitem {listar\_produtos}, \hyperpage{31}
-    \subitem {remover\_produto}, \hyperpage{31}
-    \subitem {salvar\_produtos\_csv}, \hyperpage{31}
+    \subitem {Contexto}, \hyperpage{7}
+  \item {lista\_produtos.c}, \hyperpage{27}
+    \subitem {adicionar\_produto}, \hyperpage{28}
+    \subitem {buscar\_produto}, \hyperpage{28}
+    \subitem {carregar\_produtos\_csv}, \hyperpage{29}
+    \subitem {liberar\_lista\_produtos}, \hyperpage{29}
+    \subitem {listar\_produtos}, \hyperpage{29}
+    \subitem {remover\_produto}, \hyperpage{30}
+    \subitem {salvar\_produtos\_csv}, \hyperpage{30}
+  \item {lista\_produtos.h}, \hyperpage{30}
+    \subitem {adicionar\_produto}, \hyperpage{32}
+    \subitem {buscar\_produto}, \hyperpage{32}
+    \subitem {carregar\_produtos\_csv}, \hyperpage{32}
+    \subitem {liberar\_lista\_produtos}, \hyperpage{33}
+    \subitem {listar\_produtos}, \hyperpage{33}
+    \subitem {remover\_produto}, \hyperpage{33}
+    \subitem {salvar\_produtos\_csv}, \hyperpage{34}
   \item {listar\_produtos}
-    \subitem {lista\_produtos.c}, \hyperpage{27}
-    \subitem {lista\_produtos.h}, \hyperpage{31}
-  \item {Log}, \hyperpage{7}
-    \subitem {produto\_id}, \hyperpage{8}
-    \subitem {prox}, \hyperpage{8}
-    \subitem {timestamp}, \hyperpage{8}
-    \subitem {troco}, \hyperpage{8}
-    \subitem {valor\_pago}, \hyperpage{8}
-  \item {log\_vendas.c}, \hyperpage{32}
-    \subitem {adicionar\_log}, \hyperpage{33}
-    \subitem {carregar\_logs}, \hyperpage{34}
-    \subitem {exibir\_logs}, \hyperpage{34}
-    \subitem {liberar\_logs}, \hyperpage{34}
-    \subitem {salvar\_logs}, \hyperpage{34}
-  \item {log\_vendas.h}, \hyperpage{35}
-    \subitem {adicionar\_log}, \hyperpage{36}
+    \subitem {lista\_produtos.c}, \hyperpage{29}
+    \subitem {lista\_produtos.h}, \hyperpage{33}
+  \item {Log}, \hyperpage{9}
+    \subitem {produto\_id}, \hyperpage{10}
+    \subitem {prox}, \hyperpage{10}
+    \subitem {timestamp}, \hyperpage{10}
+    \subitem {troco}, \hyperpage{10}
+    \subitem {valor\_pago}, \hyperpage{10}
+  \item {log\_vendas.c}, \hyperpage{35}
+    \subitem {adicionar\_log}, \hyperpage{35}
     \subitem {carregar\_logs}, \hyperpage{36}
     \subitem {exibir\_logs}, \hyperpage{36}
-    \subitem {liberar\_logs}, \hyperpage{37}
+    \subitem {liberar\_logs}, \hyperpage{36}
     \subitem {salvar\_logs}, \hyperpage{37}
+  \item {log\_vendas.h}, \hyperpage{37}
+    \subitem {adicionar\_log}, \hyperpage{38}
+    \subitem {carregar\_logs}, \hyperpage{38}
+    \subitem {exibir\_logs}, \hyperpage{39}
+    \subitem {liberar\_logs}, \hyperpage{39}
+    \subitem {salvar\_logs}, \hyperpage{39}
   \item {logs\_vendas}
-    \subitem {Contexto}, \hyperpage{6}
+    \subitem {Contexto}, \hyperpage{7}
 
   \indexspace
 
   \item {main}
-    \subitem {main.c}, \hyperpage{38}
-  \item {main.c}, \hyperpage{38}
-    \subitem {main}, \hyperpage{38}
+    \subitem {main.c}, \hyperpage{45}
+  \item {main.c}, \hyperpage{40}
+    \subitem {desenhar\_menu\_config}, \hyperpage{42}
+    \subitem {desenhar\_menu\_principal}, \hyperpage{42}
+    \subitem {desenhar\_produtos\_estaticos}, \hyperpage{42}
+    \subitem {desenhar\_tela\_add\_produto}, \hyperpage{42}
+    \subitem {desenhar\_tela\_atualizar\_estoque}, \hyperpage{43}
+    \subitem {desenhar\_tela\_estatisticas}, \hyperpage{43}
+    \subitem {desenhar\_tela\_pagamento}, \hyperpage{44}
+    \subitem {desenhar\_tela\_produtos}, \hyperpage{44}
+    \subitem {desenhar\_tela\_propaganda}, \hyperpage{44}
+    \subitem {desenhar\_tela\_remove\_produto}, \hyperpage{45}
+    \subitem {desenhar\_tela\_senha}, \hyperpage{45}
+    \subitem {main}, \hyperpage{45}
   \item {mensagens}
-    \subitem {Fila}, \hyperpage{6}
+    \subitem {Fila}, \hyperpage{8}
   \item {menu\_configuracao}
-    \subitem {config.c}, \hyperpage{14}
-    \subitem {config.h}, \hyperpage{15}
-  \item {MENU\_PRINCIPAL}
-    \subitem {states.h}, \hyperpage{49}
+    \subitem {config.c}, \hyperpage{16}
+    \subitem {config.h}, \hyperpage{18}
 
   \indexspace
 
   \item {nome}
-    \subitem {produto}, \hyperpage{11}
+    \subitem {produto}, \hyperpage{13}
 
   \indexspace
 
-  \item {PAGAMENTO}
-    \subitem {states.h}, \hyperpage{49}
-  \item {pagamento.c}, \hyperpage{39}
-    \subitem {calcular\_troco}, \hyperpage{39}
-    \subitem {desfazer\_moeda}, \hyperpage{40}
-    \subitem {inserir\_moedas}, \hyperpage{40}
-  \item {pagamento.h}, \hyperpage{40}
-    \subitem {calcular\_troco}, \hyperpage{41}
-    \subitem {desfazer\_moeda}, \hyperpage{41}
-    \subitem {inserir\_moedas}, \hyperpage{42}
+  \item {pagamento.c}, \hyperpage{46}
+    \subitem {calcular\_troco}, \hyperpage{46}
+    \subitem {desfazer\_moeda}, \hyperpage{47}
+    \subitem {inserir\_moedas}, \hyperpage{47}
+  \item {pagamento.h}, \hyperpage{47}
+    \subitem {calcular\_troco}, \hyperpage{48}
+    \subitem {desfazer\_moeda}, \hyperpage{48}
+    \subitem {inserir\_moedas}, \hyperpage{49}
   \item {pausar}
-    \subitem {ui.c}, \hyperpage{51}
-    \subitem {ui.h}, \hyperpage{53}
-  \item {Pilha}, \hyperpage{8}
-    \subitem {topo}, \hyperpage{9}
-    \subitem {valores}, \hyperpage{9}
-  \item {pilha.c}, \hyperpage{42}
-  \item {pilha.h}, \hyperpage{43}
-  \item {PilhaEstados}, \hyperpage{9}
-    \subitem {estados}, \hyperpage{10}
-    \subitem {topo}, \hyperpage{10}
+    \subitem {ui.c}, \hyperpage{56}
+    \subitem {ui.h}, \hyperpage{58}
+  \item {Pilha}, \hyperpage{10}
+    \subitem {topo}, \hyperpage{11}
+    \subitem {valores}, \hyperpage{11}
+  \item {pilha.c}, \hyperpage{50}
+  \item {pilha.h}, \hyperpage{51}
+  \item {PilhaEstados}, \hyperpage{11}
+    \subitem {estados}, \hyperpage{11}
+    \subitem {topo}, \hyperpage{11}
+  \item {pos\_x\_inicial}
+    \subitem {produto}, \hyperpage{13}
+  \item {pos\_y\_inicial}
+    \subitem {produto}, \hyperpage{13}
   \item {preco}
-    \subitem {produto}, \hyperpage{11}
-  \item {produto}, \hyperpage{10}
-    \subitem {ant}, \hyperpage{11}
-    \subitem {estoque}, \hyperpage{11}
-    \subitem {id}, \hyperpage{11}
-    \subitem {nome}, \hyperpage{11}
-    \subitem {preco}, \hyperpage{11}
-    \subitem {prox}, \hyperpage{11}
+    \subitem {produto}, \hyperpage{14}
+  \item {produto}, \hyperpage{12}
+    \subitem {ant}, \hyperpage{13}
+    \subitem {estoque}, \hyperpage{13}
+    \subitem {id}, \hyperpage{13}
+    \subitem {imagem\_animacao}, \hyperpage{13}
+    \subitem {imagem\_path}, \hyperpage{13}
+    \subitem {nome}, \hyperpage{13}
+    \subitem {pos\_x\_inicial}, \hyperpage{13}
+    \subitem {pos\_y\_inicial}, \hyperpage{13}
+    \subitem {preco}, \hyperpage{14}
+    \subitem {prox}, \hyperpage{14}
   \item {produto\_id}
-    \subitem {Log}, \hyperpage{8}
+    \subitem {Log}, \hyperpage{10}
   \item {produto\_selecionado}
-    \subitem {Contexto}, \hyperpage{6}
+    \subitem {Contexto}, \hyperpage{7}
   \item {prox}
-    \subitem {Log}, \hyperpage{8}
-    \subitem {produto}, \hyperpage{11}
+    \subitem {Log}, \hyperpage{10}
+    \subitem {produto}, \hyperpage{14}
 
   \indexspace
 
   \item {remover\_produto}
-    \subitem {lista\_produtos.c}, \hyperpage{28}
-    \subitem {lista\_produtos.h}, \hyperpage{31}
+    \subitem {lista\_produtos.c}, \hyperpage{30}
+    \subitem {lista\_produtos.h}, \hyperpage{33}
 
   \indexspace
 
-  \item {SAIR}
-    \subitem {states.h}, \hyperpage{49}
   \item {salvar\_estatisticas\_csv}
-    \subitem {estatisticas.c}, \hyperpage{18}
-    \subitem {estatisticas.h}, \hyperpage{20}
+    \subitem {estatisticas.c}, \hyperpage{20}
+    \subitem {estatisticas.h}, \hyperpage{21}
   \item {salvar\_logs}
-    \subitem {log\_vendas.c}, \hyperpage{34}
-    \subitem {log\_vendas.h}, \hyperpage{37}
+    \subitem {log\_vendas.c}, \hyperpage{37}
+    \subitem {log\_vendas.h}, \hyperpage{39}
   \item {salvar\_produtos\_csv}
-    \subitem {lista\_produtos.c}, \hyperpage{28}
-    \subitem {lista\_produtos.h}, \hyperpage{31}
-  \item {SELECAO\_PRODUTO}
-    \subitem {states.h}, \hyperpage{49}
-  \item {State}
-    \subitem {states.h}, \hyperpage{48}
-  \item {states.c}, \hyperpage{45}
-    \subitem {estado\_configuracao}, \hyperpage{46}
-    \subitem {estado\_menu\_principal}, \hyperpage{46}
-    \subitem {estado\_pagamento}, \hyperpage{46}
-    \subitem {estado\_selecao\_produto}, \hyperpage{47}
-  \item {states.h}, \hyperpage{47}
-    \subitem {CONFIGURACAO}, \hyperpage{49}
-    \subitem {estado\_configuracao}, \hyperpage{49}
-    \subitem {estado\_menu\_principal}, \hyperpage{49}
-    \subitem {estado\_pagamento}, \hyperpage{49}
-    \subitem {estado\_selecao\_produto}, \hyperpage{49}
-    \subitem {MENU\_PRINCIPAL}, \hyperpage{49}
-    \subitem {PAGAMENTO}, \hyperpage{49}
-    \subitem {SAIR}, \hyperpage{49}
-    \subitem {SELECAO\_PRODUTO}, \hyperpage{49}
-    \subitem {State}, \hyperpage{48}
-    \subitem {VOLTAR}, \hyperpage{49}
+    \subitem {lista\_produtos.c}, \hyperpage{30}
+    \subitem {lista\_produtos.h}, \hyperpage{34}
+  \item {states.c}, \hyperpage{53}
+  \item {states.h}, \hyperpage{54}
 
   \indexspace
 
   \item {tamanho}
-    \subitem {Fila}, \hyperpage{7}
+    \subitem {Fila}, \hyperpage{8}
   \item {timestamp}
-    \subitem {Log}, \hyperpage{8}
+    \subitem {Log}, \hyperpage{10}
   \item {topo}
-    \subitem {Pilha}, \hyperpage{9}
-    \subitem {PilhaEstados}, \hyperpage{10}
+    \subitem {Pilha}, \hyperpage{11}
+    \subitem {PilhaEstados}, \hyperpage{11}
   \item {tras}
-    \subitem {Fila}, \hyperpage{7}
+    \subitem {Fila}, \hyperpage{9}
   \item {troco}
-    \subitem {Log}, \hyperpage{8}
+    \subitem {Log}, \hyperpage{10}
 
   \indexspace
 
-  \item {ui.c}, \hyperpage{50}
-    \subitem {inicializar\_interface}, \hyperpage{51}
-    \subitem {limpar\_tela}, \hyperpage{51}
-    \subitem {pausar}, \hyperpage{51}
-  \item {ui.h}, \hyperpage{51}
-    \subitem {inicializar\_interface}, \hyperpage{52}
-    \subitem {limpar\_tela}, \hyperpage{53}
-    \subitem {pausar}, \hyperpage{53}
+  \item {ui.c}, \hyperpage{55}
+    \subitem {inicializar\_interface}, \hyperpage{56}
+    \subitem {limpar\_tela}, \hyperpage{56}
+    \subitem {pausar}, \hyperpage{56}
+  \item {ui.h}, \hyperpage{57}
+    \subitem {inicializar\_interface}, \hyperpage{58}
+    \subitem {limpar\_tela}, \hyperpage{58}
+    \subitem {pausar}, \hyperpage{58}
 
   \indexspace
 
   \item {valor\_pago}
-    \subitem {Log}, \hyperpage{8}
+    \subitem {Log}, \hyperpage{10}
   \item {valores}
-    \subitem {Pilha}, \hyperpage{9}
+    \subitem {Pilha}, \hyperpage{11}
   \item {verificar\_senha}
-    \subitem {config.c}, \hyperpage{14}
-    \subitem {config.h}, \hyperpage{16}
-  \item {VOLTAR}
-    \subitem {states.h}, \hyperpage{49}
+    \subitem {config.c}, \hyperpage{16}
+    \subitem {config.h}, \hyperpage{18}
 
 \end{theindex}

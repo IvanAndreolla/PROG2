@@ -8,6 +8,7 @@ Implementação das funções de gerenciamento da lista de produtos.
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
 {\ttfamily \#include "{}lista\+\_\+produtos.\+h"{}}\newline
 Include dependency graph for lista\+\_\+produtos.\+c\+:
 \nopagebreak
@@ -20,7 +21,7 @@ Include dependency graph for lista\+\_\+produtos.\+c\+:
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_a40e96781cf0250c5c440078eedf133ee}{adicionar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}nome, float preco, int estoque)
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5}{adicionar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}nome, float preco, int estoque, const char \texorpdfstring{$\ast$}{*}img\+\_\+path, float pos\+\_\+x, float pos\+\_\+y)
 \begin{DoxyCompactList}\small\item\em Adiciona um novo produto ao início da lista duplamente encadeada. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_aa43d104180d153dfc883772654d1b54c}{remover\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id)
 \begin{DoxyCompactList}\small\item\em Remove um produto da lista pelo seu ID. \end{DoxyCompactList}\item 
@@ -42,11 +43,11 @@ Implementação das funções de gerenciamento da lista de produtos.
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{lista__produtos_8c_a40e96781cf0250c5c440078eedf133ee}\label{lista__produtos_8c_a40e96781cf0250c5c440078eedf133ee} 
+\Hypertarget{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5}\label{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5} 
 \index{lista\_produtos.c@{lista\_produtos.c}!adicionar\_produto@{adicionar\_produto}}
 \index{adicionar\_produto@{adicionar\_produto}!lista\_produtos.c@{lista\_produtos.c}}
 \doxysubsubsection{\texorpdfstring{adicionar\_produto()}{adicionar\_produto()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{float}]{preco,  }\item[{int}]{estoque }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{float}]{preco,  }\item[{int}]{estoque,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{img\+\_\+path,  }\item[{float}]{pos\+\_\+x,  }\item[{float}]{pos\+\_\+y }\end{DoxyParamCaption})}
 
 
 
@@ -63,6 +64,12 @@ Adiciona um novo produto ao início da lista duplamente encadeada.
 \mbox{\texttt{ in}}  & {\em preco} & Preço do novo produto. \\
 \hline
 \mbox{\texttt{ in}}  & {\em estoque} & Quantidade em estoque do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em img\+\_\+path} & Caminho do arquivo de imagem para a animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+x} & Posição X inicial da animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+y} & Posição Y inicial da animação. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

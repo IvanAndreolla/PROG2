@@ -1,29 +1,39 @@
 <map id="main.c" name="main.c">
-<area shape="rect" id="Node000001" title="Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes." alt="" coords="427,5,493,31"/>
+<area shape="rect" id="Node000001" title="Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5." alt="" coords="984,5,1051,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,26,283,47,86,81,85,76,282,42,426,21"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="984,22,843,24,624,31,360,49,222,63,86,81,85,76,221,58,359,44,623,26,843,18,984,17"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="97,79,167,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="427,29,181,81,180,76,426,24"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="192,79,256,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="427,32,270,79,268,74,425,27"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="281,79,351,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="438,33,353,75,351,70,436,28"/>
-<area shape="rect" id="Node000006" href="$ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="375,79,422,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="452,33,420,70,416,66,448,29"/>
-<area shape="rect" id="Node000007" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="391,152,446,177"/>
-<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="459,32,428,139,423,138,454,30"/>
-<area shape="rect" id="Node000008" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="481,152,556,177"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="467,30,511,138,506,140,462,32"/>
-<area shape="rect" id="Node000009" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="590,152,717,177"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="494,20,526,26,562,36,598,53,629,77,646,107,654,138,649,139,641,109,625,80,595,57,560,41,525,31,493,25"/>
-<area shape="rect" id="Node000010" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="745,152,853,177"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="494,19,563,24,647,35,726,52,756,63,778,77,788,90,795,106,801,137,796,138,790,108,784,93,774,81,754,68,724,57,646,40,562,30,493,24"/>
-<area shape="rect" id="Node000011" href="$pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="548,79,615,104"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="481,28,551,69,549,74,478,33"/>
-<area shape="rect" id="Node000012" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="690,79,763,104"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="494,26,678,74,676,79,493,31"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="405,104,414,138,409,140,399,105"/>
-<area shape="poly" id="edge12_Node000011_Node000008" title=" " alt="" coords="573,106,540,143,536,140,569,103"/>
-<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="716,106,677,144,673,140,713,102"/>
-<area shape="poly" id="edge15_Node000012_Node000010" title=" " alt="" coords="740,102,779,140,775,144,737,106"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="984,22,856,25,660,34,425,52,181,81,180,76,425,47,660,29,856,20,984,17"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="191,79,262,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="984,23,696,37,490,55,276,82,275,76,490,49,696,32,984,18"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="287,79,351,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="984,24,728,40,551,57,370,81,365,82,364,77,369,76,550,52,728,35,984,18"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="755,225,891,251"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="984,23,849,27,668,37,502,55,445,67,426,73,415,81,402,99,396,116,397,131,405,145,418,158,437,170,486,190,548,205,615,217,741,230,741,235,614,222,547,210,485,195,434,175,415,162,400,149,392,133,391,116,397,97,411,77,424,69,443,61,501,49,667,32,849,22,984,17"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="426,79,595,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="984,27,606,79,605,74,983,21"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="620,79,777,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="984,29,764,78,763,73,983,24"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="802,79,1011,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1001,33,938,73,935,69,998,28"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1036,79,1220,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1037,28,1100,69,1097,73,1034,33"/>
+<area shape="rect" id="Node000011" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="1295,79,1369,104"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1052,24,1283,76,1282,81,1050,29"/>
+<area shape="rect" id="Node000012" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="1194,152,1321,177"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="1051,16,1092,20,1141,29,1191,47,1214,60,1234,77,1244,91,1252,106,1259,138,1254,139,1247,108,1240,93,1230,81,1210,64,1188,52,1140,34,1092,25,1051,22"/>
+<area shape="rect" id="Node000013" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="1353,152,1461,177"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="1051,18,1130,22,1228,32,1320,50,1356,62,1382,77,1393,90,1401,106,1408,137,1403,138,1396,107,1389,93,1378,81,1354,67,1319,55,1227,38,1129,28,1051,23"/>
+<area shape="rect" id="Node000014" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="1444,79,1519,104"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="1051,21,1213,43,1426,76,1430,77,1429,82,1425,81,1212,48,1050,26"/>
+<area shape="rect" id="Node000015" href="$pagamento_8h.html" title="Protótipos para as funções relacionadas ao processo de pagamento." alt="" coords="1543,79,1651,104"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="1051,20,1250,41,1530,76,1529,81,1249,46,1051,25"/>
+<area shape="rect" id="Node000016" href="$estatisticas_8h.html" title="Protótipos e estruturas para as funções de geração de estatísticas." alt="" coords="1676,79,1785,104"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="1051,19,1301,38,1478,55,1663,76,1662,81,1477,60,1301,43,1051,24"/>
+<area shape="rect" id="Node000017" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="1810,79,1865,104"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="1051,17,1171,19,1353,28,1571,46,1685,59,1797,77,1796,82,1684,64,1570,51,1353,33,1171,25,1051,22"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="1322,106,1281,144,1278,141,1318,102"/>
+<area shape="poly" id="edge13_Node000011_Node000013" title=" " alt="" coords="1346,102,1386,141,1383,144,1342,106"/>
+<area shape="poly" id="edge12_Node000012_Node000006" title=" " alt="" coords="1194,179,905,226,904,221,1193,174"/>
+<area shape="poly" id="edge19_Node000016_Node000013" title=" " alt="" coords="1679,107,1473,152,1472,146,1678,101"/>
 </map>

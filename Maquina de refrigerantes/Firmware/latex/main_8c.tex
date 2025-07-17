@@ -2,20 +2,25 @@
 \hypertarget{main_8c}{}\label{main_8c}\index{main.c@{main.c}}
 
 
-Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes.  
+Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include "{}ui.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+font.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+primitives.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
 {\ttfamily \#include "{}states.\+h"{}}\newline
 {\ttfamily \#include "{}lista\+\_\+produtos.\+h"{}}\newline
 {\ttfamily \#include "{}log\+\_\+vendas.\+h"{}}\newline
+{\ttfamily \#include "{}pagamento.\+h"{}}\newline
+{\ttfamily \#include "{}estatisticas.\+h"{}}\newline
 {\ttfamily \#include "{}fila.\+h"{}}\newline
-{\ttfamily \#include "{}pilha.\+h"{}}\newline
-{\ttfamily \#include "{}config.\+h"{}}\newline
 Include dependency graph for main.\+c\+:
 \nopagebreak
 \begin{figure}[H]
@@ -24,22 +29,309 @@ Include dependency graph for main.\+c\+:
 \includegraphics[width=350pt]{main_8c__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structAnimacaoQueda}{Animacao\+Queda}}
+\begin{DoxyCompactList}\small\item\em Armazena os dados para a animação de queda de um produto. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structAnimacaoEntrega}{Animacao\+Entrega}}
+\begin{DoxyCompactList}\small\item\em Armazena os dados para a animação de entrega do produto ao cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a0f63b4b6f1fe36fbcd37583ffbce997a}\label{main_8c_a0f63b4b6f1fe36fbcd37583ffbce997a} 
+\#define {\bfseries LARGURA\+\_\+\+JANELA}~1280
+\item 
+\Hypertarget{main_8c_a3c3ab39c7b54ac25788386e853d1fffc}\label{main_8c_a3c3ab39c7b54ac25788386e853d1fffc} 
+\#define {\bfseries ALTURA\+\_\+\+JANELA}~720
+\item 
+\Hypertarget{main_8c_ac92ca5ab87034a348decad7ee8d4bd1b}\label{main_8c_ac92ca5ab87034a348decad7ee8d4bd1b} 
+\#define {\bfseries FPS}~60.\+0
+\item 
+\Hypertarget{main_8c_a3ae19f52708f679cc2af4e2c33943914}\label{main_8c_a3ae19f52708f679cc2af4e2c33943914} 
+\#define {\bfseries TELA\+\_\+X}~607
+\item 
+\Hypertarget{main_8c_a7e110a3a4ca72906bd2d3bc505735b31}\label{main_8c_a7e110a3a4ca72906bd2d3bc505735b31} 
+\#define {\bfseries TELA\+\_\+Y}~130
+\item 
+\Hypertarget{main_8c_a5c2f746df6889e0255a635c9fff490fe}\label{main_8c_a5c2f746df6889e0255a635c9fff490fe} 
+\#define {\bfseries TELA\+\_\+\+LARGURA}~159
+\item 
+\Hypertarget{main_8c_a18bb49d2ce68f4af9651cad0173968f0}\label{main_8c_a18bb49d2ce68f4af9651cad0173968f0} 
+\#define {\bfseries TELA\+\_\+\+ALTURA}~190
+\item 
+\Hypertarget{main_8c_af5ac286f24348d97bc3272999e3345d5}\label{main_8c_af5ac286f24348d97bc3272999e3345d5} 
+\#define {\bfseries PROPAGANDA\+\_\+X}~335
+\item 
+\Hypertarget{main_8c_a5434317b077cf90150f8e3d7375aa776}\label{main_8c_a5434317b077cf90150f8e3d7375aa776} 
+\#define {\bfseries PROPAGANDA\+\_\+Y}~110
+\item 
+\Hypertarget{main_8c_ab741dab6cacac69ffff256a25121e39f}\label{main_8c_ab741dab6cacac69ffff256a25121e39f} 
+\#define {\bfseries PROPAGANDA\+\_\+\+LARGURA}~220
+\item 
+\Hypertarget{main_8c_ac5f92aeb296c2fda8c9ed0e08be975bf}\label{main_8c_ac5f92aeb296c2fda8c9ed0e08be975bf} 
+\#define {\bfseries PROPAGANDA\+\_\+\+ALTURA}~60
+\item 
+\Hypertarget{main_8c_a8123cb9389dd3e195237af46f91484e8}\label{main_8c_a8123cb9389dd3e195237af46f91484e8} 
+\#define {\bfseries PORTA\+\_\+X}~400
+\item 
+\Hypertarget{main_8c_aac87ceef6bceb4f31c6ebafbee36bef1}\label{main_8c_aac87ceef6bceb4f31c6ebafbee36bef1} 
+\#define {\bfseries PORTA\+\_\+Y}~560
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{main_8c_a177811c82f287ee866f8c2c05402ae50}{desenhar\+\_\+produtos\+\_\+estaticos}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}lista\+\_\+produtos, \mbox{\hyperlink{structAnimacaoQueda}{Animacao\+Queda}} \texorpdfstring{$\ast$}{*}animacao\+\_\+atual)
+\begin{DoxyCompactList}\small\item\em Desenha os produtos na vitrine da máquina. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a4d2a05239f7c67d8a431f97eb243a715}{desenhar\+\_\+menu\+\_\+principal}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, int indice\+\_\+selecionado)
+\begin{DoxyCompactList}\small\item\em Desenha o menu principal na tela da máquina. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a17fc0774f6b68ed364c97363e9d5bffa}{desenhar\+\_\+tela\+\_\+propaganda}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, const char \texorpdfstring{$\ast$}{*}propaganda)
+\begin{DoxyCompactList}\small\item\em Desenha a mensagem de propaganda na área designada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a2d35c91265cb43c1b90440d6472c6c32}{desenhar\+\_\+tela\+\_\+produtos}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}lista\+\_\+produtos, int indice\+\_\+selecionado)
+\begin{DoxyCompactList}\small\item\em Desenha a tela de seleção de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a3387ebf9815a26f6dcd50d52c36cc6d5}{desenhar\+\_\+tela\+\_\+pagamento}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}produto\+\_\+selecionado, float valor\+\_\+inserido, int botao\+\_\+pressionado\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Desenha a tela de pagamento para um produto selecionado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ae98d854651b4e4390e631469d6d2f56f}{desenhar\+\_\+tela\+\_\+estatisticas}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, \mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\begin{DoxyCompactList}\small\item\em Desenha a tela de estatísticas de vendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a5130a7d83677714b9ceb832fe50f8853}{desenhar\+\_\+tela\+\_\+senha}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, const char \texorpdfstring{$\ast$}{*}senha\+\_\+digitada, bool cursor\+\_\+visivel)
+\begin{DoxyCompactList}\small\item\em Desenha a tela de inserção de senha para acesso à configuração. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a6ada6c1984145c8105c56d4df71248e1}{desenhar\+\_\+menu\+\_\+config}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, int indice\+\_\+selecionado)
+\begin{DoxyCompactList}\small\item\em Desenha o menu principal de configurações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a7d96966343b0b18435e0981713f473cb}{desenhar\+\_\+tela\+\_\+add\+\_\+produto}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, char \texorpdfstring{$\ast$}{*}id, char \texorpdfstring{$\ast$}{*}nome, char \texorpdfstring{$\ast$}{*}preco, char \texorpdfstring{$\ast$}{*}estoque, char \texorpdfstring{$\ast$}{*}img\+\_\+path, char \texorpdfstring{$\ast$}{*}pos\+\_\+x, char \texorpdfstring{$\ast$}{*}pos\+\_\+y, int campo\+\_\+ativo, bool cursor\+\_\+visivel)
+\begin{DoxyCompactList}\small\item\em Desenha o formulário para adicionar um novo produto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ad75c4c5fbb48184e8b1ae7c62a333f81}{desenhar\+\_\+tela\+\_\+remove\+\_\+produto}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, char \texorpdfstring{$\ast$}{*}id\+\_\+str, bool cursor\+\_\+visivel)
+\begin{DoxyCompactList}\small\item\em Desenha a tela para remover um produto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a93559e4a51e6517189e884f2e160713d}{desenhar\+\_\+tela\+\_\+atualizar\+\_\+estoque}} (ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}fonte, char \texorpdfstring{$\ast$}{*}id\+\_\+str, char \texorpdfstring{$\ast$}{*}estoque\+\_\+str, int campo\+\_\+ativo, bool cursor\+\_\+visivel)
+\begin{DoxyCompactList}\small\item\em Desenha a tela para atualizar o estoque de um produto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em Função principal que executa a máquina de refrigerantes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função principal da aplicação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes. 
+Ponto de entrada principal e gerenciador da interface gráfica com Allegro 5. 
 
-
-\begin{DoxyItemize}
-\item Este arquivo inicializa todas as estruturas de dados, gerencia a máquina de estados finitos (FSM) e controla o fluxo principal da aplicação. 
-\end{DoxyItemize}
+Este arquivo inicializa a biblioteca Allegro, cria a janela, gerencia o laço de eventos principal e controla a máquina de estados finitos que rege a aplicação. Toda a lógica de renderização das telas e de interação do usuário (teclado e mouse) está contida aqui. 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a6ada6c1984145c8105c56d4df71248e1}\label{main_8c_a6ada6c1984145c8105c56d4df71248e1} 
+\index{main.c@{main.c}!desenhar\_menu\_config@{desenhar\_menu\_config}}
+\index{desenhar\_menu\_config@{desenhar\_menu\_config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_menu\_config()}{desenhar\_menu\_config()}}
+{\footnotesize\ttfamily void desenhar\+\_\+menu\+\_\+config (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{int}]{indice\+\_\+selecionado }\end{DoxyParamCaption})}
+
+
+
+Desenha o menu principal de configurações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em indice\+\_\+selecionado} & Índice da opção de configuração selecionada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a4d2a05239f7c67d8a431f97eb243a715}\label{main_8c_a4d2a05239f7c67d8a431f97eb243a715} 
+\index{main.c@{main.c}!desenhar\_menu\_principal@{desenhar\_menu\_principal}}
+\index{desenhar\_menu\_principal@{desenhar\_menu\_principal}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_menu\_principal()}{desenhar\_menu\_principal()}}
+{\footnotesize\ttfamily void desenhar\+\_\+menu\+\_\+principal (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{int}]{indice\+\_\+selecionado }\end{DoxyParamCaption})}
+
+
+
+Desenha o menu principal na tela da máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em indice\+\_\+selecionado} & Índice da opção de menu atualmente selecionada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a177811c82f287ee866f8c2c05402ae50}\label{main_8c_a177811c82f287ee866f8c2c05402ae50} 
+\index{main.c@{main.c}!desenhar\_produtos\_estaticos@{desenhar\_produtos\_estaticos}}
+\index{desenhar\_produtos\_estaticos@{desenhar\_produtos\_estaticos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_produtos\_estaticos()}{desenhar\_produtos\_estaticos()}}
+{\footnotesize\ttfamily void desenhar\+\_\+produtos\+\_\+estaticos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{lista\+\_\+produtos,  }\item[{\mbox{\hyperlink{structAnimacaoQueda}{Animacao\+Queda}} \texorpdfstring{$\ast$}{*}}]{animacao\+\_\+atual }\end{DoxyParamCaption})}
+
+
+
+Desenha os produtos na vitrine da máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista\+\_\+produtos} & Ponteiro para a lista de produtos. \\
+\hline
+{\em animacao\+\_\+atual} & Ponteiro para a animação de queda, para não desenhar o produto que está caindo. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a7d96966343b0b18435e0981713f473cb}\label{main_8c_a7d96966343b0b18435e0981713f473cb} 
+\index{main.c@{main.c}!desenhar\_tela\_add\_produto@{desenhar\_tela\_add\_produto}}
+\index{desenhar\_tela\_add\_produto@{desenhar\_tela\_add\_produto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_add\_produto()}{desenhar\_tela\_add\_produto()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+add\+\_\+produto (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{char \texorpdfstring{$\ast$}{*}}]{id,  }\item[{char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{char \texorpdfstring{$\ast$}{*}}]{preco,  }\item[{char \texorpdfstring{$\ast$}{*}}]{estoque,  }\item[{char \texorpdfstring{$\ast$}{*}}]{img\+\_\+path,  }\item[{char \texorpdfstring{$\ast$}{*}}]{pos\+\_\+x,  }\item[{char \texorpdfstring{$\ast$}{*}}]{pos\+\_\+y,  }\item[{int}]{campo\+\_\+ativo,  }\item[{bool}]{cursor\+\_\+visivel }\end{DoxyParamCaption})}
+
+
+
+Desenha o formulário para adicionar um novo produto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em id} & String para o campo ID. \\
+\hline
+{\em nome} & String para o campo Nome. \\
+\hline
+{\em preco} & String para o campo Preço. \\
+\hline
+{\em estoque} & String para o campo Estoque. \\
+\hline
+{\em img\+\_\+path} & String para o caminho da imagem. \\
+\hline
+{\em pos\+\_\+x} & String para a posição X. \\
+\hline
+{\em pos\+\_\+y} & String para a posição Y. \\
+\hline
+{\em campo\+\_\+ativo} & Índice do campo do formulário atualmente ativo. \\
+\hline
+{\em cursor\+\_\+visivel} & Flag para controlar o piscar do cursor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a93559e4a51e6517189e884f2e160713d}\label{main_8c_a93559e4a51e6517189e884f2e160713d} 
+\index{main.c@{main.c}!desenhar\_tela\_atualizar\_estoque@{desenhar\_tela\_atualizar\_estoque}}
+\index{desenhar\_tela\_atualizar\_estoque@{desenhar\_tela\_atualizar\_estoque}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_atualizar\_estoque()}{desenhar\_tela\_atualizar\_estoque()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+atualizar\+\_\+estoque (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{char \texorpdfstring{$\ast$}{*}}]{id\+\_\+str,  }\item[{char \texorpdfstring{$\ast$}{*}}]{estoque\+\_\+str,  }\item[{int}]{campo\+\_\+ativo,  }\item[{bool}]{cursor\+\_\+visivel }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela para atualizar o estoque de um produto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em id\+\_\+str} & String para o campo ID. \\
+\hline
+{\em estoque\+\_\+str} & String para o novo valor de estoque. \\
+\hline
+{\em campo\+\_\+ativo} & Índice do campo do formulário atualmente ativo. \\
+\hline
+{\em cursor\+\_\+visivel} & Flag para controlar o piscar do cursor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_ae98d854651b4e4390e631469d6d2f56f}\label{main_8c_ae98d854651b4e4390e631469d6d2f56f} 
+\index{main.c@{main.c}!desenhar\_tela\_estatisticas@{desenhar\_tela\_estatisticas}}
+\index{desenhar\_tela\_estatisticas@{desenhar\_tela\_estatisticas}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_estatisticas()}{desenhar\_tela\_estatisticas()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+estatisticas (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}}]{ctx }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela de estatísticas de vendas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em ctx} & Ponteiro para o contexto da aplicação, contendo os logs de vendas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a3387ebf9815a26f6dcd50d52c36cc6d5}\label{main_8c_a3387ebf9815a26f6dcd50d52c36cc6d5} 
+\index{main.c@{main.c}!desenhar\_tela\_pagamento@{desenhar\_tela\_pagamento}}
+\index{desenhar\_tela\_pagamento@{desenhar\_tela\_pagamento}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_pagamento()}{desenhar\_tela\_pagamento()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+pagamento (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{produto\+\_\+selecionado,  }\item[{float}]{valor\+\_\+inserido,  }\item[{int}]{botao\+\_\+pressionado\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela de pagamento para um produto selecionado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em produto\+\_\+selecionado} & Ponteiro para o produto que está sendo comprado. \\
+\hline
+{\em valor\+\_\+inserido} & Valor monetário já inserido pelo usuário. \\
+\hline
+{\em botao\+\_\+pressionado\+\_\+id} & ID do botão sendo pressionado (para feedback visual). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a2d35c91265cb43c1b90440d6472c6c32}\label{main_8c_a2d35c91265cb43c1b90440d6472c6c32} 
+\index{main.c@{main.c}!desenhar\_tela\_produtos@{desenhar\_tela\_produtos}}
+\index{desenhar\_tela\_produtos@{desenhar\_tela\_produtos}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_produtos()}{desenhar\_tela\_produtos()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+produtos (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{lista\+\_\+produtos,  }\item[{int}]{indice\+\_\+selecionado }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela de seleção de produtos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em lista\+\_\+produtos} & Ponteiro para a lista de produtos a ser exibida. \\
+\hline
+{\em indice\+\_\+selecionado} & Índice do produto atualmente selecionado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a17fc0774f6b68ed364c97363e9d5bffa}\label{main_8c_a17fc0774f6b68ed364c97363e9d5bffa} 
+\index{main.c@{main.c}!desenhar\_tela\_propaganda@{desenhar\_tela\_propaganda}}
+\index{desenhar\_tela\_propaganda@{desenhar\_tela\_propaganda}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_propaganda()}{desenhar\_tela\_propaganda()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+propaganda (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{propaganda }\end{DoxyParamCaption})}
+
+
+
+Desenha a mensagem de propaganda na área designada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em propaganda} & String contendo a propaganda a ser exibida. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_ad75c4c5fbb48184e8b1ae7c62a333f81}\label{main_8c_ad75c4c5fbb48184e8b1ae7c62a333f81} 
+\index{main.c@{main.c}!desenhar\_tela\_remove\_produto@{desenhar\_tela\_remove\_produto}}
+\index{desenhar\_tela\_remove\_produto@{desenhar\_tela\_remove\_produto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_remove\_produto()}{desenhar\_tela\_remove\_produto()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+remove\+\_\+produto (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{char \texorpdfstring{$\ast$}{*}}]{id\+\_\+str,  }\item[{bool}]{cursor\+\_\+visivel }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela para remover um produto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em id\+\_\+str} & String para o campo ID do produto a ser removido. \\
+\hline
+{\em cursor\+\_\+visivel} & Flag para controlar o piscar do cursor. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_a5130a7d83677714b9ceb832fe50f8853}\label{main_8c_a5130a7d83677714b9ceb832fe50f8853} 
+\index{main.c@{main.c}!desenhar\_tela\_senha@{desenhar\_tela\_senha}}
+\index{desenhar\_tela\_senha@{desenhar\_tela\_senha}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{desenhar\_tela\_senha()}{desenhar\_tela\_senha()}}
+{\footnotesize\ttfamily void desenhar\+\_\+tela\+\_\+senha (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+FONT \texorpdfstring{$\ast$}{*}}]{fonte,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{senha\+\_\+digitada,  }\item[{bool}]{cursor\+\_\+visivel }\end{DoxyParamCaption})}
+
+
+
+Desenha a tela de inserção de senha para acesso à configuração. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fonte} & Ponteiro para a fonte a ser usada. \\
+\hline
+{\em senha\+\_\+digitada} & String com a senha atualmente digitada pelo usuário. \\
+\hline
+{\em cursor\+\_\+visivel} & Flag para controlar o piscar do cursor. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
 \index{main.c@{main.c}!main@{main}}
 \index{main@{main}!main.c@{main.c}}
@@ -48,12 +340,8 @@ Ponto de entrada principal e loop da aplicação da Máquina de Refrigerantes.
 
 
 
-Função principal que executa a máquina de refrigerantes. 
+Função principal da aplicação. 
 
-
-\begin{DoxyItemize}
-\item Inicializa o contexto, as estruturas de dados, carrega os dados de arquivos e entra no loop da máquina de estados. Ao sair, salva os dados e libera a memória alocada. \begin{DoxyReturn}{Returns}
-0 em caso de sucesso, 1 em caso de erro de alocação. 
+Inicializa o Allegro, carrega recursos, gerencia o laço de eventos (entradas do usuário, timer, redesenho da tela) e, ao final, salva os dados e libera os recursos alocados. \begin{DoxyReturn}{Returns}
+0 em caso de sucesso, -\/1 em caso de erro de inicialização. 
 \end{DoxyReturn}
-
-\end{DoxyItemize}

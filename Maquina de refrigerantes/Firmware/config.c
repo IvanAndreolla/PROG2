@@ -1,6 +1,10 @@
 /**
  * @file config.c
  * @brief Implementação das funcionalidades do menu de configuração.
+ * @note Este módulo foi projetado para uma versão de console da aplicação.
+ * Na versão gráfica final (main.c), toda a interface e lógica de configuração
+ * foram reimplementadas com Allegro, e as funções deste arquivo (exceto
+ * `verificar_senha`, cuja lógica foi adaptada) não são utilizadas.
  */
 
 #include <stdio.h>
@@ -11,7 +15,7 @@
 
 /**
  * @brief Lê um número inteiro da entrada padrão com validação.
- * * Continua solicitando a entrada até que um número inteiro válido seja fornecido.
+ * @details Continua solicitando a entrada até que um número inteiro válido seja fornecido.
  * @return O número inteiro lido.
  */
 static int ler_inteiro() {
@@ -31,7 +35,7 @@ static int ler_inteiro() {
 
 /**
  * @brief Lê um número de ponto flutuante da entrada padrão com validação.
- * * Continua solicitando a entrada até que um número válido seja fornecido.
+ * @details Continua solicitando a entrada até que um número válido seja fornecido.
  * @return O número float lido.
  */
 static float ler_float() {
@@ -51,7 +55,7 @@ static float ler_float() {
 
 /**
  * @brief Solicita e verifica a senha do administrador.
- * * Permite até 3 tentativas antes de bloquear o acesso.
+ * @details Permite até 3 tentativas antes de bloquear o acesso.
  * @return 1 se a senha estiver correta, 0 caso contrário.
  */
 int verificar_senha() {
@@ -101,6 +105,10 @@ void menu_configuracao(Contexto *ctx) {
             int id, estoque;
             char nome[50];
             float preco;
+            
+            char img_path[100];
+            float pos_x, pos_y;
+
             printf("ID: ");
             id = ler_inteiro();
 
@@ -115,7 +123,17 @@ void menu_configuracao(Contexto *ctx) {
                 preco = ler_float();
                 printf("Estoque: ");
                 estoque = ler_inteiro();
-                ctx->lista_produtos = adicionar_produto(ctx->lista_produtos, id, nome, preco, estoque);
+
+                printf("Caminho da imagem (ex: lata.png): ");
+                if (fgets(img_path, sizeof(img_path), stdin) != NULL) {
+                    img_path[strcspn(img_path, "\n")] = '\0';
+                }
+                printf("Posição X inicial da lata: ");
+                pos_x = ler_float();
+                printf("Posição Y inicial da lata: ");
+                pos_y = ler_float();
+
+                ctx->lista_produtos = adicionar_produto(ctx->lista_produtos, id, nome, preco, estoque, img_path, pos_x, pos_y);
                 printf("Produto '%s' adicionado com sucesso!\n", nome);
             }
         } else if (op == 2) {

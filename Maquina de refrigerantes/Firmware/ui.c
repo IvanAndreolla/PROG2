@@ -1,6 +1,8 @@
 /**
  * @file ui.c
  * @brief Implementação das funções de interface de usuário.
+ * @note Estas funções foram criadas para uma versão de console da aplicação e
+ * não são utilizadas pela interface gráfica principal implementada em main.c.
  */
 
 #include <stdio.h>
@@ -10,7 +12,7 @@
 
 /**
  * @brief Limpa a tela do terminal.
- * * Tenta usar "clear" (Linux/macOS) ou "cls" (Windows).
+ * @details Tenta usar "clear" (Linux/macOS) ou "cls" (Windows).
  */
 void limpar_tela() {
     system("clear || cls");
@@ -18,14 +20,12 @@ void limpar_tela() {
 
 /**
  * @brief Pausa a execução do programa até que o usuário pressione Enter.
- * * Esta versão corrigida consome quaisquer caracteres residuais no buffer de
+ * @details Esta versão corrigida consome quaisquer caracteres residuais no buffer de
  * entrada e espera por um único Enter para continuar.
  */
 void pausar() {
     printf("\nPressione Enter para continuar...\n");
     int c;
-    // Loop para consumir (limpar) quaisquer caracteres que possam ter
-    // sobrado no buffer de entrada (stdin) de uma leitura anterior.
     do {
         c = getchar();
     } while (c != '\n' && c != EOF);
@@ -51,6 +51,6 @@ void inicializar_interface(Fila *propagandas) {
     } else {
         printf("Fila de propagandas não inicializada.\n\n");
     }
-    // A chamada inicial para pausar também usará a nova função corrigida.
+
     pausar();
 }

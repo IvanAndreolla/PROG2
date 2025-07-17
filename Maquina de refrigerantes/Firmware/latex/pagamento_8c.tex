@@ -20,7 +20,7 @@ Include dependency graph for pagamento.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{pagamento_8c_aa9f67533c50d6fd5dea7962c2e43b6ee}{inserir\+\_\+moedas}} (float \texorpdfstring{$\ast$}{*}valor\+\_\+acumulado)
-\begin{DoxyCompactList}\small\item\em Coleta as moedas inseridas pelo usuário. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Coleta as moedas inseridas pelo usuário (versão console). \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{pagamento_8c_a31e16657005cd61dc632cf47e19336ab}{calcular\+\_\+troco}} (float valor\+\_\+inserido, float preco)
 \begin{DoxyCompactList}\small\item\em Calcula o troco com base no valor inserido e no preço do produto. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{pagamento_8c_a9a9713271d3a385a6ff231f325e2d11a}{desfazer\+\_\+moeda}} ()
@@ -30,6 +30,9 @@ float \mbox{\hyperlink{pagamento_8c_a9a9713271d3a385a6ff231f325e2d11a}{desfazer\
 \doxysubsection{Detailed Description}
 Implementação das funções de pagamento. 
 
+\begin{DoxyNote}{Note}
+Este módulo contém implementações originalmente pensadas para uma versão de console. Na versão gráfica final (\doxylink{main_8c}{main.\+c}), a função {\ttfamily inserir\+\_\+moedas} é substituída por uma lógica de interface gráfica. A função {\ttfamily calcular\+\_\+troco} continua sendo utilizada. 
+\end{DoxyNote}
 
 
 \doxysubsection{Function Documentation}
@@ -74,11 +77,11 @@ O valor da moeda removida, ou 0 se não houver moedas para remover.
 
 
 
-Coleta as moedas inseridas pelo usuário. 
+Coleta as moedas inseridas pelo usuário (versão console). 
 
+Coleta as moedas inseridas pelo usuário.
 
-\begin{DoxyItemize}
-\item A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. 
+A função usa um ponteiro para retornar o valor total acumulado. O valor de retorno da função indica o status da operação. 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ out}}  & {\em valor\+\_\+acumulado} & Ponteiro para a variável que armazenará o total inserido. \\
 \hline
@@ -88,5 +91,3 @@ Coleta as moedas inseridas pelo usuário.
 
 0 se a operação foi cancelada (usuário digitou -\/2). 
 \end{DoxyReturn}
-
-\end{DoxyItemize}
