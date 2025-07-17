@@ -1,0 +1,40 @@
+\doxysection{states.\+c File Reference}
+\hypertarget{states_8c}{}\label{states_8c}\index{states.c@{states.c}}
+
+
+Implementação das funções de lógica para cada estado da FSM.  
+
+
+{\ttfamily \#include "{}states.\+h"{}}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+Include dependency graph for states.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{states_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{states_8c_a20ecef154f2cf20033ff0ad084818585}\label{states_8c_a20ecef154f2cf20033ff0ad084818585} 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} {\bfseries estado\+\_\+menu\+\_\+principal} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+\Hypertarget{states_8c_a06e54282d860eeb6f7e7f7931b918080}\label{states_8c_a06e54282d860eeb6f7e7f7931b918080} 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} {\bfseries estado\+\_\+selecao\+\_\+produto} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+\Hypertarget{states_8c_a37cd3a490db4652d959c5f8e783a2dc8}\label{states_8c_a37cd3a490db4652d959c5f8e783a2dc8} 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} {\bfseries estado\+\_\+pagamento} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\item 
+\Hypertarget{states_8c_ab595df560f6d64c6327da6b5cd528f59}\label{states_8c_ab595df560f6d64c6327da6b5cd528f59} 
+\mbox{\hyperlink{states_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} {\bfseries estado\+\_\+configuracao} (\mbox{\hyperlink{structContexto}{Contexto}} \texorpdfstring{$\ast$}{*}ctx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de lógica para cada estado da FSM. 
+
+\begin{DoxyNote}{Note}
+Na versão Allegro, a maior parte da lógica foi movida para o \doxylink{main_8c}{main.\+c}. Estas funções são mantidas para compatibilidade, mas estão vazias. 
+\end{DoxyNote}

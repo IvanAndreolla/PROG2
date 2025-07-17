@@ -1,0 +1,182 @@
+\doxysection{lista\+\_\+produtos.\+c File Reference}
+\hypertarget{lista__produtos_8c}{}\label{lista__produtos_8c}\index{lista\_produtos.c@{lista\_produtos.c}}
+
+
+Implementação das funções de gerenciamento da lista de produtos.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include "{}lista\+\_\+produtos.\+h"{}}\newline
+Include dependency graph for lista\+\_\+produtos.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lista__produtos_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5}{adicionar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}nome, float preco, int estoque, const char \texorpdfstring{$\ast$}{*}img\+\_\+path, float pos\+\_\+x, float pos\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo produto ao início da lista duplamente encadeada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_aa43d104180d153dfc883772654d1b54c}{remover\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id)
+\begin{DoxyCompactList}\small\item\em Remove um produto da lista pelo seu ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_a9d0432b6528c2948479b52aa6bccb94f}{buscar\+\_\+produto}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, int id)
+\begin{DoxyCompactList}\small\item\em Busca um produto na lista pelo seu ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lista__produtos_8c_aa276a95b7dceac0c0bff1aba4a1507af}{listar\+\_\+produtos}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Lista todos os produtos da lista no terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lista__produtos_8c_a4707176ff4cc8198d554e8d826465d32}{liberar\+\_\+lista\+\_\+produtos}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Libera toda a memória alocada para a lista de produtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lista__produtos_8c_acaafe63f7b37a49e193b0f8b36f07c5a}{salvar\+\_\+produtos\+\_\+csv}} (\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Salva a lista de produtos em um arquivo no formato CSV. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{lista__produtos_8c_a0d4333cb55160fbec0a2e2a58b67d7be}{carregar\+\_\+produtos\+\_\+csv}} (const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Carrega uma lista de produtos a partir de um arquivo CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de gerenciamento da lista de produtos. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5}\label{lista__produtos_8c_afed84dc4b88c3d291ff6ab48983a7ab5} 
+\index{lista\_produtos.c@{lista\_produtos.c}!adicionar\_produto@{adicionar\_produto}}
+\index{adicionar\_produto@{adicionar\_produto}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{adicionar\_produto()}{adicionar\_produto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} adicionar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{nome,  }\item[{float}]{preco,  }\item[{int}]{estoque,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{img\+\_\+path,  }\item[{float}]{pos\+\_\+x,  }\item[{float}]{pos\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo produto ao início da lista duplamente encadeada. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em nome} & Nome do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em preco} & Preço do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em estoque} & Quantidade em estoque do novo produto. \\
+\hline
+\mbox{\texttt{ in}}  & {\em img\+\_\+path} & Caminho do arquivo de imagem para a animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+x} & Posição X inicial da animação. \\
+\hline
+\mbox{\texttt{ in}}  & {\em pos\+\_\+y} & Posição Y inicial da animação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova cabeça da lista. 
+\end{DoxyReturn}
+\Hypertarget{lista__produtos_8c_a9d0432b6528c2948479b52aa6bccb94f}\label{lista__produtos_8c_a9d0432b6528c2948479b52aa6bccb94f} 
+\index{lista\_produtos.c@{lista\_produtos.c}!buscar\_produto@{buscar\_produto}}
+\index{buscar\_produto@{buscar\_produto}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{buscar\_produto()}{buscar\_produto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} buscar\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Busca um produto na lista pelo seu ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do produto a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para o nó do produto encontrado, ou NULL se não for encontrado. 
+\end{DoxyReturn}
+\Hypertarget{lista__produtos_8c_a0d4333cb55160fbec0a2e2a58b67d7be}\label{lista__produtos_8c_a0d4333cb55160fbec0a2e2a58b67d7be} 
+\index{lista\_produtos.c@{lista\_produtos.c}!carregar\_produtos\_csv@{carregar\_produtos\_csv}}
+\index{carregar\_produtos\_csv@{carregar\_produtos\_csv}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{carregar\_produtos\_csv()}{carregar\_produtos\_csv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} carregar\+\_\+produtos\+\_\+csv (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Carrega uma lista de produtos a partir de um arquivo CSV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & Nome do arquivo CSV a ser lido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a cabeça da nova lista de produtos carregada. 
+\end{DoxyReturn}
+\Hypertarget{lista__produtos_8c_a4707176ff4cc8198d554e8d826465d32}\label{lista__produtos_8c_a4707176ff4cc8198d554e8d826465d32} 
+\index{lista\_produtos.c@{lista\_produtos.c}!liberar\_lista\_produtos@{liberar\_lista\_produtos}}
+\index{liberar\_lista\_produtos@{liberar\_lista\_produtos}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{liberar\_lista\_produtos()}{liberar\_lista\_produtos()}}
+{\footnotesize\ttfamily void liberar\+\_\+lista\+\_\+produtos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Libera toda a memória alocada para a lista de produtos. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista a ser liberada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lista__produtos_8c_aa276a95b7dceac0c0bff1aba4a1507af}\label{lista__produtos_8c_aa276a95b7dceac0c0bff1aba4a1507af} 
+\index{lista\_produtos.c@{lista\_produtos.c}!listar\_produtos@{listar\_produtos}}
+\index{listar\_produtos@{listar\_produtos}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{listar\_produtos()}{listar\_produtos()}}
+{\footnotesize\ttfamily void listar\+\_\+produtos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Lista todos os produtos da lista no terminal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lista__produtos_8c_aa43d104180d153dfc883772654d1b54c}\label{lista__produtos_8c_aa43d104180d153dfc883772654d1b54c} 
+\index{lista\_produtos.c@{lista\_produtos.c}!remover\_produto@{remover\_produto}}
+\index{remover\_produto@{remover\_produto}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{remover\_produto()}{remover\_produto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*} remover\+\_\+produto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Remove um produto da lista pelo seu ID. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do produto a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova cabeça da lista. 
+\end{DoxyReturn}
+\Hypertarget{lista__produtos_8c_acaafe63f7b37a49e193b0f8b36f07c5a}\label{lista__produtos_8c_acaafe63f7b37a49e193b0f8b36f07c5a} 
+\index{lista\_produtos.c@{lista\_produtos.c}!salvar\_produtos\_csv@{salvar\_produtos\_csv}}
+\index{salvar\_produtos\_csv@{salvar\_produtos\_csv}!lista\_produtos.c@{lista\_produtos.c}}
+\doxysubsubsection{\texorpdfstring{salvar\_produtos\_csv()}{salvar\_produtos\_csv()}}
+{\footnotesize\ttfamily void salvar\+\_\+produtos\+\_\+csv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{lista__produtos_8h_aab5e6b4227111edb38705df89c619b76}{Produto}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Salva a lista de produtos em um arquivo no formato CSV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em head} & Ponteiro para a cabeça da lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & Nome do arquivo CSV de destino. \\
+\hline
+\end{DoxyParams}

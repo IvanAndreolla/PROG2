@@ -1,0 +1,184 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Data Structures}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Animacao\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entrega Struct Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Animacao\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Queda Struct Reference}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{6}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Contexto Struct Reference}{6}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{7}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Field Documentation}{7}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}lista\_produtos}{7}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}logs\_vendas}{7}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}produto\_selecionado}{7}{subsubsection.3.3.2.3}%
+\contentsline {section}{\numberline {3.4}Estatisticas\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{8}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Fila Struct Reference}{8}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{8}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Field Documentation}{8}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}frente}{8}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}mensagens}{8}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}tamanho}{9}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}tras}{9}{subsubsection.3.5.2.4}%
+\contentsline {section}{\numberline {3.6}Log Struct Reference}{9}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{9}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Field Documentation}{10}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}produto\_id}{10}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}prox}{10}{subsubsection.3.6.2.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.3}timestamp}{10}{subsubsection.3.6.2.3}%
+\contentsline {subsubsection}{\numberline {3.6.2.4}troco}{10}{subsubsection.3.6.2.4}%
+\contentsline {subsubsection}{\numberline {3.6.2.5}valor\_pago}{10}{subsubsection.3.6.2.5}%
+\contentsline {section}{\numberline {3.7}Pilha Struct Reference}{10}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{11}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Field Documentation}{11}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}topo}{11}{subsubsection.3.7.2.1}%
+\contentsline {subsubsection}{\numberline {3.7.2.2}valores}{11}{subsubsection.3.7.2.2}%
+\contentsline {section}{\numberline {3.8}Pilha\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Estados Struct Reference}{11}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{11}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Field Documentation}{11}{subsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}estados}{11}{subsubsection.3.8.2.1}%
+\contentsline {subsubsection}{\numberline {3.8.2.2}topo}{12}{subsubsection.3.8.2.2}%
+\contentsline {section}{\numberline {3.9}produto Struct Reference}{12}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{12}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Field Documentation}{13}{subsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.1}ant}{13}{subsubsection.3.9.2.1}%
+\contentsline {subsubsection}{\numberline {3.9.2.2}estoque}{13}{subsubsection.3.9.2.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.3}id}{13}{subsubsection.3.9.2.3}%
+\contentsline {subsubsection}{\numberline {3.9.2.4}imagem\_animacao}{13}{subsubsection.3.9.2.4}%
+\contentsline {subsubsection}{\numberline {3.9.2.5}imagem\_path}{13}{subsubsection.3.9.2.5}%
+\contentsline {subsubsection}{\numberline {3.9.2.6}nome}{13}{subsubsection.3.9.2.6}%
+\contentsline {subsubsection}{\numberline {3.9.2.7}pos\_x\_inicial}{13}{subsubsection.3.9.2.7}%
+\contentsline {subsubsection}{\numberline {3.9.2.8}pos\_y\_inicial}{14}{subsubsection.3.9.2.8}%
+\contentsline {subsubsection}{\numberline {3.9.2.9}preco}{14}{subsubsection.3.9.2.9}%
+\contentsline {subsubsection}{\numberline {3.9.2.10}prox}{14}{subsubsection.3.9.2.10}%
+\contentsline {chapter}{\numberline {4}File Documentation}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{16}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{16}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}menu\_configuracao()}{16}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}verificar\_senha()}{16}{subsubsection.4.1.2.2}%
+\contentsline {section}{\numberline {4.2}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{18}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Function Documentation}{18}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}menu\_configuracao()}{18}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}verificar\_senha()}{18}{subsubsection.4.2.2.2}%
+\contentsline {section}{\numberline {4.3}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}estatisticas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{19}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{19}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Function Documentation}{19}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}calcular\_estatisticas()}{19}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}salvar\_estatisticas\_csv()}{20}{subsubsection.4.4.2.2}%
+\contentsline {section}{\numberline {4.5}estatisticas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{20}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{21}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{21}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}calcular\_estatisticas()}{21}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}salvar\_estatisticas\_csv()}{22}{subsubsection.4.5.2.2}%
+\contentsline {section}{\numberline {4.6}estatisticas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.4.6}%
+\contentsline {section}{\numberline {4.7}fila.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{22}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{23}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{23}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}desenfileirar()}{23}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}enfileirar()}{23}{subsubsection.4.7.2.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.3}frente\_fila()}{24}{subsubsection.4.7.2.3}%
+\contentsline {subsubsection}{\numberline {4.7.2.4}inicializar\_fila()}{24}{subsubsection.4.7.2.4}%
+\contentsline {section}{\numberline {4.8}fila.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{24}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{25}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Function Documentation}{25}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}desenfileirar()}{25}{subsubsection.4.8.2.1}%
+\contentsline {subsubsection}{\numberline {4.8.2.2}enfileirar()}{26}{subsubsection.4.8.2.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.3}frente\_fila()}{26}{subsubsection.4.8.2.3}%
+\contentsline {subsubsection}{\numberline {4.8.2.4}inicializar\_fila()}{26}{subsubsection.4.8.2.4}%
+\contentsline {section}{\numberline {4.9}fila.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.4.9}%
+\contentsline {section}{\numberline {4.10}lista\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}produtos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{27}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{28}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Function Documentation}{28}{subsection.4.10.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}adicionar\_produto()}{28}{subsubsection.4.10.2.1}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}buscar\_produto()}{28}{subsubsection.4.10.2.2}%
+\contentsline {subsubsection}{\numberline {4.10.2.3}carregar\_produtos\_csv()}{29}{subsubsection.4.10.2.3}%
+\contentsline {subsubsection}{\numberline {4.10.2.4}liberar\_lista\_produtos()}{29}{subsubsection.4.10.2.4}%
+\contentsline {subsubsection}{\numberline {4.10.2.5}listar\_produtos()}{29}{subsubsection.4.10.2.5}%
+\contentsline {subsubsection}{\numberline {4.10.2.6}remover\_produto()}{30}{subsubsection.4.10.2.6}%
+\contentsline {subsubsection}{\numberline {4.10.2.7}salvar\_produtos\_csv()}{30}{subsubsection.4.10.2.7}%
+\contentsline {section}{\numberline {4.11}lista\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}produtos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{30}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{31}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Function Documentation}{32}{subsection.4.11.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}adicionar\_produto()}{32}{subsubsection.4.11.2.1}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}buscar\_produto()}{32}{subsubsection.4.11.2.2}%
+\contentsline {subsubsection}{\numberline {4.11.2.3}carregar\_produtos\_csv()}{33}{subsubsection.4.11.2.3}%
+\contentsline {subsubsection}{\numberline {4.11.2.4}liberar\_lista\_produtos()}{33}{subsubsection.4.11.2.4}%
+\contentsline {subsubsection}{\numberline {4.11.2.5}listar\_produtos()}{33}{subsubsection.4.11.2.5}%
+\contentsline {subsubsection}{\numberline {4.11.2.6}remover\_produto()}{33}{subsubsection.4.11.2.6}%
+\contentsline {subsubsection}{\numberline {4.11.2.7}salvar\_produtos\_csv()}{34}{subsubsection.4.11.2.7}%
+\contentsline {section}{\numberline {4.12}lista\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}produtos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.12}%
+\contentsline {section}{\numberline {4.13}log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vendas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{35}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{35}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Function Documentation}{35}{subsection.4.13.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}adicionar\_log()}{35}{subsubsection.4.13.2.1}%
+\contentsline {subsubsection}{\numberline {4.13.2.2}carregar\_logs()}{36}{subsubsection.4.13.2.2}%
+\contentsline {subsubsection}{\numberline {4.13.2.3}exibir\_logs()}{36}{subsubsection.4.13.2.3}%
+\contentsline {subsubsection}{\numberline {4.13.2.4}liberar\_logs()}{36}{subsubsection.4.13.2.4}%
+\contentsline {subsubsection}{\numberline {4.13.2.5}salvar\_logs()}{37}{subsubsection.4.13.2.5}%
+\contentsline {section}{\numberline {4.14}log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vendas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{37}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Detailed Description}{38}{subsection.4.14.1}%
+\contentsline {subsection}{\numberline {4.14.2}Function Documentation}{38}{subsection.4.14.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.1}adicionar\_log()}{38}{subsubsection.4.14.2.1}%
+\contentsline {subsubsection}{\numberline {4.14.2.2}carregar\_logs()}{38}{subsubsection.4.14.2.2}%
+\contentsline {subsubsection}{\numberline {4.14.2.3}exibir\_logs()}{39}{subsubsection.4.14.2.3}%
+\contentsline {subsubsection}{\numberline {4.14.2.4}liberar\_logs()}{39}{subsubsection.4.14.2.4}%
+\contentsline {subsubsection}{\numberline {4.14.2.5}salvar\_logs()}{39}{subsubsection.4.14.2.5}%
+\contentsline {section}{\numberline {4.15}log\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}vendas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{40}{section.4.15}%
+\contentsline {section}{\numberline {4.16}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{40}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Detailed Description}{41}{subsection.4.16.1}%
+\contentsline {subsection}{\numberline {4.16.2}Function Documentation}{42}{subsection.4.16.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.1}desenhar\_menu\_config()}{42}{subsubsection.4.16.2.1}%
+\contentsline {subsubsection}{\numberline {4.16.2.2}desenhar\_menu\_principal()}{42}{subsubsection.4.16.2.2}%
+\contentsline {subsubsection}{\numberline {4.16.2.3}desenhar\_produtos\_estaticos()}{42}{subsubsection.4.16.2.3}%
+\contentsline {subsubsection}{\numberline {4.16.2.4}desenhar\_tela\_add\_produto()}{42}{subsubsection.4.16.2.4}%
+\contentsline {subsubsection}{\numberline {4.16.2.5}desenhar\_tela\_atualizar\_estoque()}{43}{subsubsection.4.16.2.5}%
+\contentsline {subsubsection}{\numberline {4.16.2.6}desenhar\_tela\_estatisticas()}{43}{subsubsection.4.16.2.6}%
+\contentsline {subsubsection}{\numberline {4.16.2.7}desenhar\_tela\_pagamento()}{44}{subsubsection.4.16.2.7}%
+\contentsline {subsubsection}{\numberline {4.16.2.8}desenhar\_tela\_produtos()}{44}{subsubsection.4.16.2.8}%
+\contentsline {subsubsection}{\numberline {4.16.2.9}desenhar\_tela\_propaganda()}{44}{subsubsection.4.16.2.9}%
+\contentsline {subsubsection}{\numberline {4.16.2.10}desenhar\_tela\_remove\_produto()}{45}{subsubsection.4.16.2.10}%
+\contentsline {subsubsection}{\numberline {4.16.2.11}desenhar\_tela\_senha()}{45}{subsubsection.4.16.2.11}%
+\contentsline {subsubsection}{\numberline {4.16.2.12}main()}{45}{subsubsection.4.16.2.12}%
+\contentsline {section}{\numberline {4.17}pagamento.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{46}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Detailed Description}{46}{subsection.4.17.1}%
+\contentsline {subsection}{\numberline {4.17.2}Function Documentation}{46}{subsection.4.17.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.1}calcular\_troco()}{46}{subsubsection.4.17.2.1}%
+\contentsline {subsubsection}{\numberline {4.17.2.2}desfazer\_moeda()}{47}{subsubsection.4.17.2.2}%
+\contentsline {subsubsection}{\numberline {4.17.2.3}inserir\_moedas()}{47}{subsubsection.4.17.2.3}%
+\contentsline {section}{\numberline {4.18}pagamento.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{47}{section.4.18}%
+\contentsline {subsection}{\numberline {4.18.1}Detailed Description}{48}{subsection.4.18.1}%
+\contentsline {subsection}{\numberline {4.18.2}Function Documentation}{48}{subsection.4.18.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.1}calcular\_troco()}{48}{subsubsection.4.18.2.1}%
+\contentsline {subsubsection}{\numberline {4.18.2.2}desfazer\_moeda()}{49}{subsubsection.4.18.2.2}%
+\contentsline {subsubsection}{\numberline {4.18.2.3}inserir\_moedas()}{49}{subsubsection.4.18.2.3}%
+\contentsline {section}{\numberline {4.19}pagamento.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{49}{section.4.19}%
+\contentsline {section}{\numberline {4.20}pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{50}{section.4.20}%
+\contentsline {subsection}{\numberline {4.20.1}Detailed Description}{50}{subsection.4.20.1}%
+\contentsline {section}{\numberline {4.21}pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{51}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Detailed Description}{52}{subsection.4.21.1}%
+\contentsline {section}{\numberline {4.22}pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.4.22}%
+\contentsline {section}{\numberline {4.23}states.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{53}{section.4.23}%
+\contentsline {subsection}{\numberline {4.23.1}Detailed Description}{53}{subsection.4.23.1}%
+\contentsline {section}{\numberline {4.24}states.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{54}{section.4.24}%
+\contentsline {subsection}{\numberline {4.24.1}Detailed Description}{54}{subsection.4.24.1}%
+\contentsline {section}{\numberline {4.25}states.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.4.25}%
+\contentsline {section}{\numberline {4.26}ui.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{55}{section.4.26}%
+\contentsline {subsection}{\numberline {4.26.1}Detailed Description}{56}{subsection.4.26.1}%
+\contentsline {subsection}{\numberline {4.26.2}Function Documentation}{56}{subsection.4.26.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.1}inicializar\_interface()}{56}{subsubsection.4.26.2.1}%
+\contentsline {subsubsection}{\numberline {4.26.2.2}limpar\_tela()}{56}{subsubsection.4.26.2.2}%
+\contentsline {subsubsection}{\numberline {4.26.2.3}pausar()}{56}{subsubsection.4.26.2.3}%
+\contentsline {section}{\numberline {4.27}ui.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{57}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Detailed Description}{57}{subsection.4.27.1}%
+\contentsline {subsection}{\numberline {4.27.2}Function Documentation}{58}{subsection.4.27.2}%
+\contentsline {subsubsection}{\numberline {4.27.2.1}inicializar\_interface()}{58}{subsubsection.4.27.2.1}%
+\contentsline {subsubsection}{\numberline {4.27.2.2}limpar\_tela()}{58}{subsubsection.4.27.2.2}%
+\contentsline {subsubsection}{\numberline {4.27.2.3}pausar()}{58}{subsubsection.4.27.2.3}%
+\contentsline {section}{\numberline {4.28}ui.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{section.4.28}%
+\contentsline {chapter}{Index}{59}{section*.71}%

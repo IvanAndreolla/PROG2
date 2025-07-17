@@ -1,0 +1,75 @@
+\doxysection{ui.\+c File Reference}
+\hypertarget{ui_8c}{}\label{ui_8c}\index{ui.c@{ui.c}}
+
+
+Implementação das funções de interface de usuário.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}ui.\+h"{}}\newline
+{\ttfamily \#include "{}fila.\+h"{}}\newline
+Include dependency graph for ui.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{ui_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui_8c_a4d086ec4c843d3d7c68afbd5dd5c9eee}{limpar\+\_\+tela}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a tela do terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71}{pausar}} ()
+\begin{DoxyCompactList}\small\item\em Pausa a execução do programa até que o usuário pressione Enter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ui_8c_a66a15eb8f3a2b2efbc600b0926800c70}{inicializar\+\_\+interface}} (\mbox{\hyperlink{structFila}{Fila}} \texorpdfstring{$\ast$}{*}propagandas)
+\begin{DoxyCompactList}\small\item\em Exibe a tela de boas-\/vindas da aplicação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de interface de usuário. 
+
+\begin{DoxyNote}{Note}
+Estas funções foram criadas para uma versão de console da aplicação e não são utilizadas pela interface gráfica principal implementada em \doxylink{main_8c}{main.\+c}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ui_8c_a66a15eb8f3a2b2efbc600b0926800c70}\label{ui_8c_a66a15eb8f3a2b2efbc600b0926800c70} 
+\index{ui.c@{ui.c}!inicializar\_interface@{inicializar\_interface}}
+\index{inicializar\_interface@{inicializar\_interface}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{inicializar\_interface()}{inicializar\_interface()}}
+{\footnotesize\ttfamily void inicializar\+\_\+interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structFila}{Fila}} \texorpdfstring{$\ast$}{*}}]{propagandas }\end{DoxyParamCaption})}
+
+
+
+Exibe a tela de boas-\/vindas da aplicação. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em propagandas} & Ponteiro para a fila de propagandas, para exibir a primeira. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ui_8c_a4d086ec4c843d3d7c68afbd5dd5c9eee}\label{ui_8c_a4d086ec4c843d3d7c68afbd5dd5c9eee} 
+\index{ui.c@{ui.c}!limpar\_tela@{limpar\_tela}}
+\index{limpar\_tela@{limpar\_tela}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{limpar\_tela()}{limpar\_tela()}}
+{\footnotesize\ttfamily void limpar\+\_\+tela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa a tela do terminal. 
+
+Tenta usar "{}clear"{} (Linux/mac\+OS) ou "{}cls"{} (Windows). \Hypertarget{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71}\label{ui_8c_a01a3f268deb31b1ffe17d947b6b62b71} 
+\index{ui.c@{ui.c}!pausar@{pausar}}
+\index{pausar@{pausar}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{pausar()}{pausar()}}
+{\footnotesize\ttfamily void pausar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pausa a execução do programa até que o usuário pressione Enter. 
+
+Esta versão corrigida consome quaisquer caracteres residuais no buffer de entrada e espera por um único Enter para continuar. 

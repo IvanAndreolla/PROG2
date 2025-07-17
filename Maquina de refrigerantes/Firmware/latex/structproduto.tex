@@ -1,0 +1,115 @@
+\doxysection{produto Struct Reference}
+\hypertarget{structproduto}{}\label{structproduto}\index{produto@{produto}}
+
+
+Estrutura para representar um produto na máquina de refrigerantes.  
+
+
+
+
+{\ttfamily \#include $<$lista\+\_\+produtos.\+h$>$}
+
+
+
+Collaboration diagram for produto\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{structproduto__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structproduto_a7441ef0865bcb3db9b8064dd7375c1ea}{id}}
+\item 
+char \mbox{\hyperlink{structproduto_ad9b32a94f9054fd81f59b1118b8d53d2}{nome}} \mbox{[}50\mbox{]}
+\item 
+float \mbox{\hyperlink{structproduto_a163a15b8a93cd0e9afb3ca78f69c28d6}{preco}}
+\item 
+int \mbox{\hyperlink{structproduto_a91467f7c7aaac1cb047467e734edb66e}{estoque}}
+\item 
+char \mbox{\hyperlink{structproduto_a4143b7bf20bc1d1ddf0bb8f6f9deb92c}{imagem\+\_\+path}} \mbox{[}100\mbox{]}
+\item 
+float \mbox{\hyperlink{structproduto_afb4f5432af70fe7be7c1fc6e360e3c38}{pos\+\_\+x\+\_\+inicial}}
+\item 
+float \mbox{\hyperlink{structproduto_a3eebc67279cb1d44261c4e0e0414bd0f}{pos\+\_\+y\+\_\+inicial}}
+\item 
+ALLEGRO\+\_\+\+BITMAP \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structproduto_af0e8e4e1730ff20be7d3c94894803b39}{imagem\+\_\+animacao}}
+\item 
+struct \mbox{\hyperlink{structproduto}{produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structproduto_a1b71065e066acc71f8ab93f6d9b85f52}{prox}}
+\item 
+struct \mbox{\hyperlink{structproduto}{produto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structproduto_a989e0da84ed120e962720b3a830850e5}{ant}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura para representar um produto na máquina de refrigerantes. 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structproduto_a989e0da84ed120e962720b3a830850e5}\label{structproduto_a989e0da84ed120e962720b3a830850e5} 
+\index{produto@{produto}!ant@{ant}}
+\index{ant@{ant}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{ant}{ant}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproduto}{produto}}\texorpdfstring{$\ast$}{*} ant}
+
+Ponteiro para o produto anterior na lista. \Hypertarget{structproduto_a91467f7c7aaac1cb047467e734edb66e}\label{structproduto_a91467f7c7aaac1cb047467e734edb66e} 
+\index{produto@{produto}!estoque@{estoque}}
+\index{estoque@{estoque}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{estoque}{estoque}}
+{\footnotesize\ttfamily int estoque}
+
+Quantidade disponível em estoque. \Hypertarget{structproduto_a7441ef0865bcb3db9b8064dd7375c1ea}\label{structproduto_a7441ef0865bcb3db9b8064dd7375c1ea} 
+\index{produto@{produto}!id@{id}}
+\index{id@{id}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int id}
+
+Identificador único do produto. \Hypertarget{structproduto_af0e8e4e1730ff20be7d3c94894803b39}\label{structproduto_af0e8e4e1730ff20be7d3c94894803b39} 
+\index{produto@{produto}!imagem\_animacao@{imagem\_animacao}}
+\index{imagem\_animacao@{imagem\_animacao}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{imagem\_animacao}{imagem\_animacao}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP\texorpdfstring{$\ast$}{*} imagem\+\_\+animacao}
+
+Ponteiro para o bitmap da animação carregado. \Hypertarget{structproduto_a4143b7bf20bc1d1ddf0bb8f6f9deb92c}\label{structproduto_a4143b7bf20bc1d1ddf0bb8f6f9deb92c} 
+\index{produto@{produto}!imagem\_path@{imagem\_path}}
+\index{imagem\_path@{imagem\_path}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{imagem\_path}{imagem\_path}}
+{\footnotesize\ttfamily char imagem\+\_\+path\mbox{[}100\mbox{]}}
+
+Caminho do arquivo de imagem para a animação. \Hypertarget{structproduto_ad9b32a94f9054fd81f59b1118b8d53d2}\label{structproduto_ad9b32a94f9054fd81f59b1118b8d53d2} 
+\index{produto@{produto}!nome@{nome}}
+\index{nome@{nome}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily char nome\mbox{[}50\mbox{]}}
+
+Nome do produto. \Hypertarget{structproduto_afb4f5432af70fe7be7c1fc6e360e3c38}\label{structproduto_afb4f5432af70fe7be7c1fc6e360e3c38} 
+\index{produto@{produto}!pos\_x\_inicial@{pos\_x\_inicial}}
+\index{pos\_x\_inicial@{pos\_x\_inicial}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{pos\_x\_inicial}{pos\_x\_inicial}}
+{\footnotesize\ttfamily float pos\+\_\+x\+\_\+inicial}
+
+Posição X inicial para a animação de queda. \Hypertarget{structproduto_a3eebc67279cb1d44261c4e0e0414bd0f}\label{structproduto_a3eebc67279cb1d44261c4e0e0414bd0f} 
+\index{produto@{produto}!pos\_y\_inicial@{pos\_y\_inicial}}
+\index{pos\_y\_inicial@{pos\_y\_inicial}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{pos\_y\_inicial}{pos\_y\_inicial}}
+{\footnotesize\ttfamily float pos\+\_\+y\+\_\+inicial}
+
+Posição Y inicial para a animação de queda. \Hypertarget{structproduto_a163a15b8a93cd0e9afb3ca78f69c28d6}\label{structproduto_a163a15b8a93cd0e9afb3ca78f69c28d6} 
+\index{produto@{produto}!preco@{preco}}
+\index{preco@{preco}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{preco}{preco}}
+{\footnotesize\ttfamily float preco}
+
+Preço do produto em reais. \Hypertarget{structproduto_a1b71065e066acc71f8ab93f6d9b85f52}\label{structproduto_a1b71065e066acc71f8ab93f6d9b85f52} 
+\index{produto@{produto}!prox@{prox}}
+\index{prox@{prox}!produto@{produto}}
+\doxysubsubsection{\texorpdfstring{prox}{prox}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproduto}{produto}}\texorpdfstring{$\ast$}{*} prox}
+
+Ponteiro para o próximo produto na lista. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{lista__produtos_8h}{lista\+\_\+produtos.\+h}}\end{DoxyCompactItemize}

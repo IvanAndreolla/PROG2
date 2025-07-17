@@ -1,0 +1,67 @@
+\doxysection{estatisticas.\+c File Reference}
+\hypertarget{estatisticas_8c}{}\label{estatisticas_8c}\index{estatisticas.c@{estatisticas.c}}
+
+
+Implementação das funções de geração de estatísticas de vendas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}estatisticas.\+h"{}}\newline
+Include dependency graph for estatisticas.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{estatisticas_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{estatisticas_8c_a7f56c49e835dd5778993d47e79b3dd1f}{calcular\+\_\+estatisticas}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}logs, \mbox{\hyperlink{structEstatisticasData}{Estatisticas\+Data}} \texorpdfstring{$\ast$}{*}data)
+\begin{DoxyCompactList}\small\item\em Calcula as estatísticas com base nos logs e preenche uma struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{estatisticas_8c_a67e9adac089d0423c809cb27bcd08d23}{salvar\+\_\+estatisticas\+\_\+csv}} (\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}logs, const char \texorpdfstring{$\ast$}{*}filename)
+\begin{DoxyCompactList}\small\item\em Salva as estatísticas de vendas em um arquivo CSV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação das funções de geração de estatísticas de vendas. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{estatisticas_8c_a7f56c49e835dd5778993d47e79b3dd1f}\label{estatisticas_8c_a7f56c49e835dd5778993d47e79b3dd1f} 
+\index{estatisticas.c@{estatisticas.c}!calcular\_estatisticas@{calcular\_estatisticas}}
+\index{calcular\_estatisticas@{calcular\_estatisticas}!estatisticas.c@{estatisticas.c}}
+\doxysubsubsection{\texorpdfstring{calcular\_estatisticas()}{calcular\_estatisticas()}}
+{\footnotesize\ttfamily void calcular\+\_\+estatisticas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{logs,  }\item[{\mbox{\hyperlink{structEstatisticasData}{Estatisticas\+Data}} \texorpdfstring{$\ast$}{*}}]{data }\end{DoxyParamCaption})}
+
+
+
+Calcula as estatísticas com base nos logs e preenche uma struct. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em logs} & Ponteiro para a cabeça da lista de logs de vendas. \\
+\hline
+\mbox{\texttt{ out}}  & {\em data} & Ponteiro para a struct que será preenchida com os dados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{estatisticas_8c_a67e9adac089d0423c809cb27bcd08d23}\label{estatisticas_8c_a67e9adac089d0423c809cb27bcd08d23} 
+\index{estatisticas.c@{estatisticas.c}!salvar\_estatisticas\_csv@{salvar\_estatisticas\_csv}}
+\index{salvar\_estatisticas\_csv@{salvar\_estatisticas\_csv}!estatisticas.c@{estatisticas.c}}
+\doxysubsubsection{\texorpdfstring{salvar\_estatisticas\_csv()}{salvar\_estatisticas\_csv()}}
+{\footnotesize\ttfamily void salvar\+\_\+estatisticas\+\_\+csv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLog}{Log}} \texorpdfstring{$\ast$}{*}}]{logs,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Salva as estatísticas de vendas em um arquivo CSV. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em logs} & Ponteiro para a cabeça da lista de logs de vendas. \\
+\hline
+\mbox{\texttt{ in}}  & {\em filename} & O nome do arquivo CSV onde as estatísticas serão salvas. \\
+\hline
+\end{DoxyParams}

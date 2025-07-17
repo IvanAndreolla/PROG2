@@ -1,0 +1,12 @@
+<map id="ui.c" name="ui.c">
+<area shape="rect" id="Node000001" title="Implementação das funções de interface de usuário." alt="" coords="151,5,196,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,33,74,74,72,70,150,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,79,167,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,32,148,68,143,65,164,30"/>
+<area shape="rect" id="Node000004" href="$ui_8h.html" title="Protótipos para funções de interface de usuário (UI) no terminal." alt="" coords="191,79,238,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,30,203,65,199,68,178,32"/>
+<area shape="rect" id="Node000005" href="$fila_8h.html" title="Definições e protótipos para uma estrutura de dados de fila circular." alt="" coords="218,152,273,177"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="198,27,228,47,242,61,253,78,260,109,256,139,251,138,254,109,248,80,238,64,225,51,195,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="222,103,237,139,233,141,217,105"/>
+</map>

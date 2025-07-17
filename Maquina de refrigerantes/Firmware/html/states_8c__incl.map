@@ -1,0 +1,13 @@
+<map id="states.c" name="states.c">
+<area shape="rect" id="Node000001" title="Implementação das funções de lógica para cada estado da FSM." alt="" coords="58,5,131,31"/>
+<area shape="rect" id="Node000002" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="8,79,83,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,33,63,69,59,66,84,29"/>
+<area shape="rect" id="Node000003" href="$config_8h.html" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="107,79,181,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,29,130,66,126,69,101,33"/>
+<area shape="rect" id="Node000004" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="10,152,137,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="134,106,96,144,92,140,130,102"/>
+<area shape="rect" id="Node000006" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="161,152,269,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="158,102,196,140,192,144,154,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,225,141,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="76,178,76,212,71,212,71,178"/>
+</map>

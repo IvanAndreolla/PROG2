@@ -1,0 +1,9 @@
+<map id="config.h" name="config.h">
+<area shape="rect" id="Node000001" title="Definições e protótipos para o módulo de configuração da máquina." alt="" coords="107,5,181,31"/>
+<area shape="rect" id="Node000002" href="$lista__produtos_8h.html" title="Definições e protótipos para a lista duplamente encadeada de produtos." alt="" coords="10,79,137,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,33,96,71,92,67,130,29"/>
+<area shape="rect" id="Node000004" href="$log__vendas_8h.html" title="Definições e protótipos para a lista simplesmente encadeada de logs de vendas." alt="" coords="161,79,269,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="158,29,196,67,192,71,154,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,141,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,104,76,138,71,138,71,104"/>
+</map>
