@@ -1,9 +1,0 @@
-<map id="pilha.c" name="pilha.c">
-<area shape="rect" id="Node000001" title="Implementação da estrutura de dados de pilha." alt="" coords="55,5,121,31"/>
-<area shape="rect" id="Node000002" href="$pilha_8h.html" title="Definições e protótipos para estruturas de dados de pilha." alt="" coords="9,79,76,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,32,60,69,55,66,78,30"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="100,79,167,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="98,30,121,66,116,69,93,32"/>
-<area shape="rect" id="Node000003" href="$states_8h.html" title="Definição dos estados da máquina e protótipos das funções de estado." alt="" coords="5,152,80,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="45,104,45,138,40,138,40,104"/>
-</map>
