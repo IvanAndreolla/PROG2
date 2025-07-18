@@ -18,25 +18,25 @@ Veja abaixo a interface gráfica da aplicação em ação. A interação é feit
 
 <p align="center">
   <em>Tela Principal e Animação de Anúncios</em><br><br>
-  <img src="URL_PARA_SUA_IMAGEM_MENU_PRINCIPAL.png" alt="Menu Principal" width="70%"/>
+  <img src="Maquina de refrigerantes/Firmware/images/menu_principal.png" alt="Menu Principal" width="70%"/>
 </p>
 <br>
 <p align="center">
   <em>Seleção de Produtos e Tela de Pagamento Interativa</em><br><br>
-  <img src="URL_PARA_SUA_IMAGEM_SELECAO_PRODUTOS.png" alt="Seleção de Produto" width="45%"/>
-  <img src="URL_PARA_SUA_IMAGEM_PAGAMENTO.png" alt="Tela de Pagamento" width="45%"/>
+  <img src="Maquina de refrigerantes/Firmware/images/selecao_produto.png" alt="Seleção de Produto" width="45%"/>
+  <img src="Maquina de refrigerantes/Firmware/images/pagamento.png" alt="Tela de Pagamento" width="45%"/>
 </p>
 <br>
 <p align="center">
 <em>Animação de Compra: Queda e Entrega do Produto</em><br><br>
 <p align="center">
-  <img src="URL_PARA_SEU_GIF_DE_ANIMACAO.gif" alt="Animação da Compra" width="60%"/>
+  <img src="Maquina de refrigerantes/Firmware/images/funcionamento.gif" alt="Animação da Compra" width="60%"/>
 </p>
 <br>
 <p align="center">
 <em>Menu Administrativo para Gerenciamento de Produtos</em><br><br>
 <p align="center">
-  <img src="URL_PARA_SUA_IMAGEM_MENU_ADMIN.png" alt="Menu Administrativo" width="60%"/>
+  <img src="Maquina de refrigerantes/Firmware/images/menu_conf.png" alt="Menu Administrativo" width="60%"/>
 </p>
 
 
