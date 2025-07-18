@@ -24,9 +24,15 @@ Veja abaixo como a aplicação se parece em execução.
 </p>
 <br>
 <p align="center">
-  <em>Tela de Pagamento e Menu Administrativo</em><br><br>
-  <img src="Maquina de refrigerantes/Firmware/images/pagamento.png" alt="Tela de Pagamento" width="45%"/>
-  <img src="Maquina de refrigerantes/Firmware/images/menu_admin.png" alt="Menu Administrativo" width="45%"/>
+<em>Tela de Pagamento</em><br><br>
+<p align="center">
+  <img src="Maquina de refrigerantes/Firmware/images/pagamento.png" alt="Tela de Pagamento" width="60%"/>
+</p>
+<br>
+<p align="center">
+<em>Menu Administrativo</em><br><br>
+<p align="center">
+  <img src="Maquina de refrigerantes/Firmware/images/menu_admin.png" alt="Menu Administrativo" width="60%"/>
 </p>
 
 
