@@ -14,8 +14,6 @@ Simulação de uma máquina de vendas automática desenvolvida em C, com uma int
 
 Veja abaixo a interface gráfica da aplicação em ação. A interação é feita via teclado e mouse, com animações que tornam a experiência mais imersiva.
 
-*(Nota: Substitua os links abaixo pelas URLs das suas imagens/GIFs quando as tiver.)*
-
 <p align="center">
   <em>Tela Principal e Animação de Anúncios</em><br><br>
   <img src="Maquina de refrigerantes/Firmware/images/menu_principal.png" alt="Menu Principal" width="70%"/>
