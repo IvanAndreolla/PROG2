@@ -38,14 +38,86 @@ Veja abaixo como a aplicação se parece em execução.
 
 ## ⚙️ Guia de Uso da Máquina
 
-A máquina foi projetada para ser intuitiva. Siga os passos abaixo para comprar um produto.
+A máquina foi projetada para ser intuitiva. Abaixo, um passo a passo detalhado de como realizar uma compra.
 
-| Passo | Instruções | Screenshot Sugerido |
-|:---|:---|:---|
-| **1** | Na tela inicial, pressione a tecla correspondente para **"Comprar Produto"**. Você verá a lista de produtos disponíveis, seus preços e o estoque. | <img src="Maquina de refrigerantes/Firmware/images/passo1_selecao.png" alt="Selecionando a opção de compra" width="250"/> |
-| **2** | Digite o **código do produto** que deseja comprar e pressione Enter. | <img src="Maquina de refrigerantes/Firmware/images/passo2_codigo.png" alt="Digitando o código do produto" width="250"/> |
-| **3** | A tela de pagamento será exibida. **Insira as moedas** digitando os valores (ex: 1.00, 0.50, 0.25) e pressionando Enter. O valor inserido será acumulado. | <img src="Maquina de refrigerantes/Firmware/images/passo3_moedas.png" alt="Inserindo moedas" width="250"/> |
-| **4** | Quando o valor for suficiente, a máquina informará o troco e a **compra será finalizada com sucesso**. Você será redirecionado ao menu principal. | <img src="Maquina de refrigerantes/Firmware/images/passo4_sucesso.png" alt="Compra finalizada" width="250"/> |
+### **Passo 1: Acessando a Lista de Produtos** 🛒
+
+Ao iniciar a aplicação, você verá o menu principal. Para começar uma compra, você deve entrar na tela de seleção de produtos.
+
+1.  No menu principal, **digite `1`** e pressione **Enter**.
+
+    > ```
+    > 1. Selecionar produto
+    > 2. Configurações
+    > 3. Ver estatísticas
+    > 4. Sair
+    > Escolha: 1
+    > ```
+
+2.  A máquina irá limpar a tela e exibir todos os produtos disponíveis, com seus respectivos códigos (ID), nome, preço e quantidade em estoque.
+
+    > ```
+    > --- LISTA DE PRODUTOS ---
+    > ID: 3 | Nome: Coca          | Preço: R$2.00 | Estoque: 10
+    > ID: 2 | Nome: Guaraná Jesus | Preço: R$1.50 | Estoque: 9
+    > ID: 1 | Nome: Pureza        | Preço: R$1.50 | Estoque: 10
+    > -------------------------
+    > ID do produto (0 para voltar):
+    > ```
+
+### **Passo 2: Escolhendo o Produto** 🥤
+
+Com a lista de produtos em tela, escolha o que você deseja.
+
+1.  Digite o **ID do produto** desejado e pressione **Enter**. Para este exemplo, vamos escolher "Guaraná Jesus" (`ID: 2`).
+
+    > ```
+    > ID do produto (0 para voltar): 2
+    > ```
+
+2.  O sistema confirmará sua seleção e o levará para a tela de pagamento.
+
+### **Passo 3: Realizando o Pagamento** 💰
+
+Esta tela é onde você insere o dinheiro. A máquina aceita moedas específicas e oferece opções de controle.
+
+-   **Moedas aceitas:** `0.25`, `0.50`, `1.00`.
+-   **Comandos Especiais:**
+    -   Digite `-1` para **desfazer** a última moeda inserida.
+    -   Digite `-2` para **cancelar** a compra e receber seu dinheiro de volta.
+    -   Digite `0` quando tiver inserido o valor suficiente para **finalizar** o pagamento.
+
+1.  Insira as moedas uma a uma, pressionando **Enter** após cada uma. O total inserido será atualizado a cada inserção.
+
+    > ```
+    > --- PAGAMENTO ---
+    > Produto: Guaraná Jesus | Preço: R$1.50
+    > Insira moedas (0.25, 0.5, 1.0). Digite 0 para concluir, -1 para desfazer, -2 para cancelar:
+    > Moeda: 1.00
+    > Total inserido: R$1.00
+    > Moeda: 0.25
+    > Total inserido: R$1.25
+    > Moeda: -1
+    > Desfeita moeda de R$0.25. Total: R$1.00
+    > Moeda: 0.50
+    > Total inserido: R$1.50
+    > ```
+
+2.  Quando o valor for igual ou superior ao preço do produto, **digite `0`** e pressione **Enter** para confirmar.
+
+### **Passo 4: Finalizando a Compra** 🎉
+
+Após confirmar o pagamento, a máquina processará a transação.
+
+1.  O sistema exibirá uma mensagem de sucesso e o valor do seu troco.
+
+    > ```
+    > Compra realizada! Troco: R$0.00
+    >
+    > Pressione Enter para continuar...
+    > ```
+
+2.  Após pressionar **Enter**, você será redirecionado para o menu principal, pronto para uma nova operação. O estoque do produto comprado será atualizado.
 
 ## 🛠️ Como Compilar e Executar
 
